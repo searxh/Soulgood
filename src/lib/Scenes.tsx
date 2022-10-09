@@ -1,29 +1,21 @@
-interface Dialogue {
-    content:string
-    type:string
-}
-
+import { Them, Us, Input } from './Dialogue'
+import { Soul } from './Characters'
 interface SceneDialogue {
-    scene:string,
-    dialogues:Array<Dialogue>
+    id:number,
+    dialogues:Array<Function>
+    characters:Array<Function>
+
 }
 
 export const scenes:Array<SceneDialogue> = [
     {
-        scene:'scene 1',
+        id:1,
+        characters:[
+            ()=><Soul state="happy" />,
+        ],
         dialogues:[
-            {
-                content:'test',
-                type:'them'
-            },
-            {
-                content:'test 1',
-                type:'us'
-            },
-            {
-                content:'test 2',
-                type:'input'
-            },
+            ()=><Them content="hello" />,
+            ()=><Us content="no no" />,
         ]
     },
 ]
