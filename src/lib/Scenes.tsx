@@ -1,5 +1,6 @@
 interface Dialogue {
     content:string
+    type:string
 }
 
 interface SceneDialogue {
@@ -7,18 +8,21 @@ interface SceneDialogue {
     dialogues:Array<Dialogue>
 }
 
-export const all_dialogue:Array<SceneDialogue> = [
+export const scenes:Array<SceneDialogue> = [
     {
         scene:'scene 1',
         dialogues:[
             {
-                content:'test'
+                content:'test',
+                type:'them'
             },
             {
-                content:'test 1'
+                content:'test 1',
+                type:'us'
             },
             {
-                content:'test 2'
+                content:'test 2',
+                type:'input'
             },
         ]
     },
