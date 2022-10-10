@@ -1,8 +1,11 @@
 import React from 'react'
+import { GlobalContext } from '../states'
 
 export function Them({ content }:{ content:string }) {
     const [printing, setPrinting] = React.useState<boolean>(true)
     const [displayedContent, setDisplayedContent] = React.useState<string>("")
+    const { global_state, dispatch }:any = React.useContext(GlobalContext)
+    const { scene } = global_state
     React.useEffect(()=>{
         if (printing) {
             let accumulator = ""
@@ -13,15 +16,19 @@ export function Them({ content }:{ content:string }) {
                     accumulator += content[i]
                     setDisplayedContent(accumulator)
                 },delay)
-                delay += 200
+                delay += 150
             }
-            setPrinting(false)
+            setTimeout(()=>setPrinting(false),delay)
         }
-    },[])
+    },[global_state.scene])
     return (
         <button
             disabled={printing}
-            className="bg-white text-black text-center p-5 m-2"
+            onClick={()=>{
+                dispatch({ type:"set" , field:"scene", payload:scene+1, })
+                setPrinting(true)
+            }}
+            className="bg-white text-black border-black border-2 text-center p-5 m-2"
         >
             {displayedContent}
         </button>
