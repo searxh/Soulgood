@@ -10,7 +10,7 @@ export function Soul({ state }:{ state:string }) {
     return (
         <img
             src={image}
-            className="h-32 w-42"
+            className="h-32 w-42 animate-bob"
             alt=""
         />
     )
