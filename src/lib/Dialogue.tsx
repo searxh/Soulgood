@@ -16,7 +16,7 @@ export function Them({ content }:{ content:string }) {
                     accumulator += content[i]
                     setDisplayedContent(accumulator)
                 },delay)
-                delay += 150
+                delay += 100
             }
             setTimeout(()=>setPrinting(false),delay)
         }
@@ -28,7 +28,7 @@ export function Them({ content }:{ content:string }) {
                 dispatch({ type:"set" , field:"scene", payload:scene+1, })
                 setPrinting(true)
             }}
-            className="bg-white text-black border-black border-2 text-center p-5 m-2"
+            className="bg-white text-black border-black border-2 text-center p-5 m-auto"
         >
             {displayedContent}
         </button>

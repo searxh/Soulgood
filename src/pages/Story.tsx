@@ -10,7 +10,7 @@ export default function Story() {
         console.log(global_state.scene)
     },[global_state.scene])
     return (
-        <div className=" h-screen">
+        <div className="flex flex-col h-screen">
             <>
                 {scenes.filter((sceneObj)=>global_state.scene===sceneObj.id)
                 .map((sceneObj)=>{

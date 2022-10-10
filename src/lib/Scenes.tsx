@@ -6,6 +6,7 @@ interface SceneDialogue {
     id:number
     dialogue:{ type:string, content:string}
     characters:Array<Character>
+    next:number | string
 }
 
 export const scenes:Array<SceneDialogue> = [
@@ -15,7 +16,8 @@ export const scenes:Array<SceneDialogue> = [
         dialogue:{
             type:"them",
             content:"oh hello are you a lost soul?"
-        }
+        },
+        next:'default',
     },
     {
         id:1,
@@ -23,6 +25,16 @@ export const scenes:Array<SceneDialogue> = [
         dialogue:{
             type:"them",
             content:"soul? a ghost? did i already die?!"
-        }
+        },
+        next:'default',
+    },
+    {
+        id:2,
+        characters:[{ name:"soul", state:"worried" }],
+        dialogue:{
+            type:"them",
+            content:"hi panus!!"
+        },
+        next:'default',
     },
 ]
