@@ -6,6 +6,7 @@ interface SceneDialogue {
     id:number
     dialogue:{ type:string, content:string}
     characters:Array<Character>
+    background:{ name:string }
     next:number | string
 }
 
@@ -15,7 +16,10 @@ export const scenes:Array<SceneDialogue> = [
         characters:[{ name:"soul", state:"neutral" }],
         dialogue:{
             type:"them",
-            content:"oh hello are you a lost soul?"
+            content:"โอ๊ะ สวัสดี เธอคือ soul ที่ลงมาเหรอ"
+        },
+        background:{
+            name:"1"
         },
         next:'default',
     },
@@ -24,7 +28,10 @@ export const scenes:Array<SceneDialogue> = [
         characters:[{ name:"soul", state:"happy" }],
         dialogue:{
             type:"them",
-            content:"soul? a ghost? did i already die?!"
+            content:"ไม่สิ ไม่ใช่ Soul คือ จิตวิญญาณ เธอยังไม่ตายหรอกนะ ฉันด้วย"
+        },
+        background:{
+            name:"1"
         },
         next:'default',
     },
@@ -33,7 +40,10 @@ export const scenes:Array<SceneDialogue> = [
         characters:[{ name:"soul", state:"worried" }],
         dialogue:{
             type:"them",
-            content:"hi panus!!"
+            content:"เเต่ว่าตอนนี้ เมืองที่เราอยู่ กําลังเจอปัญหาใหญ่ เเสงที่หล่อเลี้ยงเมืองนี้กําลังจะดับลง"
+        },
+        background:{
+            name:"1"
         },
         next:'default',
     },

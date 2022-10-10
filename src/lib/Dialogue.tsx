@@ -28,7 +28,8 @@ export function Them({ content }:{ content:string }) {
                 dispatch({ type:"set" , field:"scene", payload:scene+1, })
                 setPrinting(true)
             }}
-            className="bg-white text-black border-black border-2 text-center p-5 m-auto"
+            className="absolute bg-white text-black border-black border-2
+            text-center p-5 z-10 left-0 right-0 mx-auto bottom-5 w-[90%] shadow-md"
         >
             {displayedContent}
         </button>

@@ -3,16 +3,20 @@ import { GlobalContext } from '../states'
 import { scenes } from '../lib/Scenes'
 import { Input, Them, Us } from '../lib/Dialogue'
 import { Soul } from '../lib/Characters'
+import { Forest, Hills } from '../lib/Background'
 
 export default function Story() {
     const { global_state }:any = React.useContext(GlobalContext)
     React.useEffect(()=>{
         console.log(global_state.scene)
     },[global_state.scene])
+    const filteredScenes = React.useMemo(()=>{
+        return scenes.filter((sceneObj)=>global_state.scene===sceneObj.id)
+    },[global_state.scene])
     return (
-        <div className="flex flex-col h-screen">
-            <>
-                {scenes.filter((sceneObj)=>global_state.scene===sceneObj.id)
+        <div className="">
+            <div className="flex aspect-video max-h-screen m-auto relative bg-blue-400">
+                {filteredScenes
                 .map((sceneObj)=>{
                     return sceneObj.characters.map((character,index)=>{
                         return (
@@ -24,7 +28,7 @@ export default function Story() {
                         )
                     })
                 })}
-                {scenes.filter((sceneObj)=>global_state.scene===sceneObj.id)
+                {filteredScenes
                 .map((sceneObj,index)=>{
                     return (
                         <Dialogue 
@@ -34,7 +38,16 @@ export default function Story() {
                         />
                     )
                 })}
-            </>
+                {filteredScenes
+                .map((sceneObj,index)=>{
+                    return (
+                        <Background 
+                            key={index} 
+                            name={sceneObj.background.name}
+                        />
+                    )
+                })}
+            </div>
         </div>
     )
 }
@@ -58,6 +71,18 @@ function Dialogue({ type, content }:{ type:string, content:string }) {
                 <Us content={content} />:
             type==="input"?
                 <Input content={content} />:
+            null}
+        </>
+    )
+}
+
+function Background({ name }:{ name:string }) {
+    return (
+        <>
+            {name==="1"?
+                <Hills name={name} />:
+            name==="2"?
+                <Forest name={name} />:
             null}
         </>
     )

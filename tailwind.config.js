@@ -10,7 +10,7 @@ module.exports = {
         }
       },
       animation: {
-        bob: 'bob 5s ease-in-out infinite'
+        bob: 'bob 3s ease-in-out infinite'
       }
     },
   },

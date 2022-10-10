@@ -10,7 +10,8 @@ export function Soul({ state }:{ state:string }) {
     return (
         <img
             src={image}
-            className="h-32 w-42 animate-bob m-auto"
+            className="absolute aspect-video top-[40%] left-[40%] 
+            h-[20%] animate-bob z-10 object-contain"
             alt=""
         />
     )
