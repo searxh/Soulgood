@@ -79,9 +79,9 @@ function Dialogue({ type, content }:{ type:string, content:string }) {
 function Background({ name }:{ name:string }) {
     return (
         <>
-            {name==="1"?
+            {name==="hills"?
                 <Hills name={name} />:
-            name==="2"?
+            name==="forest"?
                 <Forest name={name} />:
             null}
         </>

@@ -4,7 +4,7 @@ export function Hills({ name }:{ name:string }) {
     const [image,setImage] = React.useState<string>("")
     React.useLayoutEffect(()=>{
         if (name !== undefined) {
-            setImage("/assets/bg"+name+".jpg")
+            setImage("/assets/bg_"+name+".jpg")
         }
     },[name])
     return (
@@ -20,7 +20,7 @@ export function Forest({ name }:{ name:string }) {
     const [image,setImage] = React.useState<string>("")
     React.useLayoutEffect(()=>{
         if (name !== undefined) {
-            setImage("/assets/bg"+name+".jpg")
+            setImage("/assets/bg_"+name+".jpg")
         }
     },[name])
     return (

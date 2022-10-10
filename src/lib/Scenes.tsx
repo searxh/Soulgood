@@ -19,7 +19,7 @@ export const scenes:Array<SceneDialogue> = [
             content:"โอ๊ะ สวัสดี เธอคือ soul ที่ลงมาเหรอ"
         },
         background:{
-            name:"1"
+            name:"hills"
         },
         next:'default',
     },
@@ -31,7 +31,7 @@ export const scenes:Array<SceneDialogue> = [
             content:"ไม่สิ ไม่ใช่ Soul คือ จิตวิญญาณ เธอยังไม่ตายหรอกนะ ฉันด้วย"
         },
         background:{
-            name:"1"
+            name:"hills"
         },
         next:'default',
     },
@@ -43,7 +43,7 @@ export const scenes:Array<SceneDialogue> = [
             content:"เเต่ว่าตอนนี้ เมืองที่เราอยู่ กําลังเจอปัญหาใหญ่ เเสงที่หล่อเลี้ยงเมืองนี้กําลังจะดับลง"
         },
         background:{
-            name:"1"
+            name:"hills"
         },
         next:'default',
     },
