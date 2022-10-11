@@ -11,7 +11,7 @@ export interface ContentType {
     subContent:string,
     subContent1:string,
 }
-interface SceneDialogue {
+interface SceneType {
     id:number
     dialogue:{ type:string, content:string | ContentType }
     characters:Array<CharacterType>
@@ -19,7 +19,7 @@ interface SceneDialogue {
     next:string | Array<number>
 }
 
-export const scenes:Array<SceneDialogue> = [
+export const scenes:Array<SceneType> = [
     {
         id:0,
         characters:[
