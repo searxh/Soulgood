@@ -1,6 +1,6 @@
 import React from 'react'
 import { GlobalContext } from '../states'
-import { scenes } from '../lib/Scenes'
+import { LocationType, scenes } from '../lib/Scenes'
 import { Input, Them, Us } from '../lib/Dialogue'
 import { Soul } from '../lib/Characters'
 import { Forest, Hills } from '../lib/Background'
@@ -24,6 +24,7 @@ export default function Story() {
                                 key={index} 
                                 name={character.name} 
                                 state={character.state}
+                                location={character.location}
                             />
                         )
                     })
@@ -52,11 +53,11 @@ export default function Story() {
     )
 }
 
-function Character({ name, state }:{ name:string, state:string }) {
+function Character({ name, state, location }:{ name:string, state:string, location:LocationType }) {
     return (
         <>
             {name==="soul"?
-                <Soul state={state} />:
+                <Soul state={state} location={location} />:
             null}
         </>
     )
