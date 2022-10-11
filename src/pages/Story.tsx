@@ -1,15 +1,12 @@
 import React from 'react'
 import { GlobalContext } from '../states'
-import { LocationType, scenes } from '../lib/Scenes'
-import { Input, Them, Us } from '../lib/Dialogue'
+import { ContentType, LocationType, scenes } from '../lib/Scenes'
+import { Choice, Input, Them, Us } from '../lib/Dialogue'
 import { Soul } from '../lib/Characters'
 import { Forest, Hills } from '../lib/Background'
 
 export default function Story() {
     const { global_state }:any = React.useContext(GlobalContext)
-    React.useEffect(()=>{
-        console.log(global_state.scene)
-    },[global_state.scene])
     const filteredScenes = React.useMemo(()=>{
         return scenes.filter((sceneObj)=>global_state.scene===sceneObj.id)
     },[global_state.scene])
@@ -36,6 +33,7 @@ export default function Story() {
                             key={index} 
                             type={sceneObj.dialogue.type} 
                             content={sceneObj.dialogue.content}
+                            next={sceneObj.next}
                         />
                     )
                 })}
@@ -53,7 +51,10 @@ export default function Story() {
     )
 }
 
-function Character({ name, state, location }:{ name:string, state:string, location:LocationType }) {
+function Character(
+    { name, state, location }:
+    { name:string, state:string, location:LocationType }
+){
     return (
         <>
             {name==="soul"?
@@ -63,15 +64,30 @@ function Character({ name, state, location }:{ name:string, state:string, locati
     )
 }
 
-function Dialogue({ type, content }:{ type:string, content:string }) {
+function Dialogue(
+    { type, content, next }:
+    { type:string, content:string | ContentType, next:string | Array<number> }
+){
     return (
         <>
             {type==="them"?
-                <Them content={content} />:
+                <Them 
+                    content={content as string}
+                    next={next}
+                />:
             type==="us"?
-                <Us content={content} />:
+                <Us 
+                    content={content as string}
+                />:
             type==="input"?
-                <Input content={content} />:
+                <Input 
+                    content={content as string}
+                />:
+            type==="choice"?
+                <Choice 
+                    content={content as ContentType}
+                    next={next}
+                />:
             null}
         </>
     )
