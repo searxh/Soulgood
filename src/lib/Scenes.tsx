@@ -48,10 +48,10 @@ export const scenes:Array<SceneDialogue> = [
     },
     {
         id:2,
-        characters:[{ name:"soul", state:"worried", location:{ top:"top-[40%]", left:"left-[40%]"} }],
+        characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
         dialogue:{
             type:"them",
-            content:"เเต่ว่าตอนนี้ เมืองที่เราอยู่ กําลังเจอปัญหาใหญ่ เเสงที่หล่อเลี้ยงเมืองนี้กําลังจะดับลง"
+            content:"Nice to meet you, follow me!"
         },
         background:{
             name:"hills"
@@ -60,7 +60,7 @@ export const scenes:Array<SceneDialogue> = [
     },
     {
         id:3,
-        characters:[{ name:"soul", state:"worried", location:{ top:"top-[40%]", left:"left-[40%]"} }],
+        characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
         dialogue:{
             type:"choice",
             content:{
