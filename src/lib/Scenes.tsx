@@ -46,6 +46,17 @@ export const scenes:Array<SceneType> = [
     {
         characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
         dialogue:{
+            type:"input",
+            content:"What is your name?"
+        },
+        background:{
+            name:"hills"
+        },
+        next:'default',
+    },
+    {
+        characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
+        dialogue:{
             type:"them",
             content:"Nice to meet you, follow me!"
         },
@@ -66,7 +77,7 @@ export const scenes:Array<SceneType> = [
         background:{
             name:"hills"
         },
-        next:[4,6],
+        next:[5,7],
     },
     {
         characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
@@ -88,7 +99,7 @@ export const scenes:Array<SceneType> = [
         background:{
             name:"hills"
         },
-        next:[8],
+        next:[9],
     },
     {
         characters:[{ name:"soul", state:"worried", location:{ top:"top-[40%]", left:"left-[40%]"} }],

@@ -56,12 +56,44 @@ export function Us({ content }:{ content:string }) {
     )
 }
 
-export function Input({ content }:{ content:string }) {
+export function Input({ content, next }:{ content:string, next:string | Array<Number> }) {
+    const inputRef = React.useRef<any>(null)
+    const { global_state, dispatch }:any = React.useContext(GlobalContext)
+    const { scene } = global_state
+    const sceneRouter = () => {
+        //routing for jumping back to main route
+        if (next==="default") {
+            return scene+1
+        //routing for jumping back to main route
+        } else {
+            return next[0]
+        }
+    }
+    React.useEffect(()=>{
+        if (global_state.name !== "") {
+            dispatch({ type:"set", field:"scene", payload:sceneRouter() })
+        }
+    },[global_state.name])
     return (
         <div
-            className="bg-white text-black text-center p-5 m-2"
+            className="absolute bg-white text-black border-black border-2
+            text-center p-5 z-10 left-0 right-0 mx-auto bottom-5 w-[90%] shadow-md"
         >
             {content}
+            <form
+                className="flex"
+                onSubmit={(e)=>{
+                    e.preventDefault()
+                    if (inputRef.current !== null) {
+                        dispatch({ type:"set", field:"name", payload:inputRef.current.value })
+                    }
+                }}
+            >
+                <input 
+                    ref={inputRef}
+                    className="bg-black text-white flex-1 p-2"
+                />
+            </form>
         </div>
     )
 }

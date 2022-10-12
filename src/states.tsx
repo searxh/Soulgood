@@ -30,6 +30,9 @@ export function GlobalStateProvider({ children }:any) {
         }
     }
     const [ state, dispatch ] = React.useReducer(reducer, initialState);
+    React.useEffect(()=>{
+        console.log(state)
+    },[state])
     return (
         <GlobalContext.Provider value={{ global_state:state, dispatch:dispatch }}>
             {children}
