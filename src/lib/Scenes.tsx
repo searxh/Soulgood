@@ -58,7 +58,7 @@ export const scenes:Array<SceneType> = [
         characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
         dialogue:{
             type:"them",
-            content:"Nice to meet you, follow me!"
+            content:"Nice to meet you <name>, follow me!"
         },
         background:{
             name:"hills"

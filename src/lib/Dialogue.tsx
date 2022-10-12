@@ -6,7 +6,8 @@ export function Them({ content, next }:{ content:string, next:string | Array<Num
     const [ printing, setPrinting ] = React.useState<boolean>(true)
     const [ displayedContent, setDisplayedContent ] = React.useState<string>("")
     const { global_state, dispatch }:any = React.useContext(GlobalContext)
-    const { scene } = global_state
+    const { name, scene } = global_state
+    let processedContent = content.replace("<name>",name)
     const sceneRouter = () => {
         //routing for jumping back to main route
         if (next==="default") {
@@ -20,10 +21,10 @@ export function Them({ content, next }:{ content:string, next:string | Array<Num
         if (printing) {
             let accumulator = ""
             let delay = 0
-            for (let i = 0; i < content.length; i++) {
+            for (let i = 0; i < processedContent.length; i++) {
                 // eslint-disable-next-line no-loop-func
                 setTimeout(()=>{
-                    accumulator += content[i]
+                    accumulator += processedContent[i]
                     setDisplayedContent(accumulator)
                 },delay)
                 delay += 110
@@ -77,7 +78,7 @@ export function Input({ content, next }:{ content:string, next:string | Array<Nu
     return (
         <div
             className="absolute bg-white text-black border-black border-2
-            text-center p-5 z-10 left-0 right-0 mx-auto bottom-5 w-[90%] shadow-md"
+            text-center p-3 z-10 left-0 right-0 mx-auto bottom-5 w-[90%] shadow-md"
         >
             {content}
             <form
@@ -91,7 +92,8 @@ export function Input({ content, next }:{ content:string, next:string | Array<Nu
             >
                 <input 
                     ref={inputRef}
-                    className="bg-black text-white flex-1 p-2"
+                    autoFocus={true}
+                    className="bg-slate-200 flex-1 p-2 mt-2 border-2 border-black"
                 />
             </form>
         </div>
