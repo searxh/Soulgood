@@ -12,7 +12,6 @@ export interface ContentType {
     subContent1:string,
 }
 interface SceneType {
-    id:number
     dialogue:{ type:string, content:string | ContentType }
     characters:Array<CharacterType>
     background:{ name:string }
@@ -21,7 +20,6 @@ interface SceneType {
 
 export const scenes:Array<SceneType> = [
     {
-        id:0,
         characters:[
             { name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} },
         ],
@@ -35,7 +33,6 @@ export const scenes:Array<SceneType> = [
         next:'default',
     },
     {
-        id:1,
         characters:[{ name:"soul", state:"happy", location:{ top:"top-[40%]", left:"left-[40%]"} }],
         dialogue:{
             type:"them",
@@ -47,7 +44,6 @@ export const scenes:Array<SceneType> = [
         next:'default',
     },
     {
-        id:2,
         characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
         dialogue:{
             type:"them",
@@ -59,7 +55,6 @@ export const scenes:Array<SceneType> = [
         next:'default',
     },
     {
-        id:3,
         characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
         dialogue:{
             type:"choice",
@@ -74,7 +69,6 @@ export const scenes:Array<SceneType> = [
         next:[4,6],
     },
     {
-        id:4,
         characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
         dialogue:{
             type:"them",
@@ -86,7 +80,6 @@ export const scenes:Array<SceneType> = [
         next:'default',
     },
     {
-        id:5,
         characters:[{ name:"soul", state:"worried", location:{ top:"top-[40%]", left:"left-[40%]"} }],
         dialogue:{
             type:"them",
@@ -98,7 +91,6 @@ export const scenes:Array<SceneType> = [
         next:[8],
     },
     {
-        id:6,
         characters:[{ name:"soul", state:"worried", location:{ top:"top-[40%]", left:"left-[40%]"} }],
         dialogue:{
             type:"them",
@@ -110,7 +102,6 @@ export const scenes:Array<SceneType> = [
         next:'default',
     },
     {
-        id:7,
         characters:[{ name:"soul", state:"worried", location:{ top:"top-[40%]", left:"left-[40%]"} }],
         dialogue:{
             type:"them",
@@ -122,7 +113,6 @@ export const scenes:Array<SceneType> = [
         next:'default',
     },
     {
-        id:8,
         characters:[{ name:"soul", state:"worried", location:{ top:"top-[40%]", left:"left-[40%]"} }],
         dialogue:{
             type:"them",

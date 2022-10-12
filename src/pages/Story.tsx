@@ -8,7 +8,7 @@ import { Forest, Hills } from '../lib/Background'
 export default function Story() {
     const { global_state }:any = React.useContext(GlobalContext)
     const filteredScenes = React.useMemo(()=>{
-        return scenes.filter((sceneObj)=>global_state.scene===sceneObj.id)
+        return [scenes[global_state.scene]]
     },[global_state.scene])
     return (
         <div className="">
@@ -82,6 +82,7 @@ function Dialogue(
             type==="input"?
                 <Input 
                     content={content as string}
+                    next={next}
                 />:
             type==="choice"?
                 <Choice 
