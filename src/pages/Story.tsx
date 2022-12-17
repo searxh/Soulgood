@@ -78,6 +78,7 @@ function Dialogue(
             type==="us"?
                 <Us 
                     content={content as string}
+                    next={next}
                 />:
             type==="input"?
                 <Input 
