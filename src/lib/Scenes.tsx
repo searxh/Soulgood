@@ -1,150 +1,230 @@
 interface CharacterType {
-    name:string,
-    state:string
-    location:LocationType
+    name: string;
+    state: string;
+    location: LocationType;
 }
 export interface LocationType {
-    top:string,
-    left:string,
+    top: string;
+    left: string;
 }
 export interface ContentType {
-    subContent:string,
-    subContent1:string,
+    subContent: string;
+    subContent1: string;
 }
 interface SceneType {
-    dialogue:{ type:string, content:string | ContentType }
-    characters:Array<CharacterType>
-    background:{ name:string }
-    next:string | Array<number>
+    dialogue: { type: string; content: string | ContentType };
+    characters: Array<CharacterType>;
+    background: { name: string };
+    next: string | Array<number>;
 }
+/*
+{
+    characters: array to render objects or characters
+    dialogue: specify dialogue type and content
+    background: specify background used
+    next: specify next action 
+        if default -> increment scene by 1 normally
+        else if array -> 
+            array[0] specifies first choice branch length
+            array[1] specifies second choice branch length
+}
+*/
 
-export const scenes:Array<SceneType> = [
+export const scenes: Array<SceneType> = [
     {
-        characters:[
-            { name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} },
+        characters: [
+            {
+                name: "soul",
+                state: "neutral",
+                location: { top: "top-[50%]", left: "left-[50%]" },
+            },
         ],
-        dialogue:{
-            type:"them",
-            content:"โอ๊ะ สวัสดี เธอคือ soul ที่ลงมาเหรอ"
+        dialogue: {
+            type: "them",
+            content: "โอ๊ะ สวัสดี เธอคือ soul ที่ลงมาเหรอ",
         },
-        background:{
-            name:"hills"
+        background: {
+            name: "hills",
         },
-        next:'default',
+        next: "default",
     },
     {
-        characters:[
-            { name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} },
+        characters: [
+            {
+                name: "soul",
+                state: "neutral",
+                location: { top: "top-[40%]", left: "left-[40%]" },
+            },
         ],
-        dialogue:{
-            type:"us",
-            content:"soul? a ghost? did i already die?!"
+        dialogue: {
+            type: "us",
+            content: "soul? a ghost? did i already die?!",
         },
-        background:{
-            name:"hills"
+        background: {
+            name: "hills",
         },
-        next:'default',
+        next: "default",
     },
     {
-        characters:[{ name:"soul", state:"happy", location:{ top:"top-[40%]", left:"left-[40%]"} }],
-        dialogue:{
-            type:"them",
-            content:"ไม่สิ ไม่ใช่ Soul คือ จิตวิญญาณ เธอยังไม่ตายหรอกนะ ฉันด้วย"
+        characters: [
+            {
+                name: "soul",
+                state: "happy",
+                location: { top: "top-[40%]", left: "left-[40%]" },
+            },
+        ],
+        dialogue: {
+            type: "them",
+            content:
+                "ไม่สิ ไม่ใช่ Soul คือ จิตวิญญาณ เธอยังไม่ตายหรอกนะ ฉันด้วย",
         },
-        background:{
-            name:"hills"
+        background: {
+            name: "hills",
         },
-        next:'default',
+        next: "default",
     },
     {
-        characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
-        dialogue:{
-            type:"input",
-            content:"What is your name?"
+        characters: [
+            {
+                name: "soul",
+                state: "neutral",
+                location: { top: "top-[40%]", left: "left-[40%]" },
+            },
+        ],
+        dialogue: {
+            type: "input",
+            content: "What is your name?",
         },
-        background:{
-            name:"hills"
+        background: {
+            name: "hills",
         },
-        next:'default',
+        next: "default",
     },
     {
-        characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
-        dialogue:{
-            type:"them",
-            content:"Nice to meet you <name>, follow me!"
+        characters: [
+            {
+                name: "soul",
+                state: "neutral",
+                location: { top: "top-[40%]", left: "left-[40%]" },
+            },
+        ],
+        dialogue: {
+            type: "them",
+            content: "Nice to meet you <name>, follow me!",
         },
-        background:{
-            name:"hills"
+        background: {
+            name: "hills",
         },
-        next:'default',
+        next: "default",
     },
     {
-        characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
-        dialogue:{
-            type:"choice",
-            content:{
-                subContent:"where is this?",
-                subContent1:"what happened?"
-            }
+        characters: [
+            {
+                name: "soul",
+                state: "neutral",
+                location: { top: "top-[40%]", left: "left-[40%]" },
+            },
+        ],
+        dialogue: {
+            type: "choice",
+            content: {
+                subContent: "where is this?",
+                subContent1: "what happened?",
+            },
         },
-        background:{
-            name:"hills"
+        background: {
+            name: "hills",
         },
-        next:[6,8],
+        next: [2, 4],
     },
     {
-        characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
-        dialogue:{
-            type:"them",
-            content:"this is a place where souls gather to fulfill something before they move on",
+        characters: [
+            {
+                name: "soul",
+                state: "neutral",
+                location: { top: "top-[40%]", left: "left-[40%]" },
+            },
+        ],
+        dialogue: {
+            type: "them",
+            content:
+                "this is a place where souls gather to fulfill something before they move on",
         },
-        background:{
-            name:"hills"
+        background: {
+            name: "hills",
         },
-        next:'default',
+        next: "default",
     },
     {
-        characters:[{ name:"soul", state:"worried", location:{ top:"top-[40%]", left:"left-[40%]"} }],
-        dialogue:{
-            type:"them",
-            content:"เเต่ว่าตอนนี้ เมืองที่เราอยู่ กําลังเจอปัญหาใหญ่ เเสงที่หล่อเลี้ยงเมืองนี้กําลังจะดับลง",
+        characters: [
+            {
+                name: "soul",
+                state: "worried",
+                location: { top: "top-[40%]", left: "left-[40%]" },
+            },
+        ],
+        dialogue: {
+            type: "them",
+            content:
+                "เเต่ว่าตอนนี้ เมืองที่เราอยู่ กําลังเจอปัญหาใหญ่ เเสงที่หล่อเลี้ยงเมืองนี้กําลังจะดับลง",
         },
-        background:{
-            name:"hills"
+        background: {
+            name: "hills",
         },
-        next:[10],
+        next: [10],
     },
     {
-        characters:[{ name:"soul", state:"worried", location:{ top:"top-[40%]", left:"left-[40%]"} }],
-        dialogue:{
-            type:"them",
-            content:"here we are in the city, เมืองที่เราอยู่ กําลังเจอปัญหาใหญ่ เเสงที่หล่อเลี้ยงเมืองนี้กําลังจะดับลง",
+        characters: [
+            {
+                name: "soul",
+                state: "worried",
+                location: { top: "top-[40%]", left: "left-[40%]" },
+            },
+        ],
+        dialogue: {
+            type: "them",
+            content:
+                "here we are in the city, เมืองที่เราอยู่ กําลังเจอปัญหาใหญ่ เเสงที่หล่อเลี้ยงเมืองนี้กําลังจะดับลง",
         },
-        background:{
-            name:"hills"
+        background: {
+            name: "hills",
         },
-        next:'default',
+        next: "default",
     },
     {
-        characters:[{ name:"soul", state:"worried", location:{ top:"top-[40%]", left:"left-[40%]"} }],
-        dialogue:{
-            type:"them",
-            content:"we are souls that reached this city to fulfill something..",
+        characters: [
+            {
+                name: "soul",
+                state: "worried",
+                location: { top: "top-[40%]", left: "left-[40%]" },
+            },
+        ],
+        dialogue: {
+            type: "them",
+            content:
+                "we are souls that reached this city to fulfill something..",
         },
-        background:{
-            name:"hills"
+        background: {
+            name: "hills",
         },
-        next:'default',
+        next: "default",
     },
     {
-        characters:[{ name:"soul", state:"worried", location:{ top:"top-[40%]", left:"left-[40%]"} }],
-        dialogue:{
-            type:"them",
-            content:"it would be really bad if the light stopped shining, we have to help this city!",
+        characters: [
+            {
+                name: "soul",
+                state: "worried",
+                location: { top: "top-[40%]", left: "left-[40%]" },
+            },
+        ],
+        dialogue: {
+            type: "them",
+            content:
+                "it would be really bad if the light stopped shining, we have to help this city!",
         },
-        background:{
-            name:"hills"
+        background: {
+            name: "hills",
         },
-        next:'default',
+        next: "default",
     },
-]
+];

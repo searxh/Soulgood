@@ -8,42 +8,26 @@ import { Forest, Hills } from "../lib/Background";
 export default function Story() {
     const { global_state }: any = React.useContext(GlobalContext);
     const { scene } = global_state;
-    const filteredScenes = React.useMemo(() => {
-        return [scenes[scene]];
-    }, [scene]);
     return (
         <div className="h-screen w-screen overflow-hidden">
             <div className="flex m-auto h-full relative bg-blue-400">
-                {filteredScenes.map((sceneObj) => {
-                    return sceneObj.characters.map((character, index) => {
-                        return (
-                            <Character
-                                key={index}
-                                name={character.name}
-                                state={character.state}
-                                location={character.location}
-                            />
-                        );
-                    });
-                })}
-                {filteredScenes.map((sceneObj, index) => {
+                {scenes[scene].characters.map((character, index) => {
                     return (
-                        <Dialogue
+                        <Character
                             key={index}
-                            type={sceneObj.dialogue.type}
-                            content={sceneObj.dialogue.content}
-                            next={sceneObj.next}
+                            name={character.name}
+                            state={character.state}
+                            location={character.location}
                         />
                     );
                 })}
-                {filteredScenes.map((sceneObj, index) => {
-                    return (
-                        <Background
-                            key={index}
-                            name={sceneObj.background.name}
-                        />
-                    );
-                })}
+                ;
+                <Dialogue
+                    type={scenes[scene].dialogue.type}
+                    content={scenes[scene].dialogue.content}
+                    next={scenes[scene].next}
+                />
+                <Background name={scenes[scene].background.name} />
             </div>
         </div>
     );
