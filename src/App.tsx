@@ -1,15 +1,17 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom'
-import Home from './pages/Home';
-import Story from './pages/Story';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Story from "./pages/Story";
+import Result from "./pages/Result";
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/story" element={<Story />} />
-    </Routes>
-  );
+	return (
+		<Routes>
+			<Route path="/" element={<Home />} />
+			<Route path="/story" element={<Story />} />
+			<Route path="/result" element={<Result />} />
+		</Routes>
+	);
 }
 
 export default App;

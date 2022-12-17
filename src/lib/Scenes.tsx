@@ -33,6 +33,19 @@ export const scenes:Array<SceneType> = [
         next:'default',
     },
     {
+        characters:[
+            { name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} },
+        ],
+        dialogue:{
+            type:"us",
+            content:"soul? a ghost? did i already die?!"
+        },
+        background:{
+            name:"hills"
+        },
+        next:'default',
+    },
+    {
         characters:[{ name:"soul", state:"happy", location:{ top:"top-[40%]", left:"left-[40%]"} }],
         dialogue:{
             type:"them",
@@ -77,7 +90,7 @@ export const scenes:Array<SceneType> = [
         background:{
             name:"hills"
         },
-        next:[5,7],
+        next:[6,8],
     },
     {
         characters:[{ name:"soul", state:"neutral", location:{ top:"top-[40%]", left:"left-[40%]"} }],
@@ -99,7 +112,7 @@ export const scenes:Array<SceneType> = [
         background:{
             name:"hills"
         },
-        next:[9],
+        next:[10],
     },
     {
         characters:[{ name:"soul", state:"worried", location:{ top:"top-[40%]", left:"left-[40%]"} }],
