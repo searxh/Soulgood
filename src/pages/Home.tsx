@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Zoom from "../components/Zoom";
 
 export default function Home() {
     const navigate = useNavigate();
@@ -9,7 +10,7 @@ export default function Home() {
     };
     React.useEffect(() => {
         if (start) {
-            setTimeout(() => navigate("/story"), 1000);
+            setTimeout(() => navigate("/story"), 2000);
         }
     }, [start]);
     return (
@@ -18,7 +19,7 @@ export default function Home() {
         >
             <img
                 className={` ${
-                    start ? "opacity-100 z-50" : "opacity-0 -z-10"
+                    start ? "opacity-100 z-50" : "opacity-0 -z-10 blur-lg"
                 } absolute top-0 bottom-0 right-0 left-0 transition duration-500 m-auto object-center object-cover w-full`}
                 src="/assets/spiral.gif"
                 alt=""
@@ -33,6 +34,7 @@ export default function Home() {
                         src="/assets/logo.png"
                         alt=""
                     />
+                    <Zoom />
                 </div>
                 <button
                     className="text-3xl bg-green-300 rounded-lg border-black font-bold
