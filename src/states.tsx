@@ -35,6 +35,7 @@ export function GlobalStateProvider({ children }: any) {
             case "set":
                 const newState: any = { ...state };
                 newState[action.field as string] = action.payload;
+                save(newState);
                 return newState;
             case "multi-set":
                 if (action.field !== undefined) {

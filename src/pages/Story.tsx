@@ -7,9 +7,10 @@ import { Forest, Hills } from "../lib/Background";
 
 export default function Story() {
     const { global_state }: any = React.useContext(GlobalContext);
+    const { scene } = global_state;
     const filteredScenes = React.useMemo(() => {
-        return [scenes[global_state.scene]];
-    }, [global_state.scene]);
+        return [scenes[scene]];
+    }, [scene]);
     return (
         <div className="h-screen w-screen overflow-hidden">
             <div className="flex m-auto h-full relative bg-blue-400">
