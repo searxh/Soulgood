@@ -152,9 +152,10 @@ export function Input({ content, next }: { content: string; next: any }) {
 }
 
 export function Choice({ content, next }: { content: ContentType; next: any }) {
-    const { global_state, dispatch }: any = React.useContext(GlobalContext);
+    const { global_state, dispatch } = React.useContext(GlobalContext);
     const { scene } = global_state;
     const handleSetChoice = (choice: number) => {
+        console.log(next);
         if (choice === 0) {
             dispatch({ type: "set", field: "scene", payload: scene + 1 });
         } else {

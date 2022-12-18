@@ -15,7 +15,7 @@ export default function Story() {
     const [next, setNext] = React.useState<any>();
     const calculateNext = () => {
         if (branchInfo === null) {
-            return "default";
+            return scenes[scene].next;
         } else {
             const {
                 startBranchIndex,
@@ -29,7 +29,7 @@ export default function Story() {
                 setBranchInfo({ ...branchInfo, choiceTaken: newChoiceTaken });
                 return "default";
             } else if (choiceTaken !== undefined) {
-                //console.log(scene, branchInfo, lastFirstBranchIndex);
+                console.log(scene, branchInfo, lastFirstBranchIndex);
                 if (
                     scene === lastFirstBranchIndex ||
                     scene === endBranchIndex

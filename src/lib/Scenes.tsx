@@ -18,7 +18,7 @@ export const scenes: Array<SceneType> = [
             {
                 name: "soul",
                 state: "neutral",
-                location: { top: "top-[40%]", left: "left-[40%]" },
+                location: { top: "top-[50%]", left: "left-[50%]" },
             },
         ],
         dialogue: {
@@ -35,7 +35,7 @@ export const scenes: Array<SceneType> = [
             {
                 name: "soul",
                 state: "neutral",
-                location: { top: "top-[40%]", left: "left-[40%]" },
+                location: { top: "top-[50%]", left: "left-[50%]" },
             },
         ],
         dialogue: {
@@ -52,7 +52,7 @@ export const scenes: Array<SceneType> = [
             {
                 name: "soul",
                 state: "neutral",
-                location: { top: "top-[40%]", left: "left-[40%]" },
+                location: { top: "top-[50%]", left: "left-[50%]" },
             },
         ],
         dialogue: {
@@ -72,7 +72,7 @@ export const scenes: Array<SceneType> = [
             {
                 name: "soul",
                 state: "neutral",
-                location: { top: "top-[40%]", left: "left-[40%]" },
+                location: { top: "top-[50%]", left: "left-[50%]" },
             },
         ],
         dialogue: {
@@ -89,7 +89,7 @@ export const scenes: Array<SceneType> = [
             {
                 name: "soul",
                 state: "worried",
-                location: { top: "top-[40%]", left: "left-[40%]" },
+                location: { top: "top-[50%]", left: "left-[50%]" },
             },
         ],
         dialogue: {
@@ -106,7 +106,7 @@ export const scenes: Array<SceneType> = [
             {
                 name: "soul",
                 state: "worried",
-                location: { top: "top-[40%]", left: "left-[40%]" },
+                location: { top: "top-[50%]", left: "left-[50%]" },
             },
         ],
         dialogue: {
@@ -123,7 +123,7 @@ export const scenes: Array<SceneType> = [
             {
                 name: "soul",
                 state: "happy",
-                location: { top: "top-[40%]", left: "left-[40%]" },
+                location: { top: "top-[50%]", left: "left-[50%]" },
             },
         ],
         dialogue: {
@@ -140,7 +140,7 @@ export const scenes: Array<SceneType> = [
             {
                 name: "soul",
                 state: "neutral",
-                location: { top: "top-[40%]", left: "left-[40%]" },
+                location: { top: "top-[50%]", left: "left-[50%]" },
             },
         ],
         dialogue: {
@@ -157,7 +157,7 @@ export const scenes: Array<SceneType> = [
             {
                 name: "soul",
                 state: "worried",
-                location: { top: "top-[40%]", left: "left-[40%]" },
+                location: { top: "top-[50%]", left: "left-[50%]" },
             },
         ],
         dialogue: {
@@ -166,6 +166,40 @@ export const scenes: Array<SceneType> = [
         },
         background: {
             name: "hills",
+        },
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "soul",
+                state: "worried",
+                location: { top: "top-[50%]", left: "left-[50%]" },
+            },
+        ],
+        dialogue: {
+            type: "them",
+            content: "yooo",
+        },
+        background: {
+            name: "hills",
+        },
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "soul",
+                state: "worried",
+                location: { top: "top-[50%]", left: "left-[50%]" },
+            },
+        ],
+        dialogue: {
+            type: "them",
+            content: "that's nice",
+        },
+        background: {
+            name: "forest",
         },
         next: "default",
     },
