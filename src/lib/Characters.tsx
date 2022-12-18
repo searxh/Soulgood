@@ -1,13 +1,19 @@
-import React from 'react'
-import { LocationType } from './Scenes'
+import React from "react";
+import { LocationType } from "../types";
 
-export function Soul({ state, location }:{ state:string, location:LocationType }) {
-    const [image,setImage] = React.useState<string>("")
-    React.useLayoutEffect(()=>{
+export function Soul({
+    state,
+    location,
+}: {
+    state: string;
+    location: LocationType;
+}) {
+    const [image, setImage] = React.useState<string>("");
+    React.useLayoutEffect(() => {
         if (state !== undefined) {
-            setImage("/assets/soul_"+state+".png")
+            setImage("/assets/soul_" + state + ".png");
         }
-    },[state])
+    }, [state]);
     return (
         <img
             src={image}
@@ -15,5 +21,5 @@ export function Soul({ state, location }:{ state:string, location:LocationType }
             h-[20%] animate-bob z-10 object-contain`}
             alt=""
         />
-    )
+    );
 }

@@ -1,15 +1,9 @@
 import React from "react";
 import { delayInterval } from "../default";
 import { GlobalContext } from "../states";
-import { ContentType } from "./Scenes";
+import { ContentType } from "../types";
 
-export function Them({
-    content,
-    next,
-}: {
-    content: string;
-    next: string | Array<Number>;
-}) {
+export function Them({ content, next }: { content: string; next: any }) {
     const [printing, setPrinting] = React.useState<boolean>(true);
     const [displayedContent, setDisplayedContent] = React.useState<string>("");
     const { global_state, dispatch } = React.useContext(GlobalContext);
@@ -17,11 +11,12 @@ export function Them({
     let processedContent = content.replace("<name>", name);
     const sceneRouter = () => {
         //routing for jumping back to main route
+        console.log("THEM - ", next);
         if (next === "default") {
             return scene + 1;
             //routing for jumping back to main route
         } else {
-            return next[0];
+            return next;
         }
     };
     React.useEffect(() => {
@@ -58,13 +53,7 @@ export function Them({
     );
 }
 
-export function Us({
-    content,
-    next,
-}: {
-    content: string;
-    next: string | Array<Number>;
-}) {
+export function Us({ content, next }: { content: string; next: any }) {
     const [printing, setPrinting] = React.useState<boolean>(true);
     const [displayedContent, setDisplayedContent] = React.useState<string>("");
     const { global_state, dispatch } = React.useContext(GlobalContext);
@@ -76,7 +65,7 @@ export function Us({
             return scene + 1;
             //routing for jumping back to main route
         } else {
-            return next[0];
+            return next;
         }
     };
     React.useEffect(() => {
@@ -115,13 +104,7 @@ export function Us({
     );
 }
 
-export function Input({
-    content,
-    next,
-}: {
-    content: string;
-    next: string | Array<Number>;
-}) {
+export function Input({ content, next }: { content: string; next: any }) {
     const inputRef = React.useRef<HTMLInputElement>(null);
     const { global_state, dispatch } = React.useContext(GlobalContext);
     const { name, scene } = global_state;
@@ -131,7 +114,7 @@ export function Input({
             return scene + 1;
             //routing for jumping back to main route
         } else {
-            return next[0];
+            return next;
         }
     };
     React.useEffect(() => {
@@ -168,33 +151,34 @@ export function Input({
     );
 }
 
-export function Choice({
-    content,
-    next,
-}: {
-    content: ContentType;
-    next: string | Array<Number>;
-}) {
-    const [choice, setChoice] = React.useState<number>(-1);
-    const { dispatch }: any = React.useContext(GlobalContext);
-    React.useEffect(() => {
-        if (choice !== -1)
-            dispatch({ type: "set", field: "scene", payload: next[choice] });
-    }, [choice]);
+export function Choice({ content, next }: { content: ContentType; next: any }) {
+    const { global_state, dispatch }: any = React.useContext(GlobalContext);
+    const { scene } = global_state;
+    const handleSetChoice = (choice: number) => {
+        if (choice === 0) {
+            dispatch({ type: "set", field: "scene", payload: scene + 1 });
+        } else {
+            dispatch({
+                type: "set",
+                field: "scene",
+                payload: scene + next[0] + 1,
+            });
+        }
+    };
     return (
         <div
             className="flex absolute justify-evenly
             z-10 left-0 right-0 mx-auto bottom-5 w-[90%] shadow-md"
         >
             <button
-                onClick={() => setChoice(0)}
+                onClick={() => handleSetChoice(0)}
                 className="flex-1 bg-white border-black 
                 border-2 text-center p-5 mr-2 hover:scale-[102%] transition"
             >
                 {content.subContent}
             </button>
             <button
-                onClick={() => setChoice(1)}
+                onClick={() => handleSetChoice(1)}
                 className="flex-1 bg-white border-black 
                 border-2 text-center p-5 ml-2 hover:scale-[102%] transition"
             >

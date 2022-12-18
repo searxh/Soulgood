@@ -1,22 +1,4 @@
-interface CharacterType {
-    name: string;
-    state: string;
-    location: LocationType;
-}
-export interface LocationType {
-    top: string;
-    left: string;
-}
-export interface ContentType {
-    subContent: string;
-    subContent1: string;
-}
-interface SceneType {
-    dialogue: { type: string; content: string | ContentType };
-    characters: Array<CharacterType>;
-    background: { name: string };
-    next: string | Array<number>;
-}
+import { SceneType } from "../types";
 /*
 {
     characters: array to render objects or characters
@@ -31,58 +13,6 @@ interface SceneType {
 */
 
 export const scenes: Array<SceneType> = [
-    {
-        characters: [
-            {
-                name: "soul",
-                state: "neutral",
-                location: { top: "top-[50%]", left: "left-[50%]" },
-            },
-        ],
-        dialogue: {
-            type: "them",
-            content: "โอ๊ะ สวัสดี เธอคือ soul ที่ลงมาเหรอ",
-        },
-        background: {
-            name: "hills",
-        },
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "soul",
-                state: "neutral",
-                location: { top: "top-[40%]", left: "left-[40%]" },
-            },
-        ],
-        dialogue: {
-            type: "us",
-            content: "soul? a ghost? did i already die?!",
-        },
-        background: {
-            name: "hills",
-        },
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "soul",
-                state: "happy",
-                location: { top: "top-[40%]", left: "left-[40%]" },
-            },
-        ],
-        dialogue: {
-            type: "them",
-            content:
-                "ไม่สิ ไม่ใช่ Soul คือ จิตวิญญาณ เธอยังไม่ตายหรอกนะ ฉันด้วย",
-        },
-        background: {
-            name: "hills",
-        },
-        next: "default",
-    },
     {
         characters: [
             {
@@ -135,7 +65,7 @@ export const scenes: Array<SceneType> = [
         background: {
             name: "hills",
         },
-        next: [2, 4],
+        next: [2, 3],
     },
     {
         characters: [
@@ -147,8 +77,7 @@ export const scenes: Array<SceneType> = [
         ],
         dialogue: {
             type: "them",
-            content:
-                "this is a place where souls gather to fulfill something before they move on",
+            content: "1",
         },
         background: {
             name: "hills",
@@ -165,26 +94,7 @@ export const scenes: Array<SceneType> = [
         ],
         dialogue: {
             type: "them",
-            content:
-                "เเต่ว่าตอนนี้ เมืองที่เราอยู่ กําลังเจอปัญหาใหญ่ เเสงที่หล่อเลี้ยงเมืองนี้กําลังจะดับลง",
-        },
-        background: {
-            name: "hills",
-        },
-        next: [10],
-    },
-    {
-        characters: [
-            {
-                name: "soul",
-                state: "worried",
-                location: { top: "top-[40%]", left: "left-[40%]" },
-            },
-        ],
-        dialogue: {
-            type: "them",
-            content:
-                "here we are in the city, เมืองที่เราอยู่ กําลังเจอปัญหาใหญ่ เเสงที่หล่อเลี้ยงเมืองนี้กําลังจะดับลง",
+            content: "1",
         },
         background: {
             name: "hills",
@@ -201,8 +111,41 @@ export const scenes: Array<SceneType> = [
         ],
         dialogue: {
             type: "them",
-            content:
-                "we are souls that reached this city to fulfill something..",
+            content: "2",
+        },
+        background: {
+            name: "hills",
+        },
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "soul",
+                state: "happy",
+                location: { top: "top-[40%]", left: "left-[40%]" },
+            },
+        ],
+        dialogue: {
+            type: "them",
+            content: "2",
+        },
+        background: {
+            name: "hills",
+        },
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "soul",
+                state: "neutral",
+                location: { top: "top-[40%]", left: "left-[40%]" },
+            },
+        ],
+        dialogue: {
+            type: "them",
+            content: "2",
         },
         background: {
             name: "hills",
@@ -219,8 +162,7 @@ export const scenes: Array<SceneType> = [
         ],
         dialogue: {
             type: "them",
-            content:
-                "it would be really bad if the light stopped shining, we have to help this city!",
+            content: "you're back on track",
         },
         background: {
             name: "hills",

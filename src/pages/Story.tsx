@@ -1,13 +1,62 @@
 import React from "react";
 import { GlobalContext } from "../states";
-import { ContentType, LocationType, scenes } from "../lib/Scenes";
+import { ContentType, LocationType } from "../types";
+import { scenes } from "../lib/Scenes";
 import { Choice, Input, Them, Us } from "../lib/Dialogue";
 import { Soul } from "../lib/Characters";
 import { Forest, Hills } from "../lib/Background";
+import { BranchInfoInterface } from "../types";
 
 export default function Story() {
-    const { global_state }: any = React.useContext(GlobalContext);
+    const { global_state } = React.useContext(GlobalContext);
     const { scene } = global_state;
+    const [branchInfo, setBranchInfo] =
+        React.useState<BranchInfoInterface | null>(null);
+    const [next, setNext] = React.useState<any>();
+    const calculateNext = () => {
+        if (branchInfo === null) {
+            return "default";
+        } else {
+            const {
+                startBranchIndex,
+                choiceTaken,
+                firstBranchLength,
+                endBranchIndex,
+            } = branchInfo;
+            const lastFirstBranchIndex = startBranchIndex + firstBranchLength;
+            if (scene !== startBranchIndex && choiceTaken === undefined) {
+                const newChoiceTaken = scene <= lastFirstBranchIndex ? 0 : 1;
+                setBranchInfo({ ...branchInfo, choiceTaken: newChoiceTaken });
+                return "default";
+            } else if (choiceTaken !== undefined) {
+                //console.log(scene, branchInfo, lastFirstBranchIndex);
+                if (
+                    scene === lastFirstBranchIndex ||
+                    scene === endBranchIndex
+                ) {
+                    console.log("go to end branch");
+                    setBranchInfo(null);
+                    return endBranchIndex + 1;
+                } else {
+                    return "default";
+                }
+            }
+            return scenes[scene].next;
+        }
+    };
+    React.useLayoutEffect(() => {
+        if (Array.isArray(scenes[scene].next)) {
+            const a = scenes[scene].next[0] as number;
+            const b = scenes[scene].next[1] as number;
+            setBranchInfo({
+                startBranchIndex: scene,
+                endBranchIndex: scene + a + b,
+                firstBranchLength: a,
+                secondBranchLength: b,
+            });
+        }
+        setNext(calculateNext());
+    }, [scene]);
     return (
         <div className="h-screen w-screen overflow-hidden">
             <div className="flex m-auto h-full relative bg-blue-400">
@@ -21,11 +70,10 @@ export default function Story() {
                         />
                     );
                 })}
-                ;
                 <Dialogue
                     type={scenes[scene].dialogue.type}
                     content={scenes[scene].dialogue.content}
-                    next={scenes[scene].next}
+                    next={next}
                 />
                 <Background name={scenes[scene].background.name} />
             </div>
@@ -58,8 +106,9 @@ function Dialogue({
 }: {
     type: string;
     content: string | ContentType;
-    next: string | Array<number>;
+    next: any;
 }) {
+    console.log(type, content, next);
     return (
         <>
             {type === "them" ? (
