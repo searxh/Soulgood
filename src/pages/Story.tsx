@@ -1,6 +1,6 @@
 import React from "react";
 import { GlobalContext } from "../states";
-import { ContentType, LocationType } from "../types";
+import { ContentInterface, LocationInterface } from "../types";
 import { scenes } from "../lib/Scenes";
 import { Choice, Input, Them, Us } from "../lib/Dialogue";
 import { Soul } from "../lib/Characters";
@@ -70,11 +70,16 @@ export default function Story() {
                         />
                     );
                 })}
-                <Dialogue
-                    type={scenes[scene].dialogue.type}
-                    content={scenes[scene].dialogue.content}
-                    next={next}
-                />
+                {scenes[scene].dialogues.map((dialogue, index) => {
+                    return (
+                        <Dialogue
+                            key={index}
+                            type={dialogue.type}
+                            content={dialogue.content}
+                            next={next}
+                        />
+                    );
+                })}
                 <Background name={scenes[scene].background.name} />
             </div>
         </div>
@@ -88,7 +93,7 @@ function Character({
 }: {
     name: string;
     state: string;
-    location: LocationType;
+    location: LocationInterface;
 }) {
     return (
         <>
@@ -105,7 +110,7 @@ function Dialogue({
     next,
 }: {
     type: string;
-    content: string | ContentType;
+    content: string | ContentInterface;
     next: any;
 }) {
     console.log(type, content, next);
@@ -118,7 +123,7 @@ function Dialogue({
             ) : type === "input" ? (
                 <Input content={content as string} next={next} />
             ) : type === "choice" ? (
-                <Choice content={content as ContentType} next={next} />
+                <Choice content={content as ContentInterface} next={next} />
             ) : null}
         </>
     );

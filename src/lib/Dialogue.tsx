@@ -1,7 +1,7 @@
 import React from "react";
 import { delayInterval } from "../default";
 import { GlobalContext } from "../states";
-import { ContentType } from "../types";
+import { ContentInterface } from "../types";
 
 export function Them({ content, next }: { content: string; next: any }) {
     const [printing, setPrinting] = React.useState<boolean>(true);
@@ -46,7 +46,7 @@ export function Them({ content, next }: { content: string; next: any }) {
                 setPrinting(true);
             }}
             className="absolute bg-white text-black border-black border-2
-            text-center p-5 z-10 left-0 right-0 mx-auto bottom-5 w-[90%] shadow-md"
+            text-center p-5 z-10 left-0 right-0 mx-auto top-5 w-[90%] shadow-md"
         >
             {displayedContent}
         </button>
@@ -151,7 +151,13 @@ export function Input({ content, next }: { content: string; next: any }) {
     );
 }
 
-export function Choice({ content, next }: { content: ContentType; next: any }) {
+export function Choice({
+    content,
+    next,
+}: {
+    content: ContentInterface;
+    next: any;
+}) {
     const { global_state, dispatch } = React.useContext(GlobalContext);
     const { scene } = global_state;
     const handleSetChoice = (choice: number) => {

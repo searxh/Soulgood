@@ -1,20 +1,24 @@
 import { Dispatch } from "react";
-export interface CharacterType {
+export interface CharacterInterface {
     name: string;
     state: string;
-    location: LocationType;
+    location: LocationInterface;
 }
-export interface LocationType {
+export interface LocationInterface {
     top: string;
     left: string;
 }
-export interface ContentType {
+export interface ContentInterface {
     subContent: string;
     subContent1: string;
 }
-export interface SceneType {
-    dialogue: { type: string; content: string | ContentType };
-    characters: Array<CharacterType>;
+export interface DialogueInterface {
+    type: string;
+    content: string | ContentInterface;
+}
+export interface SceneInterface {
+    dialogues: Array<DialogueInterface>;
+    characters: Array<CharacterInterface>;
     background: { name: string };
     next: string | Array<number>;
     //extra param for visual purpose only

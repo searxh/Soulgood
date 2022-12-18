@@ -1,12 +1,12 @@
 import React from "react";
-import { LocationType } from "../types";
+import { LocationInterface } from "../types";
 
 export function Soul({
     state,
     location,
 }: {
     state: string;
-    location: LocationType;
+    location: LocationInterface;
 }) {
     const [image, setImage] = React.useState<string>("");
     React.useLayoutEffect(() => {

@@ -1,4 +1,4 @@
-import { SceneType } from "../types";
+import { SceneInterface } from "../types";
 /*
 {
     characters: array to render objects or characters
@@ -12,7 +12,7 @@ import { SceneType } from "../types";
 }
 */
 
-export const scenes: Array<SceneType> = [
+export const scenes: Array<SceneInterface> = [
     {
         characters: [
             {
@@ -21,27 +21,12 @@ export const scenes: Array<SceneType> = [
                 location: { top: "top-[50%]", left: "left-[50%]" },
             },
         ],
-        dialogue: {
-            type: "input",
-            content: "What is your name?",
-        },
-        background: {
-            name: "hills",
-        },
-        next: "default",
-    },
-    {
-        characters: [
+        dialogues: [
             {
-                name: "soul",
-                state: "neutral",
-                location: { top: "top-[50%]", left: "left-[50%]" },
+                type: "input",
+                content: "What is your name?",
             },
         ],
-        dialogue: {
-            type: "them",
-            content: "Nice to meet you <name>, follow me!",
-        },
         background: {
             name: "hills",
         },
@@ -55,156 +40,14 @@ export const scenes: Array<SceneType> = [
                 location: { top: "top-[50%]", left: "left-[50%]" },
             },
         ],
-        dialogue: {
-            type: "choice",
-            content: {
-                subContent: "where is this?",
-                subContent1: "what happened?",
-            },
-        },
-        background: {
-            name: "hills",
-        },
-        next: [2, 3],
-    },
-    {
-        branch: 1,
-        characters: [
+        dialogues: [
             {
-                name: "soul",
-                state: "neutral",
-                location: { top: "top-[50%]", left: "left-[50%]" },
+                type: "them",
+                content: "Nice to meet you <name>, follow me!",
             },
         ],
-        dialogue: {
-            type: "them",
-            content: "1",
-        },
         background: {
             name: "hills",
-        },
-        next: "default",
-    },
-    {
-        branch: 1,
-        characters: [
-            {
-                name: "soul",
-                state: "worried",
-                location: { top: "top-[50%]", left: "left-[50%]" },
-            },
-        ],
-        dialogue: {
-            type: "them",
-            content: "1",
-        },
-        background: {
-            name: "hills",
-        },
-        next: "default",
-    },
-    {
-        branch: 2,
-        characters: [
-            {
-                name: "soul",
-                state: "worried",
-                location: { top: "top-[50%]", left: "left-[50%]" },
-            },
-        ],
-        dialogue: {
-            type: "them",
-            content: "2",
-        },
-        background: {
-            name: "hills",
-        },
-        next: "default",
-    },
-    {
-        branch: 2,
-        characters: [
-            {
-                name: "soul",
-                state: "happy",
-                location: { top: "top-[50%]", left: "left-[50%]" },
-            },
-        ],
-        dialogue: {
-            type: "them",
-            content: "2",
-        },
-        background: {
-            name: "hills",
-        },
-        next: "default",
-    },
-    {
-        branch: 2,
-        characters: [
-            {
-                name: "soul",
-                state: "neutral",
-                location: { top: "top-[50%]", left: "left-[50%]" },
-            },
-        ],
-        dialogue: {
-            type: "them",
-            content: "2",
-        },
-        background: {
-            name: "hills",
-        },
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "soul",
-                state: "worried",
-                location: { top: "top-[50%]", left: "left-[50%]" },
-            },
-        ],
-        dialogue: {
-            type: "them",
-            content: "you're back on track",
-        },
-        background: {
-            name: "hills",
-        },
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "soul",
-                state: "worried",
-                location: { top: "top-[50%]", left: "left-[50%]" },
-            },
-        ],
-        dialogue: {
-            type: "them",
-            content: "yooo",
-        },
-        background: {
-            name: "hills",
-        },
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "soul",
-                state: "worried",
-                location: { top: "top-[50%]", left: "left-[50%]" },
-            },
-        ],
-        dialogue: {
-            type: "them",
-            content: "that's nice",
-        },
-        background: {
-            name: "forest",
         },
         next: "default",
     },
