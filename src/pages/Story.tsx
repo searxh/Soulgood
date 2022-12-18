@@ -58,7 +58,7 @@ export default function Story() {
         setNext(calculateNext());
     }, [scene]);
     return (
-        <div className="h-screen w-screen overflow-hidden">
+        <div className="h-screen w-screen overflow-hidden font-mitr">
             <div className="flex m-auto h-full relative bg-blue-400">
                 {scenes[scene].characters.map((character, index) => {
                     return (

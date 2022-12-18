@@ -45,8 +45,8 @@ export function Them({ content, next }: { content: string; next: any }) {
                 });
                 setPrinting(true);
             }}
-            className="absolute bg-white text-black border-black border-2
-            text-center p-5 z-10 left-0 right-0 mx-auto top-5 w-[90%] shadow-md"
+            className="absolute bg-white text-black rounded-3xl text-xl
+            text-center p-5 py-10 z-10 left-0 right-0 mx-auto top-5 w-[80%] shadow-md"
         >
             {displayedContent}
         </button>
@@ -95,8 +95,8 @@ export function Us({ content, next }: { content: string; next: any }) {
                     });
                     setPrinting(true);
                 }}
-                className="absolute bg-white text-black border-black border-2 rounded-full
-            text-center p-5 z-10 left-0 right-0 mx-auto bottom-5 w-[90%] shadow-md"
+                className="absolute bg-white text-black rounded-full
+            text-center p-5 py-5 text-xl z-10 left-0 right-0 mx-auto bottom-5 w-[80%] shadow-md"
             >
                 {displayedContent}
             </button>
@@ -124,8 +124,8 @@ export function Input({ content, next }: { content: string; next: any }) {
     }, [name]);
     return (
         <div
-            className="absolute bg-white text-black border-black border-2
-            text-center p-3 z-10 left-0 right-0 mx-auto bottom-5 w-[90%] shadow-md"
+            className="absolute bg-white text-black rounded-full
+            text-center p-3 z-10 left-0 right-0 mx-auto bottom-5 w-[80%] shadow-md text-xl"
         >
             {content}
             <form
@@ -144,7 +144,8 @@ export function Input({ content, next }: { content: string; next: any }) {
                 <input
                     ref={inputRef}
                     autoFocus={true}
-                    className="bg-slate-200 flex-1 p-2 mt-2 border-2 border-black"
+                    className="bg-slate-200 w-[80%] mx-auto p-2 mt-2 border-2
+                     border-black rounded-full"
                 />
             </form>
         </div>
@@ -174,20 +175,20 @@ export function Choice({
     };
     return (
         <div
-            className="flex absolute justify-evenly
-            z-10 left-0 right-0 mx-auto bottom-5 w-[90%] shadow-md"
+            className="flex absolute justify-evenly text-xl
+            z-10 left-0 right-0 mx-auto bottom-5 w-[90%]"
         >
             <button
                 onClick={() => handleSetChoice(0)}
-                className="flex-1 bg-white border-black 
-                border-2 text-center p-5 mr-2 hover:scale-[102%] transition"
+                className="flex-1 bg-white rounded-full shadow-md
+                text-center p-5 mr-2 hover:scale-[102%] transition"
             >
                 {content.subContent}
             </button>
             <button
                 onClick={() => handleSetChoice(1)}
-                className="flex-1 bg-white border-black 
-                border-2 text-center p-5 ml-2 hover:scale-[102%] transition"
+                className="flex-1 bg-white rounded-full shadow-md
+                text-center p-5 ml-2 hover:scale-[102%] transition"
             >
                 {content.subContent1}
             </button>

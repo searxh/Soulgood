@@ -16,7 +16,9 @@ const getSessionData = () => {
         save(initialState);
         return initialState;
     } else {
-        return load();
+        return initialState;
+        //disable scene saving
+        //return load();
     }
 };
 

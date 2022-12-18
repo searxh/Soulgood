@@ -17,6 +17,9 @@ module.exports = {
       '7xl': '5rem',
     },
     extend: {
+      fontFamily:{
+        "mitr":"Mitr"
+      },
       keyframes:{
         bob:{
           '0%, 100%': { transform: ['rotate(-3deg)','translateY(-5%)'] },
