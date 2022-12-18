@@ -68,6 +68,7 @@ export const scenes: Array<SceneType> = [
         next: [2, 3],
     },
     {
+        branch: 1,
         characters: [
             {
                 name: "soul",
@@ -85,6 +86,7 @@ export const scenes: Array<SceneType> = [
         next: "default",
     },
     {
+        branch: 1,
         characters: [
             {
                 name: "soul",
@@ -102,6 +104,7 @@ export const scenes: Array<SceneType> = [
         next: "default",
     },
     {
+        branch: 2,
         characters: [
             {
                 name: "soul",
@@ -119,6 +122,7 @@ export const scenes: Array<SceneType> = [
         next: "default",
     },
     {
+        branch: 2,
         characters: [
             {
                 name: "soul",
@@ -136,6 +140,7 @@ export const scenes: Array<SceneType> = [
         next: "default",
     },
     {
+        branch: 2,
         characters: [
             {
                 name: "soul",

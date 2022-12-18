@@ -17,6 +17,8 @@ export interface SceneType {
     characters: Array<CharacterType>;
     background: { name: string };
     next: string | Array<number>;
+    //extra param for visual purpose only
+    branch?: number;
 }
 export interface GlobalStateInterface {
     name: string;
