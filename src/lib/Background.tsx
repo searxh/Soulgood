@@ -7,13 +7,7 @@ export function Hills({ name }: { name: string }) {
             setImage("/assets/bg_" + name + ".jpg");
         }
     }, [name]);
-    return (
-        <img
-            src={image}
-            className="flex-1 grayscale brightness-150 object-cover"
-            alt=""
-        />
-    );
+    return <img src={image} className="flex-1 object-cover" alt="" />;
 }
 
 export function Forest({ name }: { name: string }) {
@@ -23,11 +17,5 @@ export function Forest({ name }: { name: string }) {
             setImage("/assets/bg_" + name + ".jpg");
         }
     }, [name]);
-    return (
-        <img
-            src={image}
-            className="flex-1 grayscale brightness-200 object-cover"
-            alt=""
-        />
-    );
+    return <img src={image} className="flex-1 object-cover" alt="" />;
 }

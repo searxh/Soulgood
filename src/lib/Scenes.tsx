@@ -12,19 +12,28 @@ import { SceneInterface } from "../types";
 }
 */
 
+const defaultOwlClassName = {
+    top: "35%",
+    left: "15%",
+};
+
 export const scenes: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "soul",
+                name: "owl",
                 state: "neutral",
-                location: { top: "top-[50%]", left: "left-[50%]" },
+                className: { ...defaultOwlClassName, opacity: 0 },
             },
         ],
         dialogues: [
             {
                 type: "input",
                 content: "What is your name?",
+            },
+            {
+                type: "them",
+                content: "wtf lol?",
             },
         ],
         background: {
@@ -35,9 +44,9 @@ export const scenes: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "soul",
+                name: "owl",
                 state: "neutral",
-                location: { top: "top-[50%]", left: "left-[50%]" },
+                className: defaultOwlClassName,
             },
         ],
         dialogues: [

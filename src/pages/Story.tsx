@@ -1,9 +1,9 @@
 import React from "react";
 import { GlobalContext } from "../states";
-import { ContentInterface, LocationInterface } from "../types";
+import { ContentInterface } from "../types";
 import { scenes } from "../lib/Scenes";
 import { Choice, Input, Them, Us } from "../lib/Dialogue";
-import { Soul } from "../lib/Characters";
+import { Owl } from "../lib/Characters";
 import { Forest, Hills } from "../lib/Background";
 import { BranchInfoInterface } from "../types";
 
@@ -66,7 +66,7 @@ export default function Story() {
                             key={index}
                             name={character.name}
                             state={character.state}
-                            location={character.location}
+                            className={character.className}
                         />
                     );
                 })}
@@ -89,16 +89,16 @@ export default function Story() {
 function Character({
     name,
     state,
-    location,
+    className,
 }: {
     name: string;
     state: string;
-    location: LocationInterface;
+    className: any;
 }) {
     return (
         <>
-            {name === "soul" ? (
-                <Soul state={state} location={location} />
+            {name === "owl" ? (
+                <Owl state={state} className={className} />
             ) : null}
         </>
     );

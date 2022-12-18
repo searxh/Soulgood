@@ -1,25 +1,20 @@
 import React from "react";
-import { LocationInterface } from "../types";
 
-export function Soul({
-    state,
-    location,
-}: {
-    state: string;
-    location: LocationInterface;
-}) {
+export function Owl({ state, className }: { state: string; className: any }) {
     const [image, setImage] = React.useState<string>("");
+    state = "";
     React.useLayoutEffect(() => {
         if (state !== undefined) {
-            setImage("/assets/soul_" + state + ".png");
+            setImage("/assets/owl" + state + ".gif");
         }
-    }, [state]);
+    }, [state, className]);
     return (
         <img
             src={image}
-            className={`absolute aspect-video ${location.top} ${location.left}
-            h-[20%] animate-bob z-10 object-contain`}
+            className={`absolute ${className} drop-shadow-md
+            animate-bob z-10 w-80 transition duration-300`}
             alt=""
+            style={className}
         />
     );
 }

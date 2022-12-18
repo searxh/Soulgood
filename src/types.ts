@@ -2,7 +2,7 @@ import { Dispatch } from "react";
 export interface CharacterInterface {
     name: string;
     state: string;
-    location: LocationInterface;
+    className: any;
 }
 export interface LocationInterface {
     top: string;
