@@ -5,4 +5,4 @@ export const initialState: GlobalStateInterface = {
     scene: 0,
 };
 
-export const delayInterval = 110;
+export const delayInterval = 100;

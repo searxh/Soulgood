@@ -108,19 +108,6 @@ export const scenes: Array<SceneInterface> = [
                 content: "ไหน ๆ เธอก็มาถึงนี่แล้ว จะลองเข้าไปดูหน่อยมั้ยล่ะ",
                 speaker: "นกฮูก",
             },
-        ],
-        background: defaultBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "owl",
-                state: "neutral",
-                className: defaultOwlClassName,
-            },
-        ],
-        dialogues: [
             {
                 type: "choice",
                 content: {
@@ -130,7 +117,7 @@ export const scenes: Array<SceneInterface> = [
             },
         ],
         background: defaultBackground,
-        next: [2, 4],
+        next: [1, 3],
     },
     {
         branch: 1,
@@ -147,23 +134,9 @@ export const scenes: Array<SceneInterface> = [
                 content: "ดีเลย ว่าแต่เธอชื่ออะไรล่ะ",
                 speaker: "นกฮูก",
             },
-        ],
-        background: defaultBackground,
-        next: "default",
-    },
-    {
-        branch: 1,
-        characters: [
-            {
-                name: "owl",
-                state: "neutral",
-                className: defaultOwlClassName,
-            },
-        ],
-        dialogues: [
             {
                 type: "input",
-                content: "คุณชื่ออะไร?",
+                content: "",
             },
         ],
         background: defaultBackground,
@@ -222,23 +195,9 @@ export const scenes: Array<SceneInterface> = [
                 content: "ดีเลย ว่าแต่เธอชื่ออะไรล่ะ",
                 speaker: "นกฮูก",
             },
-        ],
-        background: defaultBackground,
-        next: "default",
-    },
-    {
-        branch: 2,
-        characters: [
-            {
-                name: "owl",
-                state: "neutral",
-                className: defaultOwlClassName,
-            },
-        ],
-        dialogues: [
             {
                 type: "input",
-                content: "คุณชื่ออะไร?",
+                content: "",
             },
         ],
         background: defaultBackground,

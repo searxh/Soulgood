@@ -7,10 +7,14 @@ export function Them({
     content,
     next,
     speaker,
+    printDoneCallback,
+    preventNext,
 }: {
     content: string;
     next: any;
     speaker: string;
+    printDoneCallback?: Function;
+    preventNext?: boolean;
 }) {
     const [printing, setPrinting] = React.useState<boolean>(true);
     const [displayedContent, setDisplayedContent] = React.useState<string>("");
@@ -18,45 +22,45 @@ export function Them({
     const { name, scene } = global_state;
     let processedContent = content.replace("<name>", name);
     const sceneRouter = () => {
-        //routing for jumping back to main route
         console.log("THEM - ", next);
         if (next === "default") {
             return scene + 1;
-            //routing for jumping back to main route
         } else {
             return next;
         }
     };
     React.useEffect(() => {
-        if (printing) {
-            let accumulator = "";
-            let delay = 0;
-            for (let i = 0; i < processedContent.length; i++) {
-                // eslint-disable-next-line no-loop-func
-                setTimeout(() => {
-                    accumulator += processedContent[i];
-                    setDisplayedContent(accumulator);
-                }, delay);
-                delay += delayInterval;
-            }
-            setTimeout(() => setPrinting(false), delay);
+        let accumulator = "";
+        let delay = 0;
+        for (let i = 0; i < processedContent.length; i++) {
+            // eslint-disable-next-line no-loop-func
+            setTimeout(() => {
+                accumulator += processedContent[i];
+                setDisplayedContent(accumulator);
+            }, delay);
+            delay += delayInterval;
         }
+        setTimeout(() => {
+            if (printDoneCallback !== undefined) printDoneCallback();
+            setPrinting(false);
+        }, delay);
     }, [scene]);
     return (
         <button
-            disabled={printing}
+            disabled={printing || preventNext}
             onClick={() => {
-                dispatch({
-                    type: "set",
-                    field: "scene",
-                    payload: sceneRouter(),
-                });
-                setPrinting(true);
+                if (!preventNext) {
+                    dispatch({
+                        type: "set",
+                        field: "scene",
+                        payload: sceneRouter(),
+                    });
+                }
             }}
             className="absolute bg-white text-black rounded-3xl text-xl border-2
             text-center z-10 left-0 right-0 mx-auto top-5 w-[80%] shadow-md"
         >
-            <div className="relative w-full h-full p-5 py-10">
+            <div className="relative w-full h-full p-5 py-10 break-words">
                 <div
                     className="absolute -top-3 left-[10%] bg-yellow-200 px-10 py-0.5 
                 shadow-md rounded-xl"
@@ -76,28 +80,24 @@ export function Us({ content, next }: { content: string; next: any }) {
     const { name, scene } = global_state;
     let processedContent = content.replace("<name>", name);
     const sceneRouter = () => {
-        //routing for jumping back to main route
         if (next === "default") {
             return scene + 1;
-            //routing for jumping back to main route
         } else {
             return next;
         }
     };
     React.useEffect(() => {
-        if (printing) {
-            let accumulator = "";
-            let delay = 0;
-            for (let i = 0; i < processedContent.length; i++) {
-                // eslint-disable-next-line no-loop-func
-                setTimeout(() => {
-                    accumulator += processedContent[i];
-                    setDisplayedContent(accumulator);
-                }, delay);
-                delay += delayInterval;
-            }
-            setTimeout(() => setPrinting(false), delay);
+        let accumulator = "";
+        let delay = 0;
+        for (let i = 0; i < processedContent.length; i++) {
+            // eslint-disable-next-line no-loop-func
+            setTimeout(() => {
+                accumulator += processedContent[i];
+                setDisplayedContent(accumulator);
+            }, delay);
+            delay += delayInterval;
         }
+        setTimeout(() => setPrinting(false), delay);
     }, [scene]);
     return (
         <>
@@ -109,15 +109,14 @@ export function Us({ content, next }: { content: string; next: any }) {
                         field: "scene",
                         payload: sceneRouter(),
                     });
-                    setPrinting(true);
                 }}
                 className="absolute bg-white text-black rounded-3xl border-2
             text-center text-xl z-10 left-0 right-0 mx-auto bottom-5 w-[80%] shadow-md"
             >
-                <div className="relative w-full h-full p-5 py-10">
+                <div className="relative w-full h-full p-5 py-10 break-words">
                     <div
                         className="absolute -top-3 left-[10%] bg-yellow-200 px-10 py-0.5 
-                shadow-md rounded-xl"
+                        shadow-md rounded-xl"
                     >
                         You
                     </div>
@@ -133,10 +132,8 @@ export function Input({ content, next }: { content: string; next: any }) {
     const { global_state, dispatch } = React.useContext(GlobalContext);
     const { name, scene } = global_state;
     const sceneRouter = () => {
-        //routing for jumping back to main route
         if (next === "default") {
             return scene + 1;
-            //routing for jumping back to main route
         } else {
             return next;
         }
@@ -168,7 +165,7 @@ export function Input({ content, next }: { content: string; next: any }) {
                 <input
                     ref={inputRef}
                     autoFocus={true}
-                    className="w-[80%] mx-auto p-2 mt-2 rounded-xl border-2
+                    className="w-[80%] mx-auto p-2 mt-2 rounded-xl outline-none
                      border-black text-center"
                 />
             </form>
@@ -200,7 +197,7 @@ export function Choice({
     return (
         <div
             className="flex absolute justify-evenly text-xl
-            z-10 left-0 right-0 mx-auto bottom-5 w-[90%]"
+            z-10 left-0 right-0 mx-auto bottom-5 w-[90%] break-words"
         >
             <button
                 onClick={() => handleSetChoice(0)}
