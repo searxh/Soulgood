@@ -30,6 +30,7 @@ export function Them({
         }
     };
     React.useEffect(() => {
+        if (!printing) setPrinting(true);
         let accumulator = "";
         let delay = 0;
         for (let i = 0; i < processedContent.length; i++) {
