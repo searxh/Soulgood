@@ -12,6 +12,7 @@ export default function Story() {
     const { scene } = global_state;
     const [branchInfo, setBranchInfo] =
         React.useState<BranchInfoInterface | null>(null);
+    const [start, setStart] = React.useState<boolean>(true);
     const [next, setNext] = React.useState<any>();
     const calculateNext = () => {
         if (branchInfo === null) {
@@ -56,9 +57,20 @@ export default function Story() {
             });
         }
         setNext(calculateNext());
+        if (scene === 0) setTimeout(() => setStart(false), 100);
     }, [scene]);
     return (
-        <div className="h-screen w-screen overflow-hidden font-mitr">
+        <div className="relative h-screen w-screen overflow-hidden font-mitr">
+            {scene === 0 && (
+                <img
+                    className={` ${
+                        start ? "opacity-100 z-50" : "opacity-0 -z-10 blur-lg"
+                    } absolute top-0 bottom-0 right-0 left-0 transition duration-500 m-auto 
+                    object-cover w-full h-full grayscale`}
+                    src="/assets/spiral.gif"
+                    alt=""
+                />
+            )}
             <div className="flex m-auto h-full relative">
                 {scenes[scene].characters.map((character, index) => {
                     return (

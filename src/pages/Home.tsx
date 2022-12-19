@@ -20,7 +20,8 @@ export default function Home() {
             <img
                 className={` ${
                     start ? "opacity-100 z-50" : "opacity-0 -z-10 blur-lg"
-                } absolute top-0 bottom-0 right-0 left-0 transition duration-500 m-auto object-center object-cover w-full`}
+                } absolute top-0 bottom-0 right-0 left-0 transition duration-500 
+                m-auto object-cover w-full h-full grayscale`}
                 src="/assets/spiral.gif"
                 alt=""
             />
