@@ -11,8 +11,8 @@ export function Owl({ state, className }: { state: string; className: any }) {
     return (
         <img
             src={image}
-            className={`absolute ${className} drop-shadow-md
-            animate-bob z-10 w-80 transition duration-300`}
+            className={`absolute ${className} drop-shadow-md m-auto
+            animate-bob z-10 w-[560px] transition duration-300`}
             alt=""
             style={className}
         />

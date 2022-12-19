@@ -46,14 +46,14 @@ const Zoom = () => {
             onTouchMove={(e) => handleMouseMove(e)}
             onMouseMove={(e) => handleMouseMove(e)}
             className={`relative h-full w-full bg-yellow-100 aspect-video z-20
-                bg-[url('../public/assets/bg_hills.jpg')] bg-no-repeat bg-cover`}
+                bg-[url('../public/assets/bg_apark.png')] bg-no-repeat bg-cover`}
         >
             <div
                 ref={ref}
                 onTouchMove={(e) => handleMouseMove(e)}
                 onMouseMove={(e) => handleMouseMove(e)}
                 className="w-[20%] aspect-square absolute border-2 border-black shadow-md rounded-full
-                    bg-[url('../public/assets/bg_hills.jpg')] bg-no-repeat bg-cover cursor-move"
+                    bg-[url('../public/assets/bg_apark.png')] bg-no-repeat bg-cover cursor-move bg-yellow-100"
                 style={{
                     top: position.y - ref?.current?.offsetHeight / 2 + "px",
                     left: position.x - ref?.current?.offsetWidth / 2 + "px",

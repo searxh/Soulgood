@@ -3,7 +3,15 @@ import { delayInterval } from "../default";
 import { GlobalContext } from "../states";
 import { ContentInterface } from "../types";
 
-export function Them({ content, next }: { content: string; next: any }) {
+export function Them({
+    content,
+    next,
+    speaker,
+}: {
+    content: string;
+    next: any;
+    speaker: string;
+}) {
     const [printing, setPrinting] = React.useState<boolean>(true);
     const [displayedContent, setDisplayedContent] = React.useState<string>("");
     const { global_state, dispatch } = React.useContext(GlobalContext);
@@ -45,10 +53,18 @@ export function Them({ content, next }: { content: string; next: any }) {
                 });
                 setPrinting(true);
             }}
-            className="absolute bg-white text-black rounded-3xl text-xl
-            text-center p-5 py-10 z-10 left-0 right-0 mx-auto top-5 w-[80%] shadow-md"
+            className="absolute bg-white text-black rounded-3xl text-xl border-2
+            text-center z-10 left-0 right-0 mx-auto top-5 w-[80%] shadow-md"
         >
-            {displayedContent}
+            <div className="relative w-full h-full p-5 py-10">
+                <div
+                    className="absolute -top-3 left-[10%] bg-yellow-200 px-10 py-0.5 
+                shadow-md rounded-xl"
+                >
+                    {speaker}
+                </div>
+                {displayedContent}
+            </div>
         </button>
     );
 }
@@ -95,10 +111,18 @@ export function Us({ content, next }: { content: string; next: any }) {
                     });
                     setPrinting(true);
                 }}
-                className="absolute bg-white text-black rounded-full
-            text-center p-5 py-5 text-xl z-10 left-0 right-0 mx-auto bottom-5 w-[80%] shadow-md"
+                className="absolute bg-white text-black rounded-3xl border-2
+            text-center text-xl z-10 left-0 right-0 mx-auto bottom-5 w-[80%] shadow-md"
             >
-                {displayedContent}
+                <div className="relative w-full h-full p-5 py-10">
+                    <div
+                        className="absolute -top-3 left-[10%] bg-yellow-200 px-10 py-0.5 
+                shadow-md rounded-xl"
+                    >
+                        You
+                    </div>
+                    {displayedContent}
+                </div>
             </button>
         </>
     );
@@ -124,7 +148,7 @@ export function Input({ content, next }: { content: string; next: any }) {
     }, [name]);
     return (
         <div
-            className="absolute bg-white text-black rounded-full
+            className="absolute bg-white text-black rounded-3xl border-2
             text-center p-3 z-10 left-0 right-0 mx-auto bottom-5 w-[80%] shadow-md text-xl"
         >
             {content}
@@ -144,8 +168,8 @@ export function Input({ content, next }: { content: string; next: any }) {
                 <input
                     ref={inputRef}
                     autoFocus={true}
-                    className="bg-slate-200 w-[80%] mx-auto p-2 mt-2 border-2
-                     border-black rounded-full"
+                    className="w-[80%] mx-auto p-2 mt-2 rounded-xl border-2
+                     border-black text-center"
                 />
             </form>
         </div>
@@ -180,14 +204,14 @@ export function Choice({
         >
             <button
                 onClick={() => handleSetChoice(0)}
-                className="flex-1 bg-white rounded-full shadow-md
+                className="flex-1 bg-white rounded-full shadow-md border-2
                 text-center p-5 mr-2 hover:scale-[102%] transition"
             >
                 {content.subContent}
             </button>
             <button
                 onClick={() => handleSetChoice(1)}
-                className="flex-1 bg-white rounded-full shadow-md
+                className="flex-1 bg-white rounded-full shadow-md border-2
                 text-center p-5 ml-2 hover:scale-[102%] transition"
             >
                 {content.subContent1}

@@ -15,6 +15,7 @@ export interface ContentInterface {
 export interface DialogueInterface {
     type: string;
     content: string | ContentInterface;
+    speaker?: string;
 }
 export interface SceneInterface {
     dialogues: Array<DialogueInterface>;

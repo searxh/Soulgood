@@ -4,7 +4,7 @@ import { ContentInterface } from "../types";
 import { scenes } from "../lib/Scenes";
 import { Choice, Input, Them, Us } from "../lib/Dialogue";
 import { Owl } from "../lib/Characters";
-import { Forest, Hills } from "../lib/Background";
+import { Bg } from "../lib/Background";
 import { BranchInfoInterface } from "../types";
 
 export default function Story() {
@@ -59,7 +59,7 @@ export default function Story() {
     }, [scene]);
     return (
         <div className="h-screen w-screen overflow-hidden font-mitr">
-            <div className="flex m-auto h-full relative bg-blue-400">
+            <div className="flex m-auto h-full relative">
                 {scenes[scene].characters.map((character, index) => {
                     return (
                         <Character
@@ -77,6 +77,7 @@ export default function Story() {
                             type={dialogue.type}
                             content={dialogue.content}
                             next={next}
+                            speaker={dialogue.speaker}
                         />
                     );
                 })}
@@ -108,16 +109,22 @@ function Dialogue({
     type,
     content,
     next,
+    speaker,
 }: {
     type: string;
     content: string | ContentInterface;
     next: any;
+    speaker?: string;
 }) {
     console.log(type, content, next);
     return (
         <>
             {type === "them" ? (
-                <Them content={content as string} next={next} />
+                <Them
+                    content={content as string}
+                    next={next}
+                    speaker={speaker as string}
+                />
             ) : type === "us" ? (
                 <Us content={content as string} next={next} />
             ) : type === "input" ? (
@@ -130,13 +137,5 @@ function Dialogue({
 }
 
 function Background({ name }: { name: string }) {
-    return (
-        <>
-            {name === "hills" ? (
-                <Hills name={name} />
-            ) : name === "forest" ? (
-                <Forest name={name} />
-            ) : null}
-        </>
-    );
+    return <Bg name={name} />;
 }
