@@ -3,10 +3,11 @@ import React from "react";
 import { GlobalContext } from "../states";
 import { ContentInterface } from "../types";
 import { scenes } from "../lib/Scenes";
-import { Choice, Input, Them, Us } from "../lib/Dialogue";
+import { Choice, Input, Them, Us, Special } from "../lib/Dialogue";
 import { Owl } from "../lib/Characters";
 import { Bg } from "../lib/Background";
 import { BranchInfoInterface } from "../types";
+import NewItem from "../components/NewItem";
 
 export default function Story() {
     const { global_state } = React.useContext(GlobalContext);
@@ -170,6 +171,8 @@ function Dialogue({
         <Input content={content as string} next={next} />
     ) : type === "choice" ? (
         <Choice content={content as ContentInterface} next={next} />
+    ) : type === "special" ? (
+        <Special content={content as string} next={next} />
     ) : null;
 }
 
