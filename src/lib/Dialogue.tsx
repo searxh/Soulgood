@@ -1,4 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
+import NewItem from "../components/NewItem";
 import { delayInterval } from "../default";
 import { NextContext } from "../next";
 import { GlobalContext } from "../states";
@@ -19,7 +21,7 @@ export function Them({
 }) {
     const [printing, setPrinting] = React.useState<boolean>(true);
     const [displayedContent, setDisplayedContent] = React.useState<string>("");
-    const { global_state, dispatch } = React.useContext(GlobalContext);
+    const { global_state } = React.useContext(GlobalContext);
     const { setActive, setNextScene } = React.useContext(NextContext);
     const { name, scene } = global_state;
     const preventRef = React.useRef<any>(null);
@@ -89,7 +91,7 @@ export function Them({
 export function Us({ content, next }: { content: string; next: any }) {
     const [printing, setPrinting] = React.useState<boolean>(true);
     const [displayedContent, setDisplayedContent] = React.useState<string>("");
-    const { global_state, dispatch } = React.useContext(GlobalContext);
+    const { global_state } = React.useContext(GlobalContext);
     const { setActive, setNextScene } = React.useContext(NextContext);
     const { name, scene } = global_state;
     const sceneRouterRef = React.useRef<any>(null);
@@ -233,6 +235,28 @@ export function Choice({
             >
                 {content.subContent1}
             </button>
+        </div>
+    );
+}
+
+export function Special({ content, next }: { content: string; next: any }) {
+    const { global_state, dispatch } = React.useContext(GlobalContext);
+    const { scene } = global_state;
+    const handleSetChoice = () => {
+        dispatch({ type: "set", field: "scene", payload: scene + 1 });
+    };
+    return (
+        <div
+            className="flex absolute justify-evenly text-xl w-screen h-screen
+            z-10 top-0 bottom-0 left-0 right-0 mx-auto break-words"
+        >
+            <>
+                <NewItem
+                    clickCallback={() => {
+                        handleSetChoice();
+                    }}
+                />
+            </>
         </div>
     );
 }

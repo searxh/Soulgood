@@ -218,6 +218,10 @@ export const scenes: Array<SceneInterface> = [
                     "ยินดีที่ได้รู้จักนะ <name> เอากระเป๋านี่ไปด้วยสิ เผื่อไว้ใส่ของนะ",
                 speaker: "นกฮูก",
             },
+            {
+                type: "special",
+                content: "",
+            },
         ],
         background: defaultBackground,
         next: "default",
