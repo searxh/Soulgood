@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { delayInterval } from "../default";
 import { NextContext } from "../next";
@@ -19,7 +20,7 @@ export function Them({
 }) {
     const [printing, setPrinting] = React.useState<boolean>(true);
     const [displayedContent, setDisplayedContent] = React.useState<string>("");
-    const { global_state, dispatch } = React.useContext(GlobalContext);
+    const { global_state } = React.useContext(GlobalContext);
     const { setActive, setNextScene } = React.useContext(NextContext);
     const { name, scene } = global_state;
     const preventRef = React.useRef<any>(null);
@@ -89,7 +90,7 @@ export function Them({
 export function Us({ content, next }: { content: string; next: any }) {
     const [printing, setPrinting] = React.useState<boolean>(true);
     const [displayedContent, setDisplayedContent] = React.useState<string>("");
-    const { global_state, dispatch } = React.useContext(GlobalContext);
+    const { global_state } = React.useContext(GlobalContext);
     const { setActive, setNextScene } = React.useContext(NextContext);
     const { name, scene } = global_state;
     const sceneRouterRef = React.useRef<any>(null);

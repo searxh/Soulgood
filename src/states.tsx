@@ -26,10 +26,10 @@ const save = (state: GlobalStateInterface) => {
     sessionStorage.setItem("fmm-state", JSON.stringify(state));
 };
 
-const load = () => {
+/*const load = () => {
     const res = JSON.parse(sessionStorage.getItem("fmm-state") as string);
     return res;
-};
+};*/
 
 export function GlobalStateProvider({ children }: any) {
     const reducer = (state: GlobalStateInterface, action: ActionInterface) => {
