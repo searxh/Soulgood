@@ -13,33 +13,41 @@ export default function Story() {
     const [branchInfo, setBranchInfo] =
         React.useState<BranchInfoInterface | null>(null);
     const [start, setStart] = React.useState<boolean>(true);
+    const [next, setNext] = React.useState<any | undefined>();
+    const [lockDialogue, setLockDialogue] = React.useState<boolean | null>();
     const calculateLockDialogue = () => {
-        return scenes[scene].dialogues.length > 1 ? true : false;
+        if (scenes[scene].dialogues.length > 1) {
+            setLockDialogue(true);
+        } else {
+            setLockDialogue(null);
+        }
     };
-    const [lockDialogue, setLockDialogue] = React.useState<boolean>(
-        calculateLockDialogue
-    );
-    const [next, setNext] = React.useState<any>();
     const calculateNext = () => {
         if (branchInfo === null) {
+            console.log("[CALCULATE NEXT]", scenes[scene].next);
             return scenes[scene].next;
         } else {
             const { startBranchIndex, firstBranchLength, endBranchIndex } =
                 branchInfo;
             const lastFirstBranchIndex = startBranchIndex + firstBranchLength;
             if (scene === lastFirstBranchIndex || scene === endBranchIndex) {
-                console.log("go to end branch");
                 setBranchInfo(null);
+                console.log(
+                    "[CALCULATE NEXT] GO END BRANCH",
+                    endBranchIndex + 1
+                );
                 return endBranchIndex + 1;
             }
+            console.log("[CALCULATE NEXT]", scenes[scene].next);
             return scenes[scene].next;
         }
     };
     const printDoneCallback = () => {
-        setLockDialogue(false);
+        if (lockDialogue !== null) setLockDialogue(false);
     };
     React.useLayoutEffect(() => {
-        if (Array.isArray(scenes[scene].next)) {
+        console.log("----------[SCENE " + scene + "]----------------");
+        if (scene < scenes.length && Array.isArray(scenes[scene].next)) {
             const a = scenes[scene].next[0] as number;
             const b = scenes[scene].next[1] as number;
             setBranchInfo({
@@ -49,13 +57,14 @@ export default function Story() {
                 secondBranchLength: b,
             });
         }
-        setNext(calculateNext());
-        setLockDialogue(calculateLockDialogue());
+        if (scene < scenes.length) {
+            calculateLockDialogue();
+            setNext(calculateNext());
+        }
         if (scene === 0) setTimeout(() => setStart(false), 100);
-        console.log("[SCENE " + scene + "]");
     }, [scene]);
-    return (
-        <div className="relative h-screen w-screen overflow-hidden font-mitr">
+    return scene < scenes.length ? (
+        <div className="relative h-screen w-screen overflow-hidden font-mitr bg-white">
             {scene === 0 && (
                 <img
                     className={` ${
@@ -77,38 +86,39 @@ export default function Story() {
                         />
                     );
                 })}
-                {scenes[scene].dialogues.map((dialogue, index) => {
-                    if (index === 0) {
-                        return (
-                            <Dialogue
-                                key={index}
-                                type={dialogue.type}
-                                content={dialogue.content}
-                                next={next}
-                                speaker={dialogue.speaker}
-                                printDoneCallback={printDoneCallback}
-                                preventNext={calculateLockDialogue()}
-                            />
-                        );
-                    } else if (!lockDialogue) {
-                        console.log("hello");
-                        return (
-                            <Dialogue
-                                key={index}
-                                type={dialogue.type}
-                                content={dialogue.content}
-                                next={next}
-                                speaker={dialogue.speaker}
-                                preventNext={false}
-                            />
-                        );
-                    }
-                    return null;
-                })}
+                {next &&
+                    lockDialogue !== undefined &&
+                    scenes[scene].dialogues.map((dialogue, index) => {
+                        if (index === 0) {
+                            return (
+                                <Dialogue
+                                    key={index}
+                                    type={dialogue.type}
+                                    content={dialogue.content}
+                                    next={next}
+                                    speaker={dialogue.speaker}
+                                    printDoneCallback={printDoneCallback}
+                                    preventNext={lockDialogue}
+                                />
+                            );
+                        } else if (!lockDialogue) {
+                            return (
+                                <Dialogue
+                                    key={index}
+                                    type={dialogue.type}
+                                    content={dialogue.content}
+                                    next={next}
+                                    speaker={dialogue.speaker}
+                                    preventNext={false}
+                                />
+                            );
+                        }
+                        return null;
+                    })}
                 <Background name={scenes[scene].background.name} />
             </div>
         </div>
-    );
+    ) : null;
 }
 
 function Character({
@@ -142,28 +152,24 @@ function Dialogue({
     next: any;
     speaker?: string;
     printDoneCallback?: Function;
-    preventNext: boolean;
+    preventNext: boolean | null;
 }) {
-    console.log(type, content, next);
-    return (
-        <>
-            {type === "them" ? (
-                <Them
-                    content={content as string}
-                    next={next}
-                    speaker={speaker as string}
-                    printDoneCallback={printDoneCallback}
-                    preventNext={preventNext}
-                />
-            ) : type === "us" ? (
-                <Us content={content as string} next={next} />
-            ) : type === "input" ? (
-                <Input content={content as string} next={next} />
-            ) : type === "choice" ? (
-                <Choice content={content as ContentInterface} next={next} />
-            ) : null}
-        </>
-    );
+    React.useEffect(() => {}, [type]);
+    return type === "them" ? (
+        <Them
+            content={content as string}
+            next={next}
+            speaker={speaker as string}
+            printDoneCallback={printDoneCallback}
+            preventNext={preventNext}
+        />
+    ) : type === "us" ? (
+        <Us content={content as string} next={next} />
+    ) : type === "input" ? (
+        <Input content={content as string} next={next} />
+    ) : type === "choice" ? (
+        <Choice content={content as ContentInterface} next={next} />
+    ) : null;
 }
 
 function Background({ name }: { name: string }) {

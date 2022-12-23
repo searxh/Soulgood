@@ -1,5 +1,6 @@
 import React from "react";
 import { delayInterval } from "../default";
+import { NextContext } from "../next";
 import { GlobalContext } from "../states";
 import { ContentInterface } from "../types";
 
@@ -14,21 +15,27 @@ export function Them({
     next: any;
     speaker: string;
     printDoneCallback?: Function;
-    preventNext?: boolean;
+    preventNext: boolean | null;
 }) {
     const [printing, setPrinting] = React.useState<boolean>(true);
     const [displayedContent, setDisplayedContent] = React.useState<string>("");
     const { global_state, dispatch } = React.useContext(GlobalContext);
+    const { setActive, setNextScene } = React.useContext(NextContext);
     const { name, scene } = global_state;
-    let processedContent = content.replace("<name>", name);
+    const preventRef = React.useRef<any>(null);
+    const printDoneCallbackRef = React.useRef<any>(null);
+    const sceneRouterRef = React.useRef<any>(null);
     const sceneRouter = () => {
-        console.log("THEM - ", next);
         if (next === "default") {
             return scene + 1;
         } else {
             return next;
         }
     };
+    preventRef.current = preventNext;
+    printDoneCallbackRef.current = printDoneCallback;
+    sceneRouterRef.current = sceneRouter();
+    let processedContent = content.replace("<name>", name);
     React.useEffect(() => {
         if (!printing) setPrinting(true);
         let accumulator = "";
@@ -42,20 +49,25 @@ export function Them({
             delay += delayInterval;
         }
         setTimeout(() => {
-            if (printDoneCallback !== undefined) printDoneCallback();
+            if (printDoneCallbackRef.current !== undefined) {
+                printDoneCallbackRef.current();
+            }
             setPrinting(false);
+            if (preventRef.current === null) {
+                setNextScene(sceneRouterRef.current);
+                setActive(true);
+            }
         }, delay);
     }, [scene]);
     return (
         <button
-            disabled={printing || preventNext}
             onClick={() => {
                 if (!preventNext) {
-                    dispatch({
+                    /*dispatch({
                         type: "set",
                         field: "scene",
                         payload: sceneRouter(),
-                    });
+                    });*/
                 }
             }}
             className="absolute bg-white text-black rounded-3xl text-xl border-2
@@ -78,8 +90,9 @@ export function Us({ content, next }: { content: string; next: any }) {
     const [printing, setPrinting] = React.useState<boolean>(true);
     const [displayedContent, setDisplayedContent] = React.useState<string>("");
     const { global_state, dispatch } = React.useContext(GlobalContext);
+    const { setActive, setNextScene } = React.useContext(NextContext);
     const { name, scene } = global_state;
-    let processedContent = content.replace("<name>", name);
+    const sceneRouterRef = React.useRef<any>(null);
     const sceneRouter = () => {
         if (next === "default") {
             return scene + 1;
@@ -87,7 +100,10 @@ export function Us({ content, next }: { content: string; next: any }) {
             return next;
         }
     };
+    sceneRouterRef.current = sceneRouter();
+    let processedContent = content.replace("<name>", name);
     React.useEffect(() => {
+        if (!printing) setPrinting(true);
         let accumulator = "";
         let delay = 0;
         for (let i = 0; i < processedContent.length; i++) {
@@ -98,18 +114,22 @@ export function Us({ content, next }: { content: string; next: any }) {
             }, delay);
             delay += delayInterval;
         }
-        setTimeout(() => setPrinting(false), delay);
+        setTimeout(() => {
+            setPrinting(false);
+            setNextScene(sceneRouterRef.current);
+            setActive(true);
+        }, delay);
     }, [scene]);
     return (
         <>
             <button
                 disabled={printing}
                 onClick={() => {
-                    dispatch({
+                    /*dispatch({
                         type: "set",
                         field: "scene",
                         payload: sceneRouter(),
-                    });
+                    });*/
                 }}
                 className="absolute bg-white text-black rounded-3xl border-2
             text-center text-xl z-10 left-0 right-0 mx-auto bottom-5 w-[80%] shadow-md"
@@ -119,7 +139,7 @@ export function Us({ content, next }: { content: string; next: any }) {
                         className="absolute -top-3 left-[10%] bg-yellow-200 px-10 py-0.5 
                         shadow-md rounded-xl"
                     >
-                        You
+                        เรา
                     </div>
                     {displayedContent}
                 </div>
@@ -184,7 +204,6 @@ export function Choice({
     const { global_state, dispatch } = React.useContext(GlobalContext);
     const { scene } = global_state;
     const handleSetChoice = (choice: number) => {
-        console.log(next);
         if (choice === 0) {
             dispatch({ type: "set", field: "scene", payload: scene + 1 });
         } else {
