@@ -1,4 +1,4 @@
-import { Dispatch } from "react";
+import { Dispatch, SetStateAction } from "react";
 export interface CharacterInterface {
     name: string;
     state: string;
@@ -45,4 +45,9 @@ export interface BranchInfoInterface {
 export interface GlobalContextInterface {
     global_state: GlobalStateInterface;
     dispatch: Dispatch<ActionInterface>;
+}
+
+export interface NextContextInterface {
+    setActive: Dispatch<SetStateAction<boolean>>;
+    setNextScene: Dispatch<SetStateAction<number>>;
 }
