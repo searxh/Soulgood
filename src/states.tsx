@@ -26,16 +26,16 @@ const save = (state: GlobalStateInterface) => {
     sessionStorage.setItem("fmm-state", JSON.stringify(state));
 };
 
-/*const load = () => {
+const load = () => {
     const res = JSON.parse(sessionStorage.getItem("fmm-state") as string);
     return res;
-};*/
+};
 
 export function GlobalStateProvider({ children }: any) {
     const reducer = (state: GlobalStateInterface, action: ActionInterface) => {
+        const newState: any = { ...state };
         switch (action.type) {
             case "set":
-                const newState: any = { ...state };
                 newState[action.field as string] = action.payload;
                 save(newState);
                 return newState;
