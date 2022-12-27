@@ -4,10 +4,9 @@ import { GlobalContext } from "../states";
 import { ContentInterface } from "../types";
 import { scenes } from "../lib/Scenes";
 import { Choice, Input, Them, Us, Special } from "../lib/Dialogue";
-import { Owl } from "../lib/Characters";
+import { FirstAttractionObjects, Owl, Rabbit } from "../lib/Characters";
 import { Bg } from "../lib/Background";
 import { BranchInfoInterface } from "../types";
-import NewItem from "../components/NewItem";
 
 export default function Story() {
     const { global_state } = React.useContext(GlobalContext);
@@ -16,7 +15,9 @@ export default function Story() {
         React.useState<BranchInfoInterface | null>(null);
     const [start, setStart] = React.useState<boolean>(true);
     const [next, setNext] = React.useState<any | undefined>();
-    const [lockDialogue, setLockDialogue] = React.useState<boolean | null>();
+    const [lockDialogue, setLockDialogue] = React.useState<
+        boolean | null | undefined
+    >();
     const calculateLockDialogue = () => {
         if (scenes[scene].dialogues.length > 1) {
             setLockDialogue(true);
@@ -92,6 +93,12 @@ export default function Story() {
                     lockDialogue !== undefined &&
                     scenes[scene].dialogues.map((dialogue, index) => {
                         if (index === 0) {
+                            console.log(
+                                "prevent debug",
+                                scene,
+                                lockDialogue,
+                                dialogue.content
+                            );
                             return (
                                 <Dialogue
                                     key={index}
@@ -136,6 +143,10 @@ function Character({
         <>
             {name === "owl" ? (
                 <Owl state={state} className={className} />
+            ) : name === "rabbit" ? (
+                <Rabbit state={state} className={className} />
+            ) : name === "a1-objects" ? (
+                <FirstAttractionObjects state={state} className={className} />
             ) : null}
         </>
     );

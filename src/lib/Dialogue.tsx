@@ -153,7 +153,7 @@ export function Us({ content, next }: { content: string; next: any }) {
 export function Input({ content, next }: { content: string; next: any }) {
     const inputRef = React.useRef<HTMLInputElement>(null);
     const { global_state, dispatch } = React.useContext(GlobalContext);
-    const { name, scene } = global_state;
+    const { scene } = global_state;
     const sceneRouter = () => {
         if (next === "default") {
             return scene + 1;
@@ -161,11 +161,6 @@ export function Input({ content, next }: { content: string; next: any }) {
             return next;
         }
     };
-    React.useEffect(() => {
-        if (name !== "") {
-            dispatch({ type: "set", field: "scene", payload: sceneRouter() });
-        }
-    }, [name]);
     return (
         <div
             className="absolute bg-white text-black rounded-3xl border-2
@@ -178,9 +173,9 @@ export function Input({ content, next }: { content: string; next: any }) {
                     e.preventDefault();
                     if (inputRef.current !== null) {
                         dispatch({
-                            type: "set",
-                            field: "name",
-                            payload: inputRef.current.value,
+                            type: "multi-set",
+                            field: ["name", "scene"],
+                            payload: [inputRef.current.value, sceneRouter()],
                         });
                     }
                 }}
