@@ -2,7 +2,7 @@
 import React from "react";
 import { GlobalContext } from "../states";
 import { ContentInterface } from "../types";
-import { scenes } from "../lib/Scenes";
+import { scenes } from "../lib/scenes/Scenes";
 import { Choice, Input, Them, Us, Special } from "../lib/Dialogue";
 import { FirstAttractionObjects, Owl, Rabbit } from "../lib/Characters";
 import { Bg } from "../lib/Background";
