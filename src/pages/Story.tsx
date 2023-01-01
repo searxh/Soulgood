@@ -4,7 +4,12 @@ import { GlobalContext } from "../states";
 import { ContentInterface } from "../types";
 import { scenes } from "../lib/scenes/Scenes";
 import { Choice, Input, Them, Us, Special } from "../lib/Dialogue";
-import { FirstAttractionObjects, Owl, Rabbit } from "../lib/Characters";
+import {
+    FirstAttractionObjects,
+    Owl,
+    Peacock,
+    Rabbit,
+} from "../lib/Characters";
 import { Bg } from "../lib/Background";
 import { BranchInfoInterface } from "../types";
 
@@ -15,6 +20,13 @@ export default function Story() {
         React.useState<BranchInfoInterface | null>(null);
     const [start, setStart] = React.useState<boolean>(true);
     const [next, setNext] = React.useState<any | undefined>();
+    const [windowSize, setWindowSize] = React.useState<{
+        height: Number;
+        width: Number;
+    }>({
+        height: window.innerHeight,
+        width: window.innerWidth,
+    });
     const [lockDialogue, setLockDialogue] = React.useState<
         boolean | null | undefined
     >();
@@ -66,8 +78,30 @@ export default function Story() {
         }
         if (scene === 0) setTimeout(() => setStart(false), 100);
     }, [scene]);
+    React.useEffect(() => {
+        window.addEventListener("resize", (e) => {
+            console.log(window.innerWidth, window.innerHeight);
+            setWindowSize({
+                height: window.innerHeight,
+                width: window.innerWidth,
+            });
+        });
+        return () =>
+            window.removeEventListener("resize", (e) => {
+                setWindowSize({
+                    height: window.innerHeight,
+                    width: window.innerWidth,
+                });
+            });
+    }, []);
     return scene < scenes.length ? (
-        <div className="relative h-screen w-screen overflow-hidden font-mitr bg-white">
+        <div
+            style={{
+                height: windowSize.height + "px",
+                width: windowSize.width + "px",
+            }}
+            className="relative overflow-hidden w-screen font-mitr bg-white"
+        >
             {scene === 0 && (
                 <img
                     className={` ${
@@ -147,6 +181,8 @@ function Character({
                 <Rabbit state={state} className={className} />
             ) : name === "a1-objects" ? (
                 <FirstAttractionObjects state={state} className={className} />
+            ) : name === "peacock" ? (
+                <Peacock state={state} className={className} />
             ) : null}
         </>
     );
