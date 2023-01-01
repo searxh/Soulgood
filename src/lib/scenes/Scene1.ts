@@ -456,7 +456,7 @@ export const firstScene: Array<SceneInterface> = [
             },
             {
                 type: "special",
-                content: "",
+                content: "New item",
             },
         ],
         background: firstAttractionBackground,

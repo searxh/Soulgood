@@ -74,3 +74,28 @@ export function FirstAttractionObjects({
         </div>
     );
 }
+
+export function Peacock({
+    state,
+    className,
+}: {
+    state: string;
+    className: any;
+}) {
+    const [image, setImage] = React.useState<string>("");
+    state = "";
+    React.useLayoutEffect(() => {
+        if (state !== undefined) {
+            setImage("/assets/peacock" + state + ".webp");
+        }
+    }, [state, className]);
+    return (
+        <img
+            src={image}
+            className={`absolute drop-shadow-md m-auto
+            animate-bob z-10 w-[400px] transition duration-300`}
+            alt=""
+            style={className}
+        />
+    );
+}

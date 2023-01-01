@@ -1,6 +1,7 @@
 import { SceneInterface } from "../../types";
 import { zerothScene } from "./Scene";
 import { firstScene } from "./Scene1";
+import { secondScene } from "./Scene2";
 /*
 {
     characters: array to render objects or characters
@@ -13,4 +14,8 @@ import { firstScene } from "./Scene1";
             array[1] specifies second choice branch length
 }
 */
-export const scenes: Array<SceneInterface> = [...zerothScene, ...firstScene];
+export const scenes: Array<SceneInterface> = [
+    // ...zerothScene,
+    // ...firstScene,
+    ...secondScene,
+];

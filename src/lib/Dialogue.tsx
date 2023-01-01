@@ -5,6 +5,7 @@ import { delayInterval } from "../default";
 import { NextContext } from "../next";
 import { GlobalContext } from "../states";
 import { ContentInterface } from "../types";
+import ZoomModule from "../components/ZoomModule";
 
 export function Them({
     content,
@@ -246,11 +247,19 @@ export function Special({ content, next }: { content: string; next: any }) {
             z-10 top-0 bottom-0 left-0 right-0 mx-auto break-words"
         >
             <>
-                <NewItem
-                    clickCallback={() => {
-                        handleSetChoice();
-                    }}
-                />
+                {content.includes("New item") ? (
+                    <NewItem
+                        clickCallback={() => {
+                            handleSetChoice();
+                        }}
+                    />
+                ) : content === "Zoom" ? (
+                    <ZoomModule
+                        clickCallback={() => {
+                            handleSetChoice();
+                        }}
+                    />
+                ) : null}
             </>
         </div>
     );
