@@ -79,6 +79,12 @@ export default function Story() {
         if (scene === 0) setTimeout(() => setStart(false), 100);
     }, [scene]);
     React.useEffect(() => {
+        const bodyElement = document.getElementById("body");
+        if (bodyElement) {
+            bodyElement.style.height = window.innerHeight + "px";
+            bodyElement.style.width = window.innerWidth + "px";
+            bodyElement.style.touchAction = "none";
+        }
         window.addEventListener("resize", (e) => {
             console.log(window.innerWidth, window.innerHeight);
             setWindowSize({

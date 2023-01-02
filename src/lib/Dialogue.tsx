@@ -74,7 +74,7 @@ export function Them({
                 }
             }}
             className="absolute bg-white text-black rounded-3xl text-xl border-2
-            text-center z-10 left-0 right-0 mx-auto top-5 w-[80%] shadow-md"
+            text-center z-10 left-0 right-0 mx-auto top-5 w-[90%] max-w-[50rem] shadow-md"
         >
             <div className="relative w-full h-full p-5 py-10 break-words">
                 <div
@@ -135,7 +135,7 @@ export function Us({ content, next }: { content: string; next: any }) {
                     });*/
                 }}
                 className="absolute bg-white text-black rounded-3xl border-2
-            text-center text-xl z-10 left-0 right-0 mx-auto bottom-5 w-[80%] shadow-md"
+            text-center text-xl z-10 left-0 right-0 mx-auto bottom-5 w-[90%] max-w-[50rem] shadow-md"
             >
                 <div className="relative w-full h-full p-5 py-10 break-words">
                     <div
@@ -165,7 +165,7 @@ export function Input({ content, next }: { content: string; next: any }) {
     return (
         <div
             className="absolute bg-white text-black rounded-3xl border-2
-            text-center p-3 z-10 left-0 right-0 mx-auto bottom-5 w-[80%] shadow-md text-xl"
+            text-center p-3 z-10 left-0 right-0 mx-auto bottom-5 w-[90%] max-w-[50rem] shadow-md text-xl"
         >
             {content}
             <form
@@ -215,7 +215,7 @@ export function Choice({
     return (
         <div
             className="flex absolute justify-evenly text-xl
-            z-10 left-0 right-0 mx-auto bottom-5 w-[90%] break-words"
+            z-10 left-0 right-0 mx-auto bottom-5 w-[90%] max-w-[50rem] break-words"
         >
             <button
                 onClick={() => handleSetChoice(0)}

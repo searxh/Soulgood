@@ -15,7 +15,7 @@ import { secondScene } from "./Scene2";
 }
 */
 export const scenes: Array<SceneInterface> = [
-    // ...zerothScene,
-    // ...firstScene,
+    ...zerothScene,
+    ...firstScene,
     ...secondScene,
 ];
