@@ -18,7 +18,7 @@ const NewItem = ({ clickCallback }: { clickCallback: Function }) => {
             onClick={handleOnClick}
             className={`${
                 transition ? "scale-100 hover:scale-105" : "scale-0"
-            } relative flex flex-col w-[350px] h-[350px] z-10 m-auto shadow-md
+            } relative flex flex-col w-[350px] aspect-square max-w-[80%] z-10 m-auto shadow-md
             p-5 rounded-full bg-blue-200 opacity-100 border-2 transition duration-500`}
         >
             <img
