@@ -6,6 +6,7 @@ import { scenes } from "../lib/scenes/Scenes";
 import { Choice, Input, Them, Us, Special } from "../lib/Dialogue";
 import {
     FirstAttractionObjects,
+    Giraffe,
     Owl,
     Peacock,
     Rabbit,
@@ -189,6 +190,8 @@ function Character({
                 <FirstAttractionObjects state={state} className={className} />
             ) : name === "peacock" ? (
                 <Peacock state={state} className={className} />
+            ) : name === "giraffe" ? (
+                <Giraffe state={state} className={className} />
             ) : null}
         </>
     );
