@@ -6,6 +6,7 @@ import { NextContext } from "../next";
 import { GlobalContext } from "../states";
 import { ContentInterface } from "../types";
 import ZoomModule from "../components/ZoomModule";
+import Balloon from "../components/Balloon";
 
 export function Them({
     content,
@@ -255,6 +256,12 @@ export function Special({ content, next }: { content: string; next: any }) {
                     />
                 ) : content === "Zoom" ? (
                     <ZoomModule
+                        clickCallback={() => {
+                            handleSetChoice();
+                        }}
+                    />
+                ) : content === "Balloon" ? (
+                    <Balloon
                         clickCallback={() => {
                             handleSetChoice();
                         }}
