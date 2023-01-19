@@ -7,6 +7,9 @@ import { Choice, Input, Them, Us, Special } from "../lib/Dialogue";
 import {
     FirstAttractionObjects,
     Giraffe,
+    KangarooKid,
+    KangarooKid1,
+    KangarooMother,
     Owl,
     Peacock,
     Rabbit,
@@ -192,6 +195,12 @@ function Character({
                 <Peacock state={state} className={className} />
             ) : name === "giraffe" ? (
                 <Giraffe state={state} className={className} />
+            ) : name === "kid_kangaroo" ? (
+                <KangarooKid state={state} className={className} />
+            ) : name === "kid_kangaroo_1" ? (
+                <KangarooKid1 state={state} className={className} />
+            ) : name === "mother_kangaroo" ? (
+                <KangarooMother state={state} className={className} />
             ) : null}
         </>
     );
