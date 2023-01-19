@@ -27,6 +27,7 @@ export interface SceneInterface {
 }
 export interface GlobalStateInterface {
     name: string;
+    track: number;
     scene: number;
 }
 export interface ActionInterface {
