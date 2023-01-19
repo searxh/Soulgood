@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import { GlobalStateProvider } from "./states";
 import { NextStateProvider } from "./next";
+import AudioPlayer from "./lib/utilities/AudioPlayer";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
@@ -14,6 +15,7 @@ root.render(
     <BrowserRouter>
         <GlobalStateProvider>
             <NextStateProvider>
+                <AudioPlayer />
                 <App />
             </NextStateProvider>
         </GlobalStateProvider>

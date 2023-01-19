@@ -22,11 +22,14 @@ export interface SceneInterface {
     characters: Array<CharacterInterface>;
     background: { name: string };
     next: string | Array<number>;
+    //param for switching music
+    trackChange?: number;
     //extra param for visual purpose only
     branch?: number;
 }
 export interface GlobalStateInterface {
     name: string;
+    track: number;
     scene: number;
 }
 export interface ActionInterface {

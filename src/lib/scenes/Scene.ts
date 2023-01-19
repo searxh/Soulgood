@@ -58,7 +58,7 @@ export const zerothScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "us",
-                content: "ไม่ใช่นะ ฉันไม่ใช่ลูกค้า ที่นี่ที่ไหนกันเนี่ย",
+                content: "ไม่ใช่นะ ฉันไม่ใช่ลูกค้า ที่นี่คือที่ไหนเหรอ",
             },
         ],
         background: defaultBackground,
@@ -76,7 +76,7 @@ export const zerothScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "ที่นี่คือสวนสนุกของฉันเอง ไม่รู้ว่าเพราะอะไร แต่มันกำลังจะล้มละลาย เพราะไม่มีลูกค้าเลยแม้แต่คนเดียว",
+                    "ที่นี่คือสวนสนุกของฉันเอง ไม่รู้ว่าเพราะอะไร แต่มันกำลังจะล้มละลาย ที่นี่ไม่มีลูกค้ามาเลยแม้แต่คนเดียว..",
                 speaker: "นกฮูก",
             },
         ],
@@ -144,7 +144,7 @@ export const zerothScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "เข้ามาเถอะ .... ข้างในอาจจะมีคำตอบที่พาเธอออกไปจากที่นี่ก็ได้นะ",
+                    "เข้ามาเถอะนะ.... ข้างในสวนสนุกอาจจะมีคำตอบที่พาเธอออกไปจากที่นี่ก็ได้",
                 speaker: "นกฮูก",
             },
         ],
@@ -226,7 +226,7 @@ export const zerothScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "ขอให้สนุกกับการเดินทางครั้งนี้นะ",
+                content: "ขอให้สนุกกับการเดินทางในครั้งนี้นะ",
                 speaker: "นกฮูก",
             },
         ],
