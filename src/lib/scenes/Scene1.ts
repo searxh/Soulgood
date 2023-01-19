@@ -96,25 +96,7 @@ export const firstScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "ช่วยตามหา ไขควง ให้ฉันหน่อยได้ไหม ฉันลืมไว้ด้านบนเครื่องเล่นน่ะ",
-                speaker: "กระต่าย",
-            },
-        ],
-        background: firstAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "rabbit",
-                state: "neutral",
-                className: defaultRabbitClassName,
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "ไม่อย่างนั้นคนอื่นต้องคิดว่าฉันไม่ได้เรื่องแน่เลย",
+                    "ช่วยตามหา ไขควง ให้ฉันหน่อยได้มั้ย ฉันลืมไว้ด้านบนเครื่องเล่นน่ะ ฉันจะต้องซ่อมชิงช้าสวรรค์ให้เสร็จทันเวลา",
                 speaker: "กระต่าย",
             },
         ],
@@ -132,135 +114,7 @@ export const firstScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "us",
-                content: "ทำไมถึงคิดแบบนั้นล่ะ",
-                speaker: "เรา",
-            },
-        ],
-        background: firstAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "rabbit",
-                state: "neutral",
-                className: defaultRabbitClassName,
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content:
-                    "ฉันน่ะเคยกดเครื่องเล่นพลาด ชิงช้าวนไปวนมาอยู่เป็นชั่วโมงเลย ยังรู้สึกเสียใจ",
-                speaker: "กระต่าย",
-            },
-        ],
-        background: firstAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "rabbit",
-                state: "neutral",
-                className: defaultRabbitClassName,
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "ฉันคิดเรื่องนั้นวนไปวนมาจนนอนไม่หลับอยู่เลย",
-                speaker: "กระต่าย",
-            },
-        ],
-        background: firstAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "rabbit",
-                state: "neutral",
-                className: defaultRabbitClassName,
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "ฉันเลยไม่กล้าทำอะไรเองแล้วล่ะ",
-                speaker: "กระต่าย",
-            },
-        ],
-        background: firstAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "rabbit",
-                state: "neutral",
-                className: defaultRabbitClassName,
-            },
-        ],
-        dialogues: [
-            {
-                type: "us",
-                content: "มีคนอื่นว่าเธออย่างนั้นเหรอ",
-                speaker: "เรา",
-            },
-        ],
-        background: firstAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "rabbit",
-                state: "neutral",
-                className: defaultRabbitClassName,
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "เปล่าหรอก ฉันรู้สึกแย่เองทั้งที่ไม่มีใครว่าฉัน",
-                speaker: "กระต่าย",
-            },
-        ],
-        background: firstAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "rabbit",
-                state: "neutral",
-                className: defaultRabbitClassName,
-            },
-        ],
-        dialogues: [
-            {
-                type: "us",
-                content:
-                    "งั้นเธอลองหาเองดูดีมั้ย เผื่อเธอจะมีความมั่นใจในตัวเองมากขึ้น",
-                speaker: "เรา",
-            },
-        ],
-        background: firstAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "rabbit",
-                state: "neutral",
-                className: defaultRabbitClassName,
-            },
-        ],
-        dialogues: [
-            {
-                type: "us",
-                content: "แต่ไม่ต้องกังวล เดี๋ยวฉันจะช่วยเธอเอง",
+                content: "ได้สิ",
                 speaker: "เรา",
             },
         ],
@@ -283,7 +137,7 @@ export const firstScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "<name> ช่วยบอกฉันหน่อยสิว่ามันอยู่ตรงไหน",
+                content: "โจทย์ ตามหาไขควงที่กระต่ายลืมไว้บนชิงช้าสวรรค์",
                 speaker: "กระต่าย",
             },
             {
@@ -309,7 +163,8 @@ export const firstScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "เจอแล้ว ! ขอบคุณมากเลยนะ เธอช่วยฉันได้เยอะเลย",
+                content:
+                    "เจอแล้ว ! ขอบคุณมากเลยนะ ว่าเเต่เธอช่วยฉันซ่อมชิงช้าสวรรค์ได้มั้ย",
                 speaker: "กระต่าย",
             },
         ],
@@ -390,7 +245,8 @@ export const firstScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "เจอแล้ว ! ขอบคุณมากเลยนะ เธอช่วยฉันได้เยอะเลย",
+                content:
+                    "เจอแล้ว ! ขอบคุณมากเลยนะ ว่าเเต่เธอช่วยฉันซ่อมชิงช้าสวรรค์ได้มั้ย",
                 speaker: "กระต่าย",
             },
         ],
@@ -409,7 +265,172 @@ export const firstScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "แล้วเวลาเธอรู้สึกกังวลที่จะต้องสิ่งที่เคยผิดพลาดมาก่อน เธอรับมือยังไงหรอ",
+                    "ถ้าฉันซ่อมเองแล้วมันออกมาไม่ดี คนอื่นต้องคิดว่าฉันไม่ได้เรื่องแน่เลย",
+                speaker: "กระต่าย",
+            },
+        ],
+        background: firstAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "rabbit",
+                state: "neutral",
+                className: defaultRabbitClassName,
+            },
+        ],
+        dialogues: [
+            {
+                type: "us",
+                content: "ทำไมถึงคิดแบบนั้นล่ะ",
+                speaker: "เรา",
+            },
+        ],
+        background: firstAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "rabbit",
+                state: "neutral",
+                className: defaultRabbitClassName,
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "ฉันน่ะเคยซ่อมเครื่องเล่นพลาด ชิงช้าหมุนวนไปวนมาอยู่เป็นชั่วโมงเลย ฉันยังรู้สึกเสียใจแถมยังโกรธตัวเองด้วย",
+                speaker: "กระต่าย",
+            },
+        ],
+        background: firstAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "rabbit",
+                state: "neutral",
+                className: defaultRabbitClassName,
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "ตอนนี้ยังคิดเรื่องนั้นวนไปวนมาจนนอนไม่หลับอยู่เลย ต่อจากนี้คงไม่กล้าทำอะไรเองเเล้วล่ะ",
+                speaker: "กระต่าย",
+            },
+        ],
+        background: firstAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "rabbit",
+                state: "neutral",
+                className: defaultRabbitClassName,
+            },
+        ],
+        dialogues: [
+            {
+                type: "us",
+                content: "มีคนอื่นว่าเธออย่างนั้นเหรอ",
+                speaker: "เรา",
+            },
+        ],
+        background: firstAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "rabbit",
+                state: "neutral",
+                className: defaultRabbitClassName,
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "เปล่าหรอก ฉันรู้สึกแย่เองทั้งที่ไม่มีใครว่าฉัน",
+                speaker: "กระต่าย",
+            },
+        ],
+        background: firstAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "rabbit",
+                state: "neutral",
+                className: defaultRabbitClassName,
+            },
+        ],
+        dialogues: [
+            {
+                type: "us",
+                content: "งั้นเธอลองซ่อมเองอีกทีมั้ย",
+                speaker: "เรา",
+            },
+        ],
+        background: firstAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "rabbit",
+                state: "neutral",
+                className: defaultRabbitClassName,
+            },
+        ],
+        dialogues: [
+            {
+                type: "us",
+                content: "แต่ไม่ต้องกังวล เดี๋ยวฉันจะช่วยเธอเอง",
+                speaker: "เรา",
+            },
+        ],
+        background: firstAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "rabbit",
+                state: "neutral",
+                className: defaultRabbitClassName,
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "อืม... แต่ฉันก็ยังรู้สึกกังวลอยู่ดีน่ะ",
+                speaker: "กระต่าย",
+            },
+        ],
+        background: firstAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "rabbit",
+                state: "neutral",
+                className: defaultRabbitClassName,
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "แล้วเวลาเธอรู้สึกกังวลที่จะต้องทำสิ่งที่เคยทำผิดพลาดมาก่อน เธอรับมือยังไงหรอ",
                 speaker: "กระต่าย",
             },
             {
@@ -432,7 +453,62 @@ export const firstScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "การที่เธอช่วยฉันหาของทำให้ฉันคิดได้ว่าความผิดพลาดในอดีตไม่ได้เป็นเหมือนเดิม ขอบคุณมาก ๆ เลยนะ",
+                    "ขอบคุณมากเลยนะที่เล่าให้ฉันฟัง เธอทำให้ฉันมั่นใจขึ้นเลยล่ะ ฉันอยากลองซ่อมด้วยตัวเองดู เธอเป็นกำลังใจให้ฉันด้วยนะ",
+                speaker: "กระต่าย",
+            },
+        ],
+        background: firstAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "rabbit",
+                state: "neutral",
+                className: defaultRabbitClassName,
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "* กระต่ายถือไขควงส่ายไปส่ายมา *",
+                speaker: "กระต่าย",
+            },
+        ],
+        background: firstAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "rabbit",
+                state: "neutral",
+                className: defaultRabbitClassName,
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "ซ่อมเสร็จแล้วล่ะ ขอบคุณมากๆเลยนะ",
+                speaker: "กระต่าย",
+            },
+        ],
+        background: firstAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "rabbit",
+                state: "neutral",
+                className: defaultRabbitClassName,
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "เรื่องราวของเธอทำให้ฉันคิดได้ว่าใคร ๆ ก็เคยผิดพลาดกันทั้งนั้น เราแค่เรียนรู้จากมันเเล้วเดินต่อไปก็พอ",
                 speaker: "กระต่าย",
             },
         ],
