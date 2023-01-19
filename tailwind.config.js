@@ -25,12 +25,12 @@ module.exports = {
       },
       keyframes:{
         bob:{
-          '0%, 100%': { transform: ['rotate(-3deg)','translateY(-5%)'] },
-          '50%': { transform: ['rotate(3deg)','translateY(5%)]'] },
+          '0%, 100%': { transform: ['rotate(-2deg)','translateY(-2.5%)'] },
+          '50%': { transform: ['rotate(2deg)','translateY(2.5%)]'] },
         }
       },
       animation: {
-        bob: 'bob 3s ease-in-out infinite'
+        bob: 'bob 5s ease-in-out infinite'
       }
     },
   },
