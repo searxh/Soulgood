@@ -254,6 +254,7 @@ export const firstScene: Array<SceneInterface> = [
         next: "default",
     },
     {
+        trackChange: 1,
         characters: [
             {
                 name: "rabbit",
@@ -479,6 +480,7 @@ export const firstScene: Array<SceneInterface> = [
         next: "default",
     },
     {
+        trackChange: 0,
         characters: [
             {
                 name: "rabbit",
