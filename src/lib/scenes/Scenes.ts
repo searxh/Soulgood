@@ -3,6 +3,7 @@ import { zerothScene } from "./Scene";
 import { firstScene } from "./Scene1";
 import { secondScene } from "./Scene2";
 import { thirdScene } from "./Scene3";
+import { fourthScene } from "./Scene4";
 /*
 {
     characters: array to render objects or characters
@@ -20,4 +21,5 @@ export const scenes: Array<SceneInterface> = [
     ...firstScene,
     ...secondScene,
     ...thirdScene,
+    ...fourthScene,
 ];

@@ -155,7 +155,7 @@ export function Us({ content, next }: { content: string; next: any }) {
 export function Input({ content, next }: { content: string; next: any }) {
     const inputRef = React.useRef<HTMLInputElement>(null);
     const { global_state, dispatch } = React.useContext(GlobalContext);
-    const { scene } = global_state;
+    const { name, scene } = global_state;
     const sceneRouter = () => {
         if (next === "default") {
             return scene + 1;
@@ -174,10 +174,12 @@ export function Input({ content, next }: { content: string; next: any }) {
                 onSubmit={(e) => {
                     e.preventDefault();
                     if (inputRef.current !== null) {
+                        const newName =
+                            name.length !== 0 ? name : inputRef.current.value;
                         dispatch({
                             type: "multi-set",
                             field: ["name", "scene"],
-                            payload: [inputRef.current.value, sceneRouter()],
+                            payload: [newName, sceneRouter()],
                         });
                     }
                 }}

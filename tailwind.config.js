@@ -20,6 +20,9 @@ module.exports = {
       fontFamily:{
         "mitr":"Mitr"
       },
+      scale:{
+        "-1":"-1"
+      },
       keyframes:{
         bob:{
           '0%, 100%': { transform: ['rotate(-3deg)','translateY(-5%)'] },

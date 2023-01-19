@@ -124,3 +124,82 @@ export function Giraffe({
         />
     );
 }
+
+export function KangarooKid1({
+    state,
+    className,
+}: {
+    state: string;
+    className: any;
+}) {
+    const [image, setImage] = React.useState<string>("");
+    state = "";
+    React.useLayoutEffect(() => {
+        if (state !== undefined) {
+            setImage("/assets/kidkangaroo" + state + ".png");
+        }
+    }, [state, className]);
+    return (
+        <img
+            src={image}
+            className={`absolute drop-shadow-md m-auto
+            animate-bob z-10 w-[300px] max-w-[80%] transition duration-300`}
+            alt=""
+            style={className}
+        />
+    );
+}
+
+export function KangarooKid({
+    state,
+    className,
+}: {
+    state: string;
+    className: any;
+}) {
+    const [image, setImage] = React.useState<string>("");
+    state = "";
+    React.useLayoutEffect(() => {
+        if (state !== undefined) {
+            setImage("/assets/kidkangaroo" + state + ".png");
+        }
+    }, [state, className]);
+    return (
+        <div
+            style={className}
+            className="absolute -scale-x-100 max-w-[80%] w-[300px] m-auto z-10"
+        >
+            <img
+                src={image}
+                className={`drop-shadow-md sepia-[50%]
+                animate-bob transition duration-300`}
+                alt=""
+            />
+        </div>
+    );
+}
+
+export function KangarooMother({
+    state,
+    className,
+}: {
+    state: string;
+    className: any;
+}) {
+    const [image, setImage] = React.useState<string>("");
+    state = "";
+    React.useLayoutEffect(() => {
+        if (state !== undefined) {
+            setImage("/assets/motherkangaroo" + state + ".webp");
+        }
+    }, [state, className]);
+    return (
+        <img
+            src={image}
+            className={`absolute drop-shadow-md m-auto
+            animate-bob z-10 w-[500px] max-w-[80%] transition duration-300`}
+            alt=""
+            style={className}
+        />
+    );
+}
