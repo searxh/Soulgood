@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
-import { GlobalContext } from "../states";
 import { ContentInterface } from "../types";
 import { scenes } from "../lib/scenes/Scenes";
 import { Choice, Input, Them, Us, Special } from "../lib/Dialogue";
@@ -15,95 +14,13 @@ import {
     Rabbit,
 } from "../lib/Characters";
 import { Bg } from "../lib/Background";
-import { BranchInfoInterface } from "../types";
+import useStoryController from "../hooks/useStoryController";
+import useWindowSize from "../hooks/useWindowSize";
 
 export default function Story() {
-    const { global_state } = React.useContext(GlobalContext);
-    const { scene } = global_state;
-    const [branchInfo, setBranchInfo] =
-        React.useState<BranchInfoInterface | null>(null);
-    const [start, setStart] = React.useState<boolean>(true);
-    const [next, setNext] = React.useState<any | undefined>();
-    const [windowSize, setWindowSize] = React.useState<{
-        height: Number;
-        width: Number;
-    }>({
-        height: window.innerHeight,
-        width: window.innerWidth,
-    });
-    const [lockDialogue, setLockDialogue] = React.useState<
-        boolean | null | undefined
-    >();
-    const calculateLockDialogue = () => {
-        if (scenes[scene].dialogues.length > 1) {
-            setLockDialogue(true);
-        } else {
-            setLockDialogue(null);
-        }
-    };
-    const calculateNext = () => {
-        if (branchInfo === null) {
-            console.log("[CALCULATE NEXT]", scenes[scene].next);
-            return scenes[scene].next;
-        } else {
-            const { startBranchIndex, firstBranchLength, endBranchIndex } =
-                branchInfo;
-            const lastFirstBranchIndex = startBranchIndex + firstBranchLength;
-            if (scene === lastFirstBranchIndex || scene === endBranchIndex) {
-                setBranchInfo(null);
-                console.log(
-                    "[CALCULATE NEXT] GO END BRANCH",
-                    endBranchIndex + 1
-                );
-                return endBranchIndex + 1;
-            }
-            console.log("[CALCULATE NEXT]", scenes[scene].next);
-            return scenes[scene].next;
-        }
-    };
-    const printDoneCallback = () => {
-        if (lockDialogue !== null) setLockDialogue(false);
-    };
-    React.useLayoutEffect(() => {
-        console.log("----------[SCENE " + scene + "]----------------");
-        if (scene < scenes.length && Array.isArray(scenes[scene].next)) {
-            const a = scenes[scene].next[0] as number;
-            const b = scenes[scene].next[1] as number;
-            setBranchInfo({
-                startBranchIndex: scene,
-                endBranchIndex: scene + a + b,
-                firstBranchLength: a,
-                secondBranchLength: b,
-            });
-        }
-        if (scene < scenes.length) {
-            calculateLockDialogue();
-            setNext(calculateNext());
-        }
-        if (scene === 0) setTimeout(() => setStart(false), 100);
-    }, [scene]);
-    React.useEffect(() => {
-        const bodyElement = document.getElementById("body");
-        if (bodyElement) {
-            bodyElement.style.height = window.innerHeight + "px";
-            bodyElement.style.width = window.innerWidth + "px";
-            bodyElement.style.touchAction = "none";
-        }
-        window.addEventListener("resize", (e) => {
-            console.log(window.innerWidth, window.innerHeight);
-            setWindowSize({
-                height: window.innerHeight,
-                width: window.innerWidth,
-            });
-        });
-        return () =>
-            window.removeEventListener("resize", (e) => {
-                setWindowSize({
-                    height: window.innerHeight,
-                    width: window.innerWidth,
-                });
-            });
-    }, []);
+    const { scene, start, next, lockDialogue, printDoneCallback } =
+        useStoryController();
+    const { windowSize } = useWindowSize();
     return scene < scenes.length ? (
         <div
             style={{
