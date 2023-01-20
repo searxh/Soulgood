@@ -168,7 +168,7 @@ export const secondScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "ตอนแรกฉันกะจะส่งก่อนเดดไลน์แต่ตอนนี้ทำไปทำมาจนมันใกล้เดดไลน์แล้วก็ยังไม่ได้ซักที",
+                    "ตอนแรกฉันว่าจะทำให้เสร็จก่อนถึงวันกำหนดส่ง แต่ตอนนี้ทำไปทำมาจนมันใกล้จะถึงแล้วก็ยังไม่ได้สักที",
                 speaker: "นกยูง",
             },
         ],
@@ -222,7 +222,7 @@ export const secondScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "us",
-                content: "โอเคแล้วนะ",
+                content: "ฉันว่าโอเคแล้วนะ",
                 speaker: "เรา",
             },
         ],
@@ -240,7 +240,7 @@ export const secondScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "us",
-                content: "มันต้องสมบูรณ์แบบขนาดไหนเหรอ",
+                content: "แล้วมันต้องสมบูรณ์แบบขนาดไหนเหรอ",
                 speaker: "เรา",
             },
         ],
@@ -281,14 +281,18 @@ export const secondScene: Array<SceneInterface> = [
                 speaker: "นกยูง",
             },
             {
-                type: "input",
-                content: "",
+                type: "choice",
+                content: {
+                    subContent: "เคย",
+                    subContent1: "ไม่เคย",
+                },
             },
         ],
         background: secondAttractionBackground,
-        next: "default",
+        next: [3, 1],
     },
     {
+        branch: 1,
         characters: [
             {
                 name: "peacock",
@@ -303,15 +307,12 @@ export const secondScene: Array<SceneInterface> = [
                     "แล้วเธอมีวิธีจัดการกับมันยังไงบ้าง เล่าให้ฉันฟังหน่อยได้ไหม",
                 speaker: "นกยูง",
             },
-            {
-                type: "input",
-                content: "",
-            },
         ],
         background: secondAttractionBackground,
         next: "default",
     },
     {
+        branch: 1,
         characters: [
             {
                 name: "peacock",
@@ -330,6 +331,7 @@ export const secondScene: Array<SceneInterface> = [
         next: "default",
     },
     {
+        branch: 1,
         characters: [
             {
                 name: "peacock",
@@ -347,6 +349,26 @@ export const secondScene: Array<SceneInterface> = [
             {
                 type: "special",
                 content: "New item",
+            },
+        ],
+        background: secondAttractionBackground,
+        next: "default",
+    },
+    {
+        branch: 2,
+        characters: [
+            {
+                name: "peacock",
+                state: "neutral",
+                className: defaultPeacockClassName,
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "ว้าว ดีจังเลย ยังมีอีกหลายคนที่พบเจอกับสถานการณ์แบบนี้ ถ้าวันนึง เธอได้พบเจอกับเพื่อน ๆ เหล่านี้ หวังว่าเธอจะช่วยเป็นกำลังใจอยู่ข้าง ๆ พวกเขาด้วยนะ",
+                speaker: "นกยูง",
             },
         ],
         background: secondAttractionBackground,
