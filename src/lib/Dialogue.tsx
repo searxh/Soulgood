@@ -241,8 +241,15 @@ export function Choice({
 export function Special({ content, next }: { content: string; next: any }) {
     const { global_state, dispatch } = React.useContext(GlobalContext);
     const { scene } = global_state;
+    const sceneRouter = () => {
+        if (next === "default") {
+            return scene + 1;
+        } else {
+            return next;
+        }
+    };
     const handleSetChoice = () => {
-        dispatch({ type: "set", field: "scene", payload: scene + 1 });
+        dispatch({ type: "set", field: "scene", payload: sceneRouter() });
     };
     return (
         <div
