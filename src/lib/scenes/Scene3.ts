@@ -13,6 +13,7 @@ const thirdAttractionBackground = {
 
 export const thirdScene: Array<SceneInterface> = [
     {
+        trackChange: 0,
         characters: [
             {
                 name: "giraffe",
@@ -204,7 +205,7 @@ export const thirdScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "เพราะฉะนั้นเครื่องเล่นของฉันจะต้องเพอร์เฟกต์ทุกด้าน",
+                content: "เพราะฉะนั้นเครื่องเล่นของฉันจะต้องสมบูรณ์แบบทุกด้าน",
                 speaker: "ยีราฟ",
             },
             {
@@ -292,6 +293,7 @@ export const thirdScene: Array<SceneInterface> = [
         next: "default",
     },
     {
+        trackChange: 1,
         characters: [
             {
                 name: "giraffe",
@@ -315,7 +317,7 @@ export const thirdScene: Array<SceneInterface> = [
             },
         ],
         background: thirdAttractionBackground,
-        next: [4, 1],
+        next: [12, 1],
     },
     {
         branch: 1,
@@ -352,6 +354,146 @@ export const thirdScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
+                content: "แล้วเธอรับมือกับความรู้สึกไม่ดีพอนี้ได้มั้ย",
+                speaker: "ยีราฟ",
+            },
+            {
+                type: "choice",
+                content: {
+                    subContent: "ได้",
+                    subContent1: "ไม่ได้",
+                },
+            },
+        ],
+        background: thirdAttractionBackground,
+        next: [1, 9],
+    },
+    {
+        branch: 1.1,
+        characters: [
+            {
+                name: "giraffe",
+                state: "neutral",
+                className: { ...defaultGiraffeClassName },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "เธอทำได้ยังไงเหรอ บอกฉันหน่อยได้มั้ย",
+                speaker: "ยีราฟ",
+            },
+            {
+                type: "input",
+                content: "",
+            },
+        ],
+        background: thirdAttractionBackground,
+        next: "default",
+    },
+    {
+        branch: 1.2,
+        characters: [
+            {
+                name: "giraffe",
+                state: "neutral",
+                className: { ...defaultGiraffeClassName },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "งั้นเรามาลองคิดไปด้วยกันไหมว่าจะจัดการกับความคิดนี้ยังไงดี",
+                speaker: "ยีราฟ",
+            },
+        ],
+        background: thirdAttractionBackground,
+        next: "default",
+    },
+    {
+        branch: 1.2,
+        characters: [
+            {
+                name: "giraffe",
+                state: "neutral",
+                className: { ...defaultGiraffeClassName },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "เธอเคยใช้วิธีจัดการกับความรู้สึกที่ไม่ดีพออะไรมาบ้างหรอ",
+                speaker: "ยีราฟ",
+            },
+            {
+                type: "input",
+                content: "",
+            },
+        ],
+        background: thirdAttractionBackground,
+        next: "default",
+    },
+    {
+        branch: 1.2,
+        characters: [
+            {
+                name: "giraffe",
+                state: "neutral",
+                className: { ...defaultGiraffeClassName },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "เธอคิดว่าวิธีที่เธอทำไป ทำไมมันถึงยังไม่ได้ผลล่ะ",
+                speaker: "ยีราฟ",
+            },
+            {
+                type: "input",
+                content: "",
+            },
+        ],
+        background: thirdAttractionBackground,
+        next: "default",
+    },
+    {
+        branch: 1.2,
+        characters: [
+            {
+                name: "giraffe",
+                state: "neutral",
+                className: { ...defaultGiraffeClassName },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "ถ้าอย่างนั้นเราจะทำให้มันดีขึ้นได้ยังไงบ้าง หรือพอมีวิธีอื่นอีกไหมที่เธอคิดว่ามันอาจจะช่วยได้",
+                speaker: "ยีราฟ",
+            },
+            {
+                type: "input",
+                content: "",
+            },
+        ],
+        background: thirdAttractionBackground,
+        next: "default",
+    },
+    {
+        branch: 1.2,
+        characters: [
+            {
+                name: "giraffe",
+                state: "neutral",
+                className: { ...defaultGiraffeClassName },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
                 content:
                     "พอได้ฟังที่เธอเล่า ฉันว่าฉันเริ่มเข้าใจตัวเองมากขึ้นแล้วล่ะ",
                 speaker: "ยีราฟ",
@@ -361,7 +503,7 @@ export const thirdScene: Array<SceneInterface> = [
         next: "default",
     },
     {
-        branch: 1,
+        branch: 1.2,
         characters: [
             {
                 name: "giraffe",
@@ -373,7 +515,7 @@ export const thirdScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "บางทีมันอาจจะไม่ใช่เพราะเธอทำได้ไม่ดีพอจริง ๆ หรอก แต่เป็นเพราะพอเธอทำได้ตามที่ตัวเองต้องการ มาตรฐานของเธอก็เพิ่มขึ้นตามไปด้วย",
+                    "บางทีมันอาจจะไม่ใช่เพราะฉันทำได้ไม่ดีพอหรอก แต่เป็นเพราะมาตรฐานของฉันเพิ่มขึ้นเรื่อย ๆ",
                 speaker: "ยีราฟ",
             },
         ],
@@ -381,7 +523,45 @@ export const thirdScene: Array<SceneInterface> = [
         next: "default",
     },
     {
-        branch: 1,
+        branch: 1.2,
+        characters: [
+            {
+                name: "giraffe",
+                state: "neutral",
+                className: { ...defaultGiraffeClassName },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "เพราะแบบนี้ ฉันถึงรู้สึกว่ามันยังไม่ดีพอสักที",
+                speaker: "ยีราฟ",
+            },
+        ],
+        background: thirdAttractionBackground,
+        next: "default",
+    },
+    {
+        branch: 1.2,
+        characters: [
+            {
+                name: "giraffe",
+                state: "neutral",
+                className: { ...defaultGiraffeClassName },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "ฉันจะเก็บเรื่องนี้ไว้เป็นบทเรียนนะ ขอบคุณเธอมากเลย",
+                speaker: "ยีราฟ",
+            },
+        ],
+        background: thirdAttractionBackground,
+        next: "default",
+    },
+    {
+        branch: 1.2,
         characters: [
             {
                 name: "giraffe",
@@ -393,7 +573,7 @@ export const thirdScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "การพยายามไขว่คว้ามาตรฐานที่เพิ่มขึ้นแบบไม่มีที่สิ้นสุดคงทำให้เธอรู้สึกเหนื่อยได้",
+                    "ถ้าเกิดเธอความรู้สึกแบบนี้บ้าง ก็อยากให้เธอลองเอาวิธีที่เธอบอกฉันเมื่อกี้ไปปรับใช้ดูนะ",
                 speaker: "ยีราฟ",
             },
         ],
@@ -413,8 +593,12 @@ export const thirdScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "แสดงว่าเธอจัดการกับความรู้สึกของตัวเองได้ดีมากเลยนะเนี่ย ฉันคงจะต้องหาตรงกลางให้ได้แบบเธอบ้างเเล้วล่ะ",
+                    "เก่งจังเลย บอกฉันหน่อยสิว่าเธอทำยังไงถึงไม่เคยรู้สึกไม่ดีพอเลย",
                 speaker: "ยีราฟ",
+            },
+            {
+                type: "input",
+                content: "",
             },
         ],
         background: thirdAttractionBackground,

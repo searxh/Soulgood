@@ -266,6 +266,7 @@ export const secondScene: Array<SceneInterface> = [
         next: "default",
     },
     {
+        trackChange: 1,
         characters: [
             {
                 name: "peacock",
@@ -306,6 +307,10 @@ export const secondScene: Array<SceneInterface> = [
                 content:
                     "แล้วเธอมีวิธีจัดการกับมันยังไงบ้าง เล่าให้ฉันฟังหน่อยได้ไหม",
                 speaker: "นกยูง",
+            },
+            {
+                type: "input",
+                content: "",
             },
         ],
         background: secondAttractionBackground,

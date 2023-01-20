@@ -34,6 +34,7 @@ const fourthAttractionBackground = {
 
 export const fourthScene: Array<SceneInterface> = [
     {
+        trackChange: 0,
         characters: [
             {
                 name: "kid_kangaroo",
@@ -681,6 +682,7 @@ export const fourthScene: Array<SceneInterface> = [
         next: "default",
     },
     {
+        trackChange: 1,
         characters: [
             {
                 name: "owl",
