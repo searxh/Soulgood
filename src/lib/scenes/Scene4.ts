@@ -50,7 +50,7 @@ export const fourthScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "us",
-                content: "เอ ไปไหนก่อนดีนะ",
+                content: "เอ ไปไหนต่อดีนะ",
                 speaker: "เรา",
             },
         ],
@@ -79,9 +79,154 @@ export const fourthScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
+                content: "สะ..สวัสดี ยินดีต้อนรับเข้าสู่รถบั๊ม",
+                speaker: "พี่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(1)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "เอ่อ นาย พูดต่อสิ ๆ",
+                speaker: "พี่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(1)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "ขะ...เข้ามานั่งตรงนี้ ละ...เลย พวกเราจะดูแลคุณเอง",
+                speaker: "น้องจิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(1)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "us",
+                content: "พวกเธอโอเครึเปล่า ดูเกร็งๆนะ",
+                speaker: "เรา",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(1)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "เปล่าสักหน่อย… ว่าเเต่เธอดูออกด้วยหรอ",
+                speaker: "น้องจิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(1)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
                 content:
-                    "ฉันมาฝึกงานที่นี่ เพราะแม่เคยทำงานเครื่องเล่นนี้มาก่อน ต้องทำให้ดีสมกับที่แม่คาดหวัง",
-                speaker: "จิงโจ้ (1)",
+                    "พวกเราเพิ่งมาฝึกงานที่นี่น่ะ แม่ของพวกเราเคยทำงานที่เครื่องเล่นนี้เลยต้องทำให้ดีตามที่แม่คาดหวัง",
+                speaker: "พี่จิงโจ้",
             },
         ],
         background: fourthAttractionBackground,
@@ -110,8 +255,8 @@ export const fourthScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "จริง ๆ ฉันไม่ได้อยากดูแลเครื่องเล่นด้วยซ้ำ ฉันอยากเป็นเชฟ กดดันมากเลย",
-                speaker: "จิงโจ้ (2)",
+                    "จริง ๆ ฉันไม่ได้อยากทำงานนี้ด้วยซ้ำ ฉันอยากเป็นเชฟ กดดันมากเลย",
+                speaker: "น้องจิงโจ้",
             },
         ],
         background: fourthAttractionBackground,
@@ -139,8 +284,9 @@ export const fourthScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "แล้ว <name> ชอบสิ่งที่ตัวเองกำลังทำอยู่ไหม",
-                speaker: "จิงโจ้ (2)",
+                content:
+                    "แล้ว <name> ชอบสิ่งที่ตัวเองกำลังทำเรียนหรือทำงานอยู่มั้ย",
+                speaker: "น้องจิงโจ้",
             },
             {
                 type: "choice",
@@ -176,14 +322,15 @@ export const fourthScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "ดีจังนะ",
-                speaker: "จิงโจ้ (2)",
+                content: "ดีจังเลยนะ อย่างน้อยเธอก็ได้มีโอกาสทำในสิ่งที่ชอบนะ",
+                speaker: "น้องจิงโจ้",
             },
         ],
         background: fourthAttractionBackground,
         next: "default",
     },
     {
+        trackChange: 1,
         branch: 2,
         characters: [
             {
@@ -207,475 +354,8 @@ export const fourthScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "เรายังมีเวลาค้นหาตัวเองอีกเยอะ การค้นพบสิ่งที่ชอบไม่มีวันสุดสิ้นหรอกนะ สักวันเธอจะต้องเจอตัวเองเเน่ๆ",
-                speaker: "จิงโจ้ (2)",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "kid_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content:
-                    "เธอเจอพี่ยีราฟมาแล้วใช่มั้ย ถ้าฉันเก่งแบบพี่ยีราฟก็คงดี",
-                speaker: "จิงโจ้ (2)",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "kid_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content:
-                    "ฉันต้องเก่งแบบพี่เขา เพราะแม่ชอบชมพี่ยีราฟ บางทีฉันก็อยากให้แม่ชมฉันบ้าง",
-                speaker: "จิงโจ้ (1)",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "kid_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content:
-                    "ตอนฝึกงานใหม่ ๆ ฉันทำได้ไม่ดี ฉันต้องผ่านการทดลองงานให้ได้ทำงานที่นี่ให้ได้ จะต้องไม่ทำให้แม่ผิดหวัง",
-                speaker: "จิงโจ้ (2)",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "kid_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content:
-                    "เดี๋ยวฉันต้องดูแลเครื่องเล่นต่อละ ถ้าทำได้ดีน้อยกว่าคนอื่นเดี๋ยวแม่เสียหน้า",
-                speaker: "จิงโจ้ (1)",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "mother_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultMotherKangarooClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "* แม่จิงโจ้แอบดู *",
-                speaker: "แม่จิงโจ้",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "mother_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultMotherKangarooClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "นั่น ผู้จัดการนกฮูกมาประเมินลูกทั้งสองคนของฉันแน่เลย",
-                speaker: "แม่จิงโจ้",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "mother_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultMotherKangarooClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content:
-                    "แต่ลูก ๆ ฉันเป็นคนดี ถึงไม่เก่งเท่ามาตรฐานคนอื่น ขอแค่เป็นคนดีก็น่าจะได้รางวัลแล้ว",
-                speaker: "แม่จิงโจ้",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "mother_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultMotherKangarooClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "ฉันมีแผนการ รอดูเถอะ หึ ๆ",
-                speaker: "แม่จิงโจ้",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "mother_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultMotherKangarooClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "* วิ่งเข้ามาแกล้งสะดุดล้ม *",
-                speaker: "แม่จิงโจ้",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "kid_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "คุณผู้หญิง เป็นอะไรไหมครับ",
-                speaker: "จิงโจ้ (1)",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "kid_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "เจ็บตรงไหนไหมคะ",
-                speaker: "จิงโจ้ (2)",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "mother_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultMotherKangarooClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "ไม่เป็นไรค่ะ ไม่เป็นไรเลย",
-                speaker: "แม่จิงโจ้",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "mother_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultMotherKangarooClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "* วิกหลุด *",
-                speaker: "แม่จิงโจ้",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "kid_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKidClassName,
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "neutral",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "แม่ !!!",
-                speaker: "จิงโจ้(1)/จิงโจ้(2)",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "mother_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultMotherKangarooClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "ว้ายยย ตายแล้ว โดนจับได้",
-                speaker: "แม่จิงโจ้",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "owl",
-                state: "neutral",
-                className: {
-                    ...defaultOwlClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "พระเจ้าช่วย !!!",
-                speaker: "นกฮูก",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "owl",
-                state: "neutral",
-                className: {
-                    ...defaultOwlClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "เพื่อให้ลูกได้รางวัล ต้องทำถึงขนาดนี้เลยเหรอเนี่ย",
-                speaker: "นกฮูก",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "owl",
-                state: "neutral",
-                className: {
-                    ...defaultOwlClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "จริง ๆ คุณไม่ต้องทำถึงขนาดนี้ก็ได้นะ",
-                speaker: "นกฮูก",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "mother_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultMotherKangarooClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content:
-                    "ก็มันเป็นเพราะคุณนั่นแหละที่ตั้งมาตรฐานไว้สูงขนาดนั้น !!",
-                speaker: "แม่จิงโจ้",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "owl",
-                state: "neutral",
-                className: {
-                    ...defaultOwlClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "(ตายล่ะ เป็นเพราะฉันเองเหรอเนี่ย)",
-                speaker: "นกฮูก",
+                    "ไม่เป็นไรนะ ฉันเข้าใจมาก ๆ เลยล่ะ ถึงรู้ว่ายังมีเวลาค้นหาตัวเองอีกเยอะแต่ก็รู้สึกไม่สบายใจอยู่ดี",
+                speaker: "น้องจิงโจ้",
             },
         ],
         background: fourthAttractionBackground,
@@ -685,59 +365,115 @@ export const fourthScene: Array<SceneInterface> = [
         trackChange: 1,
         characters: [
             {
-                name: "owl",
+                name: "kid_kangaroo",
                 state: "neutral",
                 className: {
-                    ...defaultOwlClassName,
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(0.5)",
                 },
             },
-        ],
-        dialogues: [
             {
-                type: "us",
-                content: "(ฉันควรจะพูดอะไรหน่อยไหมนะ)",
-                speaker: "เรา",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "owl",
+                name: "kid_kangaroo_1",
                 state: "neutral",
                 className: {
-                    ...defaultOwlClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "us",
-                content:
-                    "ฉันเห็นความพยายามของเธอนะ การทำให้แม่ภูมิใจเป็นเรื่องดี แต่ถ้ามันกดดันตัวเองมากเกินไป มันจะทำให้เธอไม่สบายใจรึเปล่า",
-                speaker: "เรา",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "owl",
-                state: "neutral",
-                className: {
-                    ...defaultOwlClassName,
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(1)",
                 },
             },
         ],
         dialogues: [
             {
                 type: "them",
-                content: "ฉันก็เคยเป็นแบบนี้เหมือนกัน ไม่เป็นไรนะ",
-                speaker: "นกฮูก",
+                content:
+                    "ว่าเเต่เธอเจอพี่ยีราฟมาแล้วใช่มั้ย ถ้าฉันเก่งแบบพี่ยีราฟก็คงดี",
+                speaker: "น้องจิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(1)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "us",
+                content: "เพราะอะไรถึงคิดว่าพี่เค้าเก่งเหรอ",
+                speaker: "เรา",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(1)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "แม่บอกว่าพี่เค้าเก่ง เพราะเค้าทำงานได้ไร้ที่ติเลยล่ะ",
+                speaker: "น้องจิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(1)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "us",
+                content: "ถ้าพวกเธอทำงานออกมาไร้ที่ติบ้างจะได้อะไรเหรอ",
+                speaker: "เรา",
             },
         ],
         background: fourthAttractionBackground,
@@ -766,8 +502,66 @@ export const fourthScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "อื้ม นั่นสินะ พวกเราคงต้องหาอะไรทำให้ตัวเองรู้สึกดีขึ้นบ้างแล้วล่ะ",
-                speaker: "จิงโจ้ (1)",
+                    "บางทีฉันก็แค่อยากให้แม่ชมฉันบ้าง พักนี้แม่เอาแต่เปรียบเทียบพวกเรากับพี่ยีราฟ",
+                speaker: "พี่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(1)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "โอ้ะ พวกเราเผลอเล่าให้เธอฟังไปซะเยอะ",
+                speaker: "พี่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(1)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "โอ้ะ พวกเราเผลอเล่าให้เธอฟังไปซะเยอะ",
+                speaker: "พี่จิงโจ้",
             },
         ],
         background: fourthAttractionBackground,
@@ -796,8 +590,8 @@ export const fourthScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "เธอพอจะมีอะไรที่พอใช้พึ่งพาใจได้มั้ย ไม่จำเป็นต้องเป็นคนก็ได้นะ จะเป็นท้องฟ้า ของอร่อย สิ่งของอย่างอื่นก็ได้หมดเลย",
-                speaker: "จิงโจ้ (1)",
+                    "<name> ล่ะ อยากเล่าเรื่องราวที่เคยได้รับความคาดหวังจากพ่อเเม่ให้พวกเราฟังบ้างมั้ย",
+                speaker: "เรา",
             },
             {
                 type: "input",
@@ -829,9 +623,219 @@ export const fourthScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
+                content: "ขอบคุณที่เล่าให้พวกเราฟังนะ",
+                speaker: "น้องจิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(1)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "แม่ของพวกเราคาดหวังกับการทดลองงานนี้ไว้เยอะเลยล่ะ",
+                speaker: "น้องจิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(1)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "us",
                 content:
-                    "อย่างนี้นี่เอง ฉันหวังว่าเธอจะหาสิ่งที่ดีกับใจเธอเพิ่มขึ้นในทุก ๆ วันของชีวิตนะ",
-                speaker: "จิงโจ้ (2)",
+                    "ฉันเห็นถึงความพยายามของเธอนะ การทำให้แม่ภูมิใจเป็นเรื่องดี แต่ก็ระวังอย่ากดดันตัวเองมากเกินไปนะ",
+                speaker: "เรา",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(1)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "แต่ว่ามันก็ยังเป็นเรื่องที่ยากอยู่ดี…",
+                speaker: "น้องจิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(1)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "อื้ม นั่นสินะ พวกเราคงต้องหาอะไรมาช่วยทำให้ตัวเองรู้สึกดีขึ้นบ้างแล้วล่ะ",
+                speaker: "พี่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(1)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "เธอพอจะมีอะไรที่พอใช้พึ่งพาใจได้มั้ย ไม่จำเป็นต้องเป็นคนก็ได้นะ จะเป็นท้องฟ้า ของอร่อย สิ่งของอย่างอื่นก็ได้หมดเลย",
+                speaker: "พี่จิงโจ้",
+            },
+            {
+                type: "input",
+                content: "",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(1)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "เยี่ยมเลย ไว้ฉันจะลองหาของฉันบ้างนะ",
+                speaker: "พี่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(1)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "งั้นถ้าตอนไหนที่เธอต้องการที่พึ่งพาใจก็อย่าลืมนึกถึงมันนะ",
+                speaker: "น้องจิงโจ้",
             },
         ],
         background: fourthAttractionBackground,
@@ -850,8 +854,339 @@ export const fourthScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "* แม่ลูกจิงโจ้กอดกัน *",
+                content: "* แม่จิงโจ้เดินเข้ามา *",
                 speaker: "แม่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "สวัสดีลูก ๆ แม่เอาข้าวกลางวันมาให้",
+                speaker: "แม่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "นี่ทั้งสองคนยืนคุยเล่นกันอยู่เหรอ ทำไมถึงไม่ทำงานล่ะ",
+                speaker: "แม่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(1)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "พวกเราแค่คุยกับคุณลูกค้าเเปปเดียวเองแม่",
+                speaker: "พี่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "พี่ยีราฟเขาคงไม่มาทำตัวแบบนี้หรอก เขาถึงได้รางวัลพนักงานดีเด่นยังไงล่ะ",
+                speaker: "แม่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "มัวแต่คุยเล่นอยู่แบบนี้เดี๋ยวก็ไม่ผ่านการทดลองงานหรอก",
+                speaker: "แม่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "ผู้จัดการนกฮูกยิ่งจับตาดูอยู่ด้วย",
+                speaker: "แม่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "us",
+                content: "ใจเย็น ๆ ก่อนนะคุณแม่",
+                speaker: "เรา",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "อย่างที่ฉันบอกไป ที่นี่เขาเข้มงวดมาก ๆ",
+                speaker: "แม่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "การทดลองงานนี้มันเป็นเรื่องสำคัญมากเลยนะ",
+                speaker: "แม่จิงโจ้",
+            },
+            {
+                type: "choice",
+                content: {
+                    subContent: "เราเข้าใจที่คุณแม่พูดนะ",
+                    subContent1: "เรารู้สึกได้ถึงความหวังดีของคุณแม่นะ",
+                },
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: [1, 1],
+    },
+    {
+        branch: 1,
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "us",
+                content: "แต่คุณแม่เคยถามความต้องการของลูกมั้ย",
+                speaker: "เรา",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        branch: 2,
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "us",
+                content: "แต่คุณแม่เคยถามความต้องการของลูกมั้ย",
+                speaker: "เรา",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "...",
+                speaker: "แม่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "us",
+                content:
+                    "ถ้าทั้งสองคนทำสำเร็จตามที่คุณแม่หวังแต่ไม่มีความสุข คุณแม่จะโอเคจริง ๆ เหรอ",
+                speaker: "เรา",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "นี่ลูก ๆ ไม่ได้อยากทำงานที่นี่เหรอ",
+                speaker: "แม่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "kid_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKidClassName,
+                    filter: "brightness(1)",
+                },
+            },
+            {
+                name: "kid_kangaroo_1",
+                state: "neutral",
+                className: {
+                    ...defaultKangarooKid1ClassName,
+                    filter: "brightness(0.5)",
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "ใช่ครับ พวกเรามีความฝันที่อยากไปทำ แต่ก็ไม่เคยได้บอกแม่",
+                speaker: "พี่จิงโจ้",
             },
         ],
         background: fourthAttractionBackground,
@@ -899,8 +1234,130 @@ export const fourthScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "ไม่่เป็นไร เราเข้าใจนะแม่",
-                speaker: "จิงโจ้ (1)",
+                content: "ไม่เป็นไรเลยครับ เราเข้าใจถึงความหวังดีของแม่นะ",
+                speaker: "พี่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "owl",
+                state: "neutral",
+                className: {
+                    ...defaultOwlClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "* นกฮูกเดินเข้ามา *",
+                speaker: "นกฮูก",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "owl",
+                state: "neutral",
+                className: {
+                    ...defaultOwlClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "ใครกำลังพูดถึงฉันอยู่หรือเปล่านะ",
+                speaker: "นกฮูก",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "คุณมาก็ดีแล้ว",
+                speaker: "แม่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "mother_kangaroo",
+                state: "neutral",
+                className: {
+                    ...defaultMotherKangarooClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "ที่ฉันต้องกดดันลูกเป็นเพราะคุณนั่นแหละที่ตั้งมาตรฐานไว้สูงขนาดนั้น !!",
+                speaker: "แม่จิงโจ้",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "owl",
+                state: "neutral",
+                className: {
+                    ...defaultOwlClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "เพราะฉันเหรอ…",
+                speaker: "นกฮูก",
+            },
+        ],
+        background: fourthAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "owl",
+                state: "neutral",
+                className: {
+                    ...defaultOwlClassName,
+                },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "ระ…หรือว่าสาเหตุที่เเท้จริงที่สวนสนุกนี้กำลังจะล้มละลายเพราะฉันกดดันทุกคนมากเกินไป",
+                speaker: "นกฮูก",
             },
         ],
         background: fourthAttractionBackground,
