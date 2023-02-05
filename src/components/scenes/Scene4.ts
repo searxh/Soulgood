@@ -854,26 +854,6 @@ export const fourthScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "* แม่จิงโจ้เดินเข้ามา *",
-                speaker: "แม่จิงโจ้",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "mother_kangaroo",
-                state: "neutral",
-                className: {
-                    ...defaultMotherKangarooClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
                 content: "สวัสดีลูก ๆ แม่เอาข้าวกลางวันมาให้",
                 speaker: "แม่จิงโจ้",
             },
@@ -1236,26 +1216,6 @@ export const fourthScene: Array<SceneInterface> = [
                 type: "them",
                 content: "ไม่เป็นไรเลยครับ เราเข้าใจถึงความหวังดีของแม่นะ",
                 speaker: "พี่จิงโจ้",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "owl",
-                state: "neutral",
-                className: {
-                    ...defaultOwlClassName,
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content: "* นกฮูกเดินเข้ามา *",
-                speaker: "นกฮูก",
             },
         ],
         background: fourthAttractionBackground,
