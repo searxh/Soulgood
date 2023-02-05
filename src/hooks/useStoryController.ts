@@ -1,7 +1,7 @@
 import React from "react";
 import { GlobalContext } from "../states";
 import { BranchInfoInterface } from "../types";
-import { scenes } from "../lib/scenes/Scenes";
+import { scenes } from "../components/scenes/Scenes";
 
 const useStoryController = () => {
     const { global_state, dispatch } = React.useContext(GlobalContext);

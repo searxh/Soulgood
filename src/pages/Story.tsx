@@ -1,27 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
-import { ContentInterface } from "../types";
-import { scenes } from "../lib/scenes/Scenes";
-import Choice from "../lib/dialogues/Choice";
-import Input from "../lib/dialogues/Input";
-import Special from "../lib/dialogues/Special";
-import Them from "../lib/dialogues/Them";
-import Us from "../lib/dialogues/Us";
-import {
-    FirstAttractionObjects,
-    Giraffe,
-    KangarooKid,
-    KangarooKid1,
-    KangarooMother,
-    Owl,
-    Peacock,
-    Rabbit,
-} from "../lib/Characters";
-import { Bg } from "../lib/Background";
+import { scenes } from "../components/scenes/Scenes";
 import useStoryController from "../hooks/useStoryController";
 import useWindowSize from "../hooks/useWindowSize";
+import Character from "../components/Character";
+import Dialogue from "../components/Dialogue";
+import Background from "../components/Background";
 
-export default function Story() {
+const Story = () => {
     const { scene, start, next, lockDialogue, printDoneCallback } =
         useStoryController();
     const { windowSize } = useWindowSize();
@@ -93,75 +79,6 @@ export default function Story() {
             </div>
         </div>
     ) : null;
-}
+};
 
-function Character({
-    name,
-    state,
-    className,
-}: {
-    name: string;
-    state: string;
-    className: any;
-}) {
-    return (
-        <>
-            {name === "owl" ? (
-                <Owl state={state} className={className} />
-            ) : name === "rabbit" ? (
-                <Rabbit state={state} className={className} />
-            ) : name === "a1-objects" ? (
-                <FirstAttractionObjects state={state} className={className} />
-            ) : name === "peacock" ? (
-                <Peacock state={state} className={className} />
-            ) : name === "giraffe" ? (
-                <Giraffe state={state} className={className} />
-            ) : name === "kid_kangaroo" ? (
-                <KangarooKid state={state} className={className} />
-            ) : name === "kid_kangaroo_1" ? (
-                <KangarooKid1 state={state} className={className} />
-            ) : name === "mother_kangaroo" ? (
-                <KangarooMother state={state} className={className} />
-            ) : null}
-        </>
-    );
-}
-
-function Dialogue({
-    type,
-    content,
-    next,
-    speaker,
-    printDoneCallback,
-    preventNext,
-}: {
-    type: string;
-    content: string | ContentInterface;
-    next: any;
-    speaker?: string;
-    printDoneCallback?: Function;
-    preventNext: boolean | null;
-}) {
-    React.useEffect(() => {}, [type]);
-    return type === "them" ? (
-        <Them
-            content={content as string}
-            next={next}
-            speaker={speaker as string}
-            printDoneCallback={printDoneCallback}
-            preventNext={preventNext}
-        />
-    ) : type === "us" ? (
-        <Us content={content as string} next={next} />
-    ) : type === "input" ? (
-        <Input content={content as string} next={next} />
-    ) : type === "choice" ? (
-        <Choice content={content as ContentInterface} next={next} />
-    ) : type === "special" ? (
-        <Special content={content as string} next={next} />
-    ) : null;
-}
-
-function Background({ name }: { name: string }) {
-    return <Bg name={name} />;
-}
+export default Story;

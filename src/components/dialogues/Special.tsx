@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
-import NewItem from "../../components/NewItem";
+import NewItem from "../NewItem";
 import { GlobalContext } from "../../states";
-import ZoomModule from "../../components/ZoomModule";
-import Balloon from "../../components/Balloon";
+import ZoomModule from "../ZoomModule";
+import Balloon from "../Balloon";
 
 const Special = ({ content, next }: { content: string; next: any }) => {
     const { global_state, dispatch } = React.useContext(GlobalContext);
