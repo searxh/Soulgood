@@ -305,12 +305,12 @@ export const secondScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "แล้วเธอมีวิธีจัดการกับมันยังไงบ้าง เล่าให้ฉันฟังหน่อยได้ไหม",
+                    "แล้ว <name> มีวิธีจัดการกับมันยังไงบ้าง เล่าให้ฉันฟังหน่อยได้ไหม",
                 speaker: "นกยูง",
             },
             {
                 type: "input",
-                content: "",
+                content: "consider",
             },
         ],
         background: secondAttractionBackground,

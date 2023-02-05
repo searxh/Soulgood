@@ -595,7 +595,7 @@ export const fourthScene: Array<SceneInterface> = [
             },
             {
                 type: "input",
-                content: "",
+                content: "consider",
             },
         ],
         background: fourthAttractionBackground,
@@ -776,7 +776,7 @@ export const fourthScene: Array<SceneInterface> = [
             },
             {
                 type: "input",
-                content: "",
+                content: "consider",
             },
         ],
         background: fourthAttractionBackground,

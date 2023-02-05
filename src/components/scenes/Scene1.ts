@@ -436,7 +436,7 @@ export const firstScene: Array<SceneInterface> = [
             },
             {
                 type: "input",
-                content: "",
+                content: "consider",
             },
         ],
         background: firstAttractionBackground,

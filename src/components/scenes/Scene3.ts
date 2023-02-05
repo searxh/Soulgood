@@ -305,7 +305,7 @@ export const thirdScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "เธอไม่เคยรู้สึกแบบนี้หรอ แบบว่าทำยังไงก็ยังรู้สึกไม่ดีพอสักทีน่ะ ทั้งที่คนอื่นก็ไม่ได้กดดัน",
+                    "<name> ไม่เคยรู้สึกแบบนี้หรอ แบบว่าทำยังไงก็ยังรู้สึกไม่ดีพอสักทีน่ะ ทั้งที่คนอื่นก็ไม่ได้กดดัน",
                 speaker: "ยีราฟ",
             },
             {
@@ -336,7 +336,7 @@ export const thirdScene: Array<SceneInterface> = [
             },
             {
                 type: "input",
-                content: "",
+                content: "consider",
             },
         ],
         background: thirdAttractionBackground,
@@ -354,7 +354,7 @@ export const thirdScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "แล้วเธอรับมือกับความรู้สึกไม่ดีพอนี้ได้มั้ย",
+                content: "แล้ว <name> รับมือกับความรู้สึกไม่ดีพอนี้ได้มั้ย",
                 speaker: "ยีราฟ",
             },
             {
@@ -380,12 +380,13 @@ export const thirdScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "เธอทำได้ยังไงเหรอ บอกฉันหน่อยได้มั้ย",
+                content:
+                    "เธอรับมือกับความรู้สึกไม่ดีพอได้ยังไงเหรอ บอกฉันหน่อยได้มั้ย",
                 speaker: "ยีราฟ",
             },
             {
                 type: "input",
-                content: "",
+                content: "consider",
             },
         ],
         background: thirdAttractionBackground,
@@ -424,12 +425,12 @@ export const thirdScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "เธอเคยใช้วิธีจัดการกับความรู้สึกที่ไม่ดีพออะไรมาบ้างหรอ",
+                    "<name> เคยใช้วิธีจัดการกับความรู้สึกที่ไม่ดีพออะไรมาบ้างหรอ",
                 speaker: "ยีราฟ",
             },
             {
                 type: "input",
-                content: "",
+                content: "consider",
             },
         ],
         background: thirdAttractionBackground,
@@ -447,7 +448,7 @@ export const thirdScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "เธอคิดว่าวิธีที่เธอทำไป ทำไมมันถึงยังไม่ได้ผลล่ะ",
+                content: "แล้วเธอคิดว่าวิธีที่ทำไป ทำไมมันถึงยังไม่ได้ผลล่ะ",
                 speaker: "ยีราฟ",
             },
             {
