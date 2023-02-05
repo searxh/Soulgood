@@ -21,7 +21,6 @@ const Dialogue = ({
     printDoneCallback?: Function;
     preventNext: boolean | null;
 }) => {
-    React.useEffect(() => {}, [type]);
     return type === "them" ? (
         <Them
             content={content as string}
