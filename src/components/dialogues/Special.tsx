@@ -20,7 +20,7 @@ const Special = ({ content, next }: { content: string; next: any }) => {
     };
     return (
         <div
-            className="flex absolute justify-evenly text-xl w-screen h-screen
+            className="flex absolute justify-evenly w-screen h-screen
             z-10 top-0 bottom-0 left-0 right-0 mx-auto break-words"
         >
             <>

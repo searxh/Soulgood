@@ -69,7 +69,7 @@ const Them = ({
                     });*/
                 }
             }}
-            className="absolute bg-white text-black rounded-3xl text-xl border-2
+            className="absolute bg-white text-black rounded-3xl border-2
             text-center z-10 left-0 right-0 mx-auto top-5 w-[90%] max-w-[50rem] shadow-md"
         >
             <div className="relative w-full h-full p-5 py-10 break-words">

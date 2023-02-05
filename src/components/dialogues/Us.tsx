@@ -49,7 +49,7 @@ const Us = ({ content, next }: { content: string; next: any }) => {
                     });*/
                 }}
                 className="absolute bg-white text-black rounded-3xl border-2
-            text-center text-xl z-10 left-0 right-0 mx-auto bottom-5 w-[90%] max-w-[50rem] shadow-md"
+            text-center z-10 left-0 right-0 mx-auto bottom-5 w-[90%] max-w-[50rem] shadow-md"
             >
                 <div className="relative w-full h-full p-5 py-10 break-words">
                     <div
