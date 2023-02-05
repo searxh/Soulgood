@@ -1,5 +1,5 @@
 import { GlobalContext } from "../../states";
-import React from "react";
+import React, { FormEvent } from "react";
 
 const Input = ({ content, next }: { content: string; next: any }) => {
     const [transition, setTransition] = React.useState<boolean>(false);
@@ -13,6 +13,19 @@ const Input = ({ content, next }: { content: string; next: any }) => {
             return next;
         }
     };
+    const handleOnSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (inputRef.current === null) return;
+        let newName = name;
+        if (name.length === 0) {
+            newName = inputRef.current.value;
+        }
+        dispatch({
+            type: "multi-set",
+            field: ["name", "scene"],
+            payload: [newName, sceneRouter()],
+        });
+    };
     React.useEffect(() => {
         if (content.length !== 0) setTimeout(() => setTransition(true), 50);
     }, [content]);
@@ -21,20 +34,7 @@ const Input = ({ content, next }: { content: string; next: any }) => {
             <div className="relative w-full h-full">
                 <form
                     className="absolute left-0 right-0 bottom-0 flex bg-white border-2 rounded-3xl p-3 shadow-md z-20"
-                    onSubmit={(e) => {
-                        e.preventDefault();
-                        if (inputRef.current !== null) {
-                            const newName =
-                                name.length !== 0
-                                    ? name
-                                    : inputRef.current.value;
-                            dispatch({
-                                type: "multi-set",
-                                field: ["name", "scene"],
-                                payload: [newName, sceneRouter()],
-                            });
-                        }
-                    }}
+                    onSubmit={(e) => handleOnSubmit(e)}
                 >
                     {/*<div
                         className="absolute -top-3 left-[10%] bg-yellow-200 px-10 py-0.5 

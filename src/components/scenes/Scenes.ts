@@ -18,10 +18,10 @@ import { fifthScene } from "./Scene5";
 }
 */
 export const scenes: Array<SceneInterface> = [
-    /*...zerothScene,
+    ...zerothScene,
     ...firstScene,
     ...secondScene,
     ...thirdScene,
-    ...fourthScene,*/
+    ...fourthScene,
     ...fifthScene,
 ];
