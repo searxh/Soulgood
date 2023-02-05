@@ -1,13 +1,11 @@
-import {
-    Owl,
-    Rabbit,
-    FirstAttractionObjects,
-    Peacock,
-    Giraffe,
-    KangarooKid,
-    KangarooKid1,
-    KangarooMother,
-} from "../lib/Characters";
+import Owl from "./characters/Owl";
+import Rabbit from "./characters/Rabbit";
+import FirstAttractionObjects from "./characters/FirstAttractionObjects";
+import Peacock from "./characters/Peacock";
+import Giraffe from "./characters/Giraffe";
+import KangarooKid from "./characters/KangarooKid";
+import KangarooKid1 from "./characters/KangarooKid1";
+import KangarooMother from "./characters/KangarooMother";
 
 const Character = ({
     name,
