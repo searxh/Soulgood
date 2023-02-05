@@ -2,7 +2,11 @@
 import React from "react";
 import { ContentInterface } from "../types";
 import { scenes } from "../lib/scenes/Scenes";
-import { Choice, Input, Them, Us, Special } from "../lib/Dialogue";
+import Choice from "../lib/dialogues/Choice";
+import Input from "../lib/dialogues/Input";
+import Special from "../lib/dialogues/Special";
+import Them from "../lib/dialogues/Them";
+import Us from "../lib/dialogues/Us";
 import {
     FirstAttractionObjects,
     Giraffe,
