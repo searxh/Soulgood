@@ -1,6 +1,12 @@
 import React from "react";
 
-const NewItem = ({ clickCallback }: { clickCallback: Function }) => {
+const NewItem = ({
+    clickCallback,
+    item,
+}: {
+    clickCallback: Function;
+    item: string;
+}) => {
     const [transition, setTransition] = React.useState<boolean>(false);
     const handleOnClick = () => {
         setTransition(false);
@@ -28,7 +34,7 @@ const NewItem = ({ clickCallback }: { clickCallback: Function }) => {
             />
             <img
                 className="drop-shadow-md m-auto"
-                src="/assets/backpack.webp"
+                src={`/assets/Props/${item}.PNG`}
                 alt=""
             />
         </button>

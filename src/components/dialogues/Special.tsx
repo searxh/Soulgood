@@ -29,6 +29,7 @@ const Special = ({ content, next }: { content: string; next: any }) => {
                         clickCallback={() => {
                             handleSetChoice();
                         }}
+                        item={content.split("/")[1]}
                     />
                 ) : content === "Zoom" ? (
                     <ZoomModule
