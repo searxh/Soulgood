@@ -17,7 +17,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -35,7 +35,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -53,7 +53,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -71,7 +71,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -89,7 +89,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -107,7 +107,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -125,7 +125,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -143,7 +143,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -161,7 +161,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -179,7 +179,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -198,7 +198,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -224,7 +224,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -242,7 +242,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -260,7 +260,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -278,7 +278,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -297,7 +297,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -324,7 +324,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -347,7 +347,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -373,7 +373,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -397,7 +397,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -417,7 +417,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -441,7 +441,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -464,7 +464,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -488,7 +488,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -508,7 +508,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -528,7 +528,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -547,7 +547,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -566,7 +566,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -586,7 +586,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -609,7 +609,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],
@@ -632,7 +632,7 @@ export const thirdScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "giraffe",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultGiraffeClassName },
             },
         ],

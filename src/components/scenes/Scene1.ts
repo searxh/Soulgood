@@ -16,7 +16,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultRabbitClassName, opacity: 0 },
             },
         ],
@@ -34,7 +34,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -52,7 +52,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -70,7 +70,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -88,7 +88,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -107,7 +107,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -125,12 +125,12 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultRabbitClassName, opacity: 0 },
             },
             {
                 name: "a1-objects",
-                state: "neutral",
+                state: "Idle",
                 className: {},
             },
         ],
@@ -156,7 +156,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -176,7 +176,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "a1-objects",
-                state: "neutral",
+                state: "Idle",
                 className: {},
             },
         ],
@@ -195,7 +195,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "a1-objects",
-                state: "neutral",
+                state: "Idle",
                 className: {},
             },
         ],
@@ -214,12 +214,12 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: { ...defaultRabbitClassName, opacity: 0 },
             },
             {
                 name: "a1-objects",
-                state: "neutral",
+                state: "Idle",
                 className: {},
             },
         ],
@@ -238,7 +238,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -258,7 +258,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -277,7 +277,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -295,7 +295,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -314,7 +314,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -333,7 +333,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -351,7 +351,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -369,7 +369,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -387,7 +387,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -405,7 +405,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -423,7 +423,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -446,7 +446,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -465,7 +465,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -484,7 +484,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -502,7 +502,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -521,7 +521,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
@@ -544,7 +544,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "neutral",
+                state: "Idle",
                 className: defaultRabbitClassName,
             },
         ],
