@@ -1,7 +1,7 @@
 import { SceneInterface } from "../../types";
 
 const defaultPeacockClassName = {
-    top: "30%",
+    top: "50%",
     bottom: "0%",
     left: "0%",
     right: "0%",

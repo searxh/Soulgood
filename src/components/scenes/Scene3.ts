@@ -1,7 +1,7 @@
 import { SceneInterface } from "../../types";
 
 const defaultGiraffeClassName = {
-    top: "50%",
+    top: "40%",
     bottom: "0%",
     left: "0%",
     right: "0%",

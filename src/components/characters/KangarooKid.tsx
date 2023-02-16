@@ -8,16 +8,17 @@ export default function KangarooKid({
     className: any;
 }) {
     const [image, setImage] = React.useState<string>("");
-    state = "";
     React.useLayoutEffect(() => {
         if (state !== undefined) {
-            setImage("/assets/kidkangaroo" + state + ".png");
+            setImage(
+                "/assets/Character/Kangaroo (Kid)/Cream_" + state + ".PNG"
+            );
         }
     }, [state, className]);
     return (
         <div
             style={className}
-            className="absolute -scale-x-100 max-w-[80%] w-[300px] m-auto z-10"
+            className="absolute -scale-x-100 max-w-[80%] w-[400px] m-auto z-10"
         >
             <img
                 src={image}
