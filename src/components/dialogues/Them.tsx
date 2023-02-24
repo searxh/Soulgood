@@ -73,7 +73,7 @@ const Them = ({
                 boxShadow: "5px 5px 0px BurlyWood",
             }}
             className="absolute bg-gradient-to-r from-orange-100 to-orange-200 rounded-2x rounded-xl
-            text-center z-10 left-0 right-0 mx-auto top-5 w-[90%] max-w-[50rem] drop-shadow-lg text-neutral-700"
+            text-center z-10 left-0 right-0 mx-auto top-10 w-[90%] max-w-[50rem] drop-shadow-lg text-neutral-700"
         >
             <div className="relative w-full h-full p-5 py-10 break-words">
                 <div
