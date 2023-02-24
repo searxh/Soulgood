@@ -8,7 +8,7 @@ const defaultGiraffeClassName = {
 };
 
 const thirdAttractionBackground = {
-    name: "balloon.jpg",
+    name: "balloon.webp",
 };
 
 export const thirdScene: Array<SceneInterface> = [

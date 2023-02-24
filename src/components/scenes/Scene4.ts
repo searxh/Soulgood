@@ -29,7 +29,7 @@ const defaultOwlClassName = {
 };
 
 const fourthAttractionBackground = {
-    name: "bumper.jpg",
+    name: "bumper.webp",
 };
 
 export const fourthScene: Array<SceneInterface> = [
@@ -591,7 +591,7 @@ export const fourthScene: Array<SceneInterface> = [
                 type: "them",
                 content:
                     "<name> ล่ะ อยากเล่าเรื่องราวที่เคยได้รับความคาดหวังจากพ่อเเม่ให้พวกเราฟังบ้างมั้ย",
-                speaker: "เรา",
+                speaker: "พี่จิงโจ้",
             },
             {
                 type: "input",

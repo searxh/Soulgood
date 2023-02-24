@@ -209,7 +209,7 @@ export const zerothScene: Array<SceneInterface> = [
             },
             {
                 type: "special",
-                content: "New item",
+                content: "New item/Bag",
             },
         ],
         background: defaultBackground,

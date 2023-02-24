@@ -8,7 +8,7 @@ const defaultPeacockClassName = {
 };
 
 const secondAttractionBackground = {
-    name: "carousel.jpg",
+    name: "carousel.webp",
 };
 
 export const secondScene: Array<SceneInterface> = [

@@ -8,7 +8,7 @@ const defaultRabbitClassName = {
 };
 
 const firstAttractionBackground = {
-    name: "forest.jpg",
+    name: "ferris.webp",
 };
 
 export const firstScene: Array<SceneInterface> = [
@@ -534,7 +534,7 @@ export const firstScene: Array<SceneInterface> = [
             },
             {
                 type: "special",
-                content: "New item",
+                content: "New item/Heart2",
             },
         ],
         background: firstAttractionBackground,
