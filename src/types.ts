@@ -31,6 +31,7 @@ export interface GlobalStateInterface {
     name: string;
     track: number;
     scene: number;
+    answers: Array<string>;
 }
 export interface ActionInterface {
     type: string;

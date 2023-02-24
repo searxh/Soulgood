@@ -24,7 +24,10 @@ export function NextStateProvider({ children }: any) {
     }, [active]);
     return (
         <NextContext.Provider
-            value={{ setActive: setActive, setNextScene: setNextScene }}
+            value={{
+                setActive: setActive,
+                setNextScene: setNextScene,
+            }}
         >
             {active ? (
                 <button

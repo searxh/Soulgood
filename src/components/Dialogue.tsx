@@ -13,6 +13,7 @@ const Dialogue = ({
     speaker,
     printDoneCallback,
     preventNext,
+    targetList,
 }: {
     type: string;
     content: string | ContentInterface;
@@ -20,6 +21,7 @@ const Dialogue = ({
     speaker?: string;
     printDoneCallback?: Function;
     preventNext: boolean | null;
+    targetList: Array<number>;
 }) => {
     return type === "them" ? (
         <Them
@@ -32,7 +34,11 @@ const Dialogue = ({
     ) : type === "us" ? (
         <Us content={content as string} next={next} />
     ) : type === "input" ? (
-        <Input content={content as string} next={next} />
+        <Input
+            content={content as string}
+            next={next}
+            targetList={targetList}
+        />
     ) : type === "choice" ? (
         <Choice content={content as ContentInterface} next={next} />
     ) : type === "special" ? (

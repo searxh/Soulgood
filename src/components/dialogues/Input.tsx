@@ -1,11 +1,19 @@
 import { GlobalContext } from "../../states";
 import React, { FormEvent } from "react";
 
-const Input = ({ content, next }: { content: string; next: any }) => {
+const Input = ({
+    content,
+    next,
+    targetList,
+}: {
+    content: string;
+    next: any;
+    targetList: Array<number>;
+}) => {
     const [transition, setTransition] = React.useState<boolean>(false);
     const inputRef = React.useRef<HTMLInputElement>(null);
     const { global_state, dispatch } = React.useContext(GlobalContext);
-    const { name, scene } = global_state;
+    const { name, scene, answers } = global_state;
     const sceneRouter = () => {
         if (next === "default") {
             return scene + 1;
@@ -20,10 +28,15 @@ const Input = ({ content, next }: { content: string; next: any }) => {
         if (name.length === 0) {
             newName = inputRef.current.value;
         }
+        let newAnswers = answers;
+        if (targetList.includes(scene)) {
+            console.log(`[STORE VALUE SCENE ${scene}]`, inputRef.current.value);
+            newAnswers = [...answers, inputRef.current.value];
+        }
         dispatch({
             type: "multi-set",
-            field: ["name", "scene"],
-            payload: [newName, sceneRouter()],
+            field: ["name", "scene", "answers"],
+            payload: [newName, sceneRouter(), newAnswers],
         });
     };
     React.useEffect(() => {
