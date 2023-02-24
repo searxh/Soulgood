@@ -70,18 +70,18 @@ const Them = ({
                 }
             }}
             style={{
-                boxShadow: "10px 0px 0px BurlyWood",
+                boxShadow: "5px 5px 0px BurlyWood",
             }}
-            className="absolute bg-gradient-to-r from-orange-100 to-orange-200 rounded-2xl
-            text-center z-10 left-0 right-0 mx-auto top-5 w-[90%] max-w-[50rem] shadow-md text-neutral-700"
+            className="absolute bg-gradient-to-r from-orange-100 to-orange-200 rounded-2x rounded-xl
+            text-center z-10 left-0 right-0 mx-auto top-5 w-[90%] max-w-[50rem] drop-shadow-lg text-neutral-700"
         >
             <div className="relative w-full h-full p-5 py-10 break-words">
                 <div
                     style={{
-                        boxShadow: "5px 0px 0px brown",
+                        boxShadow: "5px 5px 0px brown",
                     }}
                     className="absolute -top-3 left-[10%] bg-red-500 px-10 py-1 
-                shadow-md rounded-xl text-white"
+                drop-shadow-md rounded-xl text-white"
                 >
                     {speaker}
                 </div>
