@@ -25,7 +25,7 @@ const Choice = ({
     return (
         <div
             className="flex absolute justify-evenly
-            z-10 left-0 right-0 mx-auto bottom-5 w-[90%] max-w-[50rem] break-words"
+            z-10 left-0 right-0 mx-auto bottom-5 w-[90%] max-w-[50rem]"
         >
             <button
                 onClick={() => handleSetChoice(0)}

@@ -81,7 +81,7 @@ const Them = ({
                         boxShadow: "5px 5px 0px brown",
                     }}
                     className="absolute -top-3 left-[10%] bg-red-500 px-10 py-1 
-                    drop-shadow-md rounded-xl text-white break-words"
+                    drop-shadow-md rounded-xl text-white"
                 >
                     {speaker}
                 </div>
