@@ -29,14 +29,20 @@ const Choice = ({
         >
             <button
                 onClick={() => handleSetChoice(0)}
-                className="flex-1 bg-white rounded-full shadow-md border-2
+                style={{
+                    boxShadow: "5px 5px 0px gray",
+                }}
+                className="flex-1 bg-gradient-to-r from-white to-neutral-200 rounded-full drop-shadow-lg
                 text-center p-5 mr-2 hover:scale-[102%] transition"
             >
                 {content.subContent}
             </button>
             <button
                 onClick={() => handleSetChoice(1)}
-                className="flex-1 bg-white rounded-full shadow-md border-2
+                style={{
+                    boxShadow: "5px 5px 0px gray",
+                }}
+                className="flex-1 bg-gradient-to-r from-white to-neutral-200 rounded-full drop-shadow-lg
                 text-center p-5 ml-2 hover:scale-[102%] transition"
             >
                 {content.subContent1}

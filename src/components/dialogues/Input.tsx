@@ -46,7 +46,10 @@ const Input = ({
         <div className="absolute text-black text-center z-20 left-0 right-0 mx-auto bottom-5 w-[90%] max-w-[50rem]">
             <div className="relative w-full h-full">
                 <form
-                    className="absolute left-0 right-0 bottom-0 flex bg-white border-2 rounded-3xl p-3 shadow-md z-20"
+                    style={{
+                        boxShadow: "5px 5px 0px gray",
+                    }}
+                    className="absolute left-0 right-0 bottom-0 flex bg-gradient-to-r from-white to-neutral-200 rounded-3xl p-3 drop-shadow-lg z-20"
                     onSubmit={(e) => handleOnSubmit(e)}
                 >
                     {/*<div
@@ -58,7 +61,7 @@ const Input = ({
                     <input
                         ref={inputRef}
                         autoFocus={true}
-                        className="w-[80%] my-2 mx-auto p-2 outline-none text-center"
+                        className="w-[80%] my-2 mx-auto p-2 outline-none text-center bg-transparent"
                     />
                 </form>
                 {content.length !== 0 ? (

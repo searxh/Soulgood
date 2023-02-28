@@ -48,13 +48,19 @@ const Us = ({ content, next }: { content: string; next: any }) => {
                         payload: sceneRouter(),
                     });*/
                 }}
-                className="absolute bg-white text-black rounded-3xl border-2
-            text-center z-10 left-0 right-0 mx-auto bottom-5 w-[90%] max-w-[50rem] shadow-md"
+                style={{
+                    boxShadow: "5px 5px 0px gray",
+                }}
+                className="absolute bg-gradient-to-r from-white to-neutral-200 text-black rounded-3xl
+            text-center z-10 left-0 right-0 mx-auto bottom-5 w-[90%] max-w-[50rem] drop-shadow-lg"
             >
-                <div className="relative w-full h-full p-5 py-10 break-words">
+                <div className="relative w-full h-full p-5 py-10">
                     <div
+                        style={{
+                            boxShadow: "5px 5px 0px goldenrod",
+                        }}
                         className="absolute -top-3 left-[10%] bg-yellow-200 px-10 py-0.5 
-                        shadow-md rounded-xl"
+                        drop-shadow-md rounded-xl"
                     >
                         เรา
                     </div>

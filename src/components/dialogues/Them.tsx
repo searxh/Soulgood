@@ -75,13 +75,13 @@ const Them = ({
             className="absolute bg-gradient-to-r from-orange-100 to-orange-200 rounded-2x rounded-xl
             text-center z-10 left-0 right-0 mx-auto top-10 w-[90%] max-w-[50rem] drop-shadow-lg text-neutral-700"
         >
-            <div className="relative w-full h-full p-5 py-10 break-words">
+            <div className="relative w-full h-full p-5 py-10">
                 <div
                     style={{
                         boxShadow: "5px 5px 0px brown",
                     }}
                     className="absolute -top-3 left-[10%] bg-red-500 px-10 py-1 
-                drop-shadow-md rounded-xl text-white"
+                    drop-shadow-md rounded-xl text-white break-words"
                 >
                     {speaker}
                 </div>
