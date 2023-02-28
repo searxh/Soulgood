@@ -1,7 +1,7 @@
 import { SceneInterface } from "../../types";
 
 const defaultRabbitClassName = {
-    top: "40%",
+    top: "45%",
     bottom: "0%",
     left: "0%",
     right: "0%",
@@ -137,8 +137,8 @@ export const firstScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "โจทย์ ตามหาไขควงที่กระต่ายลืมไว้บนชิงช้าสวรรค์",
-                speaker: "กระต่าย",
+                content: "ตามหาไขควงที่กระต่ายลืมไว้บนชิงช้าสวรรค์",
+                speaker: "โจทย์",
             },
             {
                 type: "choice",

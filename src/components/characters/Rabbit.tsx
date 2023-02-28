@@ -10,14 +10,14 @@ export default function Rabbit({
     const [image, setImage] = React.useState<string>("");
     React.useLayoutEffect(() => {
         if (state !== undefined) {
-            setImage("/assets/Character/Rabbit/Rabbit_" + state + ".PNG");
+            setImage("/assets/Character/Rabbit/Rabbit_" + state + ".png");
         }
     }, [state, className]);
     return (
         <img
             src={image}
             className={`absolute drop-shadow-md m-auto
-            animate-bob z-10 w-[600px] max-w-[80%] transition duration-300`}
+            animate-bob z-10 w-full max-w-[400px] transition duration-300`}
             alt=""
             style={className}
         />
