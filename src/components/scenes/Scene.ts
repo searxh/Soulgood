@@ -8,7 +8,7 @@ const defaultOwlClassName = {
 };
 
 const defaultBackground = {
-    name: "apark.png",
+    name: "apark.webp",
 };
 
 export const zerothScene: Array<SceneInterface> = [
