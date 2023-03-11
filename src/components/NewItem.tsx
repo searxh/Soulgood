@@ -34,7 +34,7 @@ const NewItem = ({
             />
             <img
                 className="drop-shadow-md m-auto"
-                src={`/assets/Props/${item}.PNG`}
+                src={`/assets/Props/${item}.webp`}
                 alt=""
             />
         </button>
