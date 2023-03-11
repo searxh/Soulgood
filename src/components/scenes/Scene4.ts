@@ -560,35 +560,6 @@ export const fourthScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "โอ้ะ พวกเราเผลอเล่าให้เธอฟังไปซะเยอะ",
-                speaker: "พี่จิงโจ้",
-            },
-        ],
-        background: fourthAttractionBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
                 content:
                     "<name> ล่ะ อยากเล่าเรื่องราวที่เคยได้รับความคาดหวังจากพ่อเเม่ให้พวกเราฟังบ้างมั้ย",
                 speaker: "พี่จิงโจ้",

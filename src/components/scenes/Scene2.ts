@@ -353,7 +353,7 @@ export const secondScene: Array<SceneInterface> = [
             },
             {
                 type: "special",
-                content: "New item",
+                content: "New item/Balloon2",
             },
         ],
         background: secondAttractionBackground,

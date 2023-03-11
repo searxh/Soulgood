@@ -33,7 +33,7 @@ export const zerothScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Happy",
                 className: defaultOwlClassName,
             },
         ],
@@ -68,7 +68,7 @@ export const zerothScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Sad",
                 className: defaultOwlClassName,
             },
         ],
@@ -113,7 +113,7 @@ export const zerothScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Happy",
                 className: defaultOwlClassName,
             },
         ],
@@ -136,7 +136,7 @@ export const zerothScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Sad",
                 className: defaultOwlClassName,
             },
         ],
@@ -174,7 +174,7 @@ export const zerothScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Happy",
                 className: defaultOwlClassName,
             },
         ],
@@ -219,7 +219,7 @@ export const zerothScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Happy",
                 className: defaultOwlClassName,
             },
         ],

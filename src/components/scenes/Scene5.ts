@@ -135,10 +135,8 @@ export const fifthScene: Array<SceneInterface> = [
         ],
         dialogues: [
             {
-                type: "them",
-                content:
-                    "ขึ้นเป็นสิ่งที่เค้าเคยพิมพ์ตอนได้ ตุ๊กตา ในด่านนั้น ๆ",
-                speaker: "นกฮูก",
+                type: "special",
+                content: "Answer bubble",
             },
         ],
         background: defaultBackground,

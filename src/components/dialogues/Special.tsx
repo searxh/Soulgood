@@ -4,6 +4,7 @@ import NewItem from "../NewItem";
 import { GlobalContext } from "../../states";
 import ZoomModule from "../ZoomModule";
 import Balloon from "../Balloon";
+import AnswerBubble from "../AnswerBubble";
 
 const Special = ({ content, next }: { content: string; next: any }) => {
     const { global_state, dispatch } = React.useContext(GlobalContext);
@@ -39,6 +40,12 @@ const Special = ({ content, next }: { content: string; next: any }) => {
                     />
                 ) : content === "Balloon" ? (
                     <Balloon
+                        clickCallback={() => {
+                            handleSetChoice();
+                        }}
+                    />
+                ) : content === "Answer bubble" ? (
+                    <AnswerBubble
                         clickCallback={() => {
                             handleSetChoice();
                         }}
