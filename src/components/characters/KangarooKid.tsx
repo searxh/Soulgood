@@ -11,21 +11,16 @@ export default function KangarooKid({
     React.useLayoutEffect(() => {
         if (state !== undefined) {
             setImage(
-                "/assets/Character/Kangaroo (Kid)/Cream_" + state + ".PNG"
+                "/assets/Character/Kangaroo (Kid)/Cream_" + state + ".png"
             );
         }
     }, [state, className]);
     return (
-        <div
-            style={className}
-            className="absolute -scale-x-100 max-w-[80%] w-[400px] m-auto z-10"
-        >
-            <img
-                src={image}
-                className={`drop-shadow-md sepia-[50%]
-                animate-bob transition duration-300`}
-                alt=""
-            />
-        </div>
+        <img
+            src={image}
+            className={`absolute drop-shadow-md m-auto
+            animate-bob z-10 w-full max-w-[400px] transition duration-300`}
+            alt=""
+        />
     );
 }
