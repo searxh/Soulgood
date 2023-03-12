@@ -23,7 +23,11 @@ const Balloon = ({ clickCallback }: { clickCallback: Function }) => {
             } relative flex flex-col w-[350px] aspect-square max-w-[80%] z-10 m-auto
             p-5 rounded-full transition duration-500`}
         >
-            <img className="m-auto h-full" src="/assets/balloon.webp" alt="" />
+            <img
+                className="m-auto h-full"
+                src="/assets/Props/Balloon1.webp"
+                alt=""
+            />
         </button>
     );
 };

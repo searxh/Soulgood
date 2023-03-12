@@ -20,7 +20,7 @@ export default function AudioPlayer() {
     return (
         <button
             onClick={handleOnClick}
-            className={`absolute top-1 left-3 w-12 h-12 hover:scale-110 opacity-70
+            className={`absolute top-1 right-3 w-12 h-12 hover:scale-110 opacity-70
             ${
                 mute
                     ? "bg-[url('../public/assets/mute.png')]"

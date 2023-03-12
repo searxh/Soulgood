@@ -26,9 +26,9 @@ module.exports = {
             keyframes: {
                 bob: {
                     "0%, 100%": {
-                        transform: ["rotate(-2deg)", "translateY(-2.5%)"],
+                        transform: ["rotate(-2deg)", "translateY(-2%)"],
                     },
-                    "50%": { transform: ["rotate(2deg)", "translateY(2.5%)]"] },
+                    "50%": { transform: ["rotate(2deg)", "translateY(2%)]"] },
                 },
             },
             animation: {

@@ -64,7 +64,9 @@ const Us = ({ content, next }: { content: string; next: any }) => {
                     >
                         เรา
                     </div>
-                    {displayedContent}
+                    <div className="mx-auto max-w-[40rem]">
+                        {displayedContent}
+                    </div>
                 </div>
             </button>
         </>
