@@ -5,8 +5,11 @@ import Page1 from "../components/intro/Page1";
 import Page2 from "../components/intro/Page2";
 import Page3 from "../components/intro/Page3";
 import Page4 from "../components/intro/Page4";
+import PreIntroForm from "../components/PreIntroForm";
 import { introPlayInterval } from "../default";
 import useAspectRatio from "../hooks/useAspectRatio";
+import { GlobalContext } from "../states";
+import { PreIntroFormInterface } from "../types";
 
 const aspectRatioBg = [
     "/assets/Background/game_cover.webp",
@@ -16,16 +19,26 @@ const aspectRatioBg = [
 const introScreens = [<Page1 />, <Page2 />, <Page3 />, <Page4 />, null];
 
 export default function Home() {
+    const { dispatch } = React.useContext(GlobalContext);
     const navigate = useNavigate();
-    const [start, setStart] = React.useState<boolean>(false);
+    //status 0 = initial, status 1 = form shows up, status 2 = intro starts
+    const [status, setStatus] = React.useState<number>(0);
     const [currentPage, setCurrentPage] = React.useState<number>(0);
     const aspectRatioIndex = useAspectRatio([1.777, 0.5625]);
     const handleOnClick = () => {
-        setStart(true);
+        setStatus(1);
     };
-    //currentPage.current = 4;
+    const answerCallback = (formData: PreIntroFormInterface) => {
+        console.log(formData);
+        dispatch({
+            type: "set",
+            field: "preIntroForm",
+            payload: formData,
+        });
+        setStatus(2);
+    };
     React.useEffect(() => {
-        if (start) {
+        if (status === 2) {
             introScreens.forEach((item, index) => {
                 setTimeout(() => {
                     if (!item)
@@ -36,7 +49,7 @@ export default function Home() {
                 }, index * (introPlayInterval + 2100));
             });
         }
-    }, [start]);
+    }, [status]);
     return (
         <div
             className={`flex relative h-screen w-screen font-mitr overflow-hidden`}
@@ -80,24 +93,46 @@ export default function Home() {
                 alt=""
             />
             {currentPage === 0 ? (
-                <div className={`flex flex-col w-full h-full m-auto`}>
-                    <div className="flex flex-col text-2xl m-auto font-extrabold">
-                        <div className="text-center">
+                <div
+                    className={`flex flex-col w-full h-full m-auto drop-shadow-md`}
+                >
+                    <div className="flex flex-col text-center m-auto">
+                        <div className="text-center text-xl font-medium text-neutral-700">
                             WELCOME TO THE ULTIMATE GAME
                         </div>
+                        <div
+                            style={{
+                                textShadow: "5px 5px 0px pink",
+                            }}
+                            className="text-6xl font-bold leading-none text-pink-400 rounded-full"
+                        >
+                            GOODIVAL
+                        </div>
                         <img
-                            className=" mx-auto w-[25rem] h-24"
+                            className="mx-auto w-[20rem] h-20"
                             src="/assets/logo.png"
                             alt=""
                         />
+                        {status === 0 ? (
+                            <button
+                                style={{
+                                    boxShadow: "5px 5px 0px forestgreen",
+                                }}
+                                className="text-2xl bg-green-400 rounded-lg text-white
+                                px-24 py-2 m-auto hover:scale-105 hover:bg-green-500 transition 
+                                duration-300 font-medium my-10"
+                                onClick={handleOnClick}
+                            >
+                                Start!
+                            </button>
+                        ) : (
+                            <PreIntroForm
+                                answerCallback={(formData) =>
+                                    answerCallback(formData)
+                                }
+                            />
+                        )}
                     </div>
-                    <button
-                        className="text-3xl bg-green-300 rounded-lg border-black font-bold
-					    border-2 px-24 py-3 m-auto hover:scale-105 transition duration-300"
-                        onClick={handleOnClick}
-                    >
-                        Start!
-                    </button>
                 </div>
             ) : (
                 introScreens[currentPage - 1]

@@ -1,4 +1,9 @@
 import { Dispatch, SetStateAction } from "react";
+
+export interface PreIntroFormInterface {
+    age: number;
+    sex: string;
+}
 export interface CharacterInterface {
     name: string;
     state: string;
@@ -31,6 +36,7 @@ export interface GlobalStateInterface {
     name: string;
     track: number;
     scene: number;
+    preIntroForm: PreIntroFormInterface;
     answers: Array<string>;
 }
 export interface ActionInterface {
