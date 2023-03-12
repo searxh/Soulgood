@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { GlobalContext } from "../../states";
 import React from "react";
 import { NextContext } from "../../next";
@@ -39,15 +40,7 @@ const Us = ({ content, next }: { content: string; next: any }) => {
     }, [scene]);
     return (
         <>
-            <button
-                disabled={printing}
-                onClick={() => {
-                    /*dispatch({
-                        type: "set",
-                        field: "scene",
-                        payload: sceneRouter(),
-                    });*/
-                }}
+            <div
                 style={{
                     boxShadow: "5px 5px 0px gray",
                 }}
@@ -68,7 +61,7 @@ const Us = ({ content, next }: { content: string; next: any }) => {
                         {displayedContent}
                     </div>
                 </div>
-            </button>
+            </div>
         </>
     );
 };
