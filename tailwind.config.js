@@ -30,9 +30,19 @@ module.exports = {
                     },
                     "50%": { transform: ["rotate(2deg)", "translateY(2%)]"] },
                 },
+                equalbob: {
+                    "0%, 100%": {
+                        transform: ["rotate(0deg)", "translateY(0%)"],
+                    },
+                    "33%": {
+                        transform: ["rotate(-0.5deg)", "translateY(-2%)]"],
+                    },
+                    "67%": { transform: ["rotate(0.5deg)", "translateY(2%)]"] },
+                },
             },
             animation: {
                 bob: "bob 5s ease-in-out infinite",
+                lightbob: "equalbob 10s ease-in-out infinite",
             },
         },
     },

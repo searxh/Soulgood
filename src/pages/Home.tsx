@@ -38,14 +38,26 @@ export default function Home() {
         }
     }, [start]);
     return (
-        <div className={`flex relative h-screen w-screen font-mitr`}>
+        <div
+            className={`flex relative h-screen w-screen font-mitr overflow-hidden`}
+        >
             <img
                 className={` ${
                     currentPage === 0
                         ? "opacity-100 -z-10 blur-none"
                         : "opacity-100 -z-10 blur-md"
                 } absolute top-0 bottom-0 right-0 left-0 transition duration-1000 
-                m-auto object-cover object-center w-full h-full`}
+                m-auto object-cover object-center w-[120%] h-[120%] animate-lightbob`}
+                src={aspectRatioBg[aspectRatioIndex]}
+                alt=""
+            />
+            <img
+                className={` ${
+                    currentPage === 0
+                        ? "opacity-100 -z-[15] blur-none"
+                        : "opacity-100 -z-[15] blur-md"
+                } absolute top-0 bottom-0 right-0 left-0 transition duration-1000 
+                m-auto object-cover object-center w-[120%] h-[120%]`}
                 src={aspectRatioBg[aspectRatioIndex]}
                 alt=""
             />
@@ -69,7 +81,7 @@ export default function Home() {
             />
             {currentPage === 0 ? (
                 <div className={`flex flex-col w-full h-full m-auto`}>
-                    <div className="flex flex-col text-2xl m-auto font-extrabold animate-bob">
+                    <div className="flex flex-col text-2xl m-auto font-extrabold">
                         <div className="text-center">
                             WELCOME TO THE ULTIMATE GAME
                         </div>

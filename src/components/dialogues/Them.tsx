@@ -59,16 +59,7 @@ const Them = ({
         }, delay);
     }, [scene]);
     return (
-        <button
-            onClick={() => {
-                if (!preventNext) {
-                    /*dispatch({
-                        type: "set",
-                        field: "scene",
-                        payload: sceneRouter(),
-                    });*/
-                }
-            }}
+        <div
             style={{
                 boxShadow: "5px 5px 0px BurlyWood",
             }}
@@ -87,7 +78,7 @@ const Them = ({
                 </div>
                 <div className="mx-auto max-w-[40rem]">{displayedContent}</div>
             </div>
-        </button>
+        </div>
     );
 };
 
