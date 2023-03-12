@@ -8,3 +8,5 @@ export const initialState: GlobalStateInterface = {
 };
 
 export const delayInterval = 10;
+
+export const introPlayInterval = 5000;
