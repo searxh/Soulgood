@@ -2,8 +2,8 @@ import React from "react";
 
 const useWindowSize = () => {
     const [windowSize, setWindowSize] = React.useState<{
-        height: Number;
-        width: Number;
+        height: number;
+        width: number;
     }>({
         height: window.innerHeight,
         width: window.innerWidth,

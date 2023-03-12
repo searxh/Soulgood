@@ -27,7 +27,7 @@ const ZoomModule = ({ clickCallback }: { clickCallback: Function }) => {
                 onClick={handleOnClick}
                 className={`${
                     transition ? "scale-100 opacity-100" : "scale-0 opacity-0"
-                } w-[80%] min-w-[21rem] m-auto
+                } h-full w-full
                 transition duration-300`}
             >
                 <Zoom />
