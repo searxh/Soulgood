@@ -16,7 +16,6 @@ const useWindowSize = () => {
             bodyElement.style.touchAction = "none";
         }
         window.addEventListener("resize", (e) => {
-            console.log(window.innerWidth, window.innerHeight);
             setWindowSize({
                 height: window.innerHeight,
                 width: window.innerWidth,

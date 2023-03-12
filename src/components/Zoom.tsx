@@ -46,7 +46,6 @@ const Zoom = () => {
         }
     };
     React.useEffect(() => {
-        console.log(aspectRatioIndex);
         window.addEventListener("touchmove", (e: any) => {
             handleMouseMove(e);
         });

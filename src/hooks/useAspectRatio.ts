@@ -10,7 +10,6 @@ const useAspectRatio = (supportedAspectRatio: Array<number>) => {
         let minDiff = 1e9;
         supportedAspectRatio.forEach((item, index) => {
             const temp = Math.abs(windowSize.width / windowSize.height - item);
-            console.log(temp);
             if (temp < minDiff) {
                 setSelectedRatioIndex(index);
                 minDiff = temp;
