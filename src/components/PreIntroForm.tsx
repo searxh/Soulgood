@@ -35,9 +35,14 @@ const PreIntroForm = ({
         >
             <div className="m-auto drop-shadow-md">
                 <div className="text-left text-white">เพศ:</div>
-                <select ref={sexRef} className="rounded-xl w-24 px-2 h-8">
+                <select
+                    ref={sexRef}
+                    className="rounded-xl w-24 px-2 h-8 bg-white"
+                >
                     <option>ชาย</option>
                     <option>หญิง</option>
+                    <option>LGBTQ+</option>
+                    <option>ไม่ระบุ</option>
                 </select>
                 <div className="text-left text-white">อายุ:</div>
                 <input
@@ -45,7 +50,7 @@ const PreIntroForm = ({
                     type="number"
                     min={1}
                     max={150}
-                    className="rounded-xl w-24 px-2 h-8"
+                    className="rounded-xl w-24 px-2 h-8 bg-white"
                 />
             </div>
             <button
@@ -54,8 +59,8 @@ const PreIntroForm = ({
                 }}
                 className={`${
                     isError ? "bg-red-400" : "bg-green-400 hover:bg-green-500"
-                } text-2xl rounded-lg text-white
-                px-20 py-2 mt-5 m-auto hover:scale-105 transition 
+                } text-2xl rounded-lg text-white px-5 w-[80%]
+                py-2 mt-5 m-auto hover:scale-105 transition 
                 duration-500 font-medium drop-shadow-md`}
                 onClick={handleOnSubmit}
             >
