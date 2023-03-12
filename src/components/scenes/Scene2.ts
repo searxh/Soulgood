@@ -34,7 +34,7 @@ export const secondScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "peacock",
-                state: "Idle",
+                state: "Worry",
                 className: defaultPeacockClassName,
             },
         ],
@@ -52,7 +52,7 @@ export const secondScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "peacock",
-                state: "Idle",
+                state: "Worry",
                 className: defaultPeacockClassName,
             },
         ],
@@ -88,7 +88,7 @@ export const secondScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "peacock",
-                state: "Idle",
+                state: "Worry",
                 className: defaultPeacockClassName,
             },
         ],
@@ -106,7 +106,7 @@ export const secondScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "peacock",
-                state: "Idle",
+                state: "Worry",
                 className: defaultPeacockClassName,
             },
         ],
@@ -124,7 +124,7 @@ export const secondScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "peacock",
-                state: "Idle",
+                state: "Worry",
                 className: defaultPeacockClassName,
             },
         ],
@@ -142,7 +142,7 @@ export const secondScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "peacock",
-                state: "Idle",
+                state: "Worry",
                 className: defaultPeacockClassName,
             },
         ],
@@ -160,7 +160,7 @@ export const secondScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "peacock",
-                state: "Idle",
+                state: "Stress",
                 className: defaultPeacockClassName,
             },
         ],
@@ -179,7 +179,7 @@ export const secondScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "peacock",
-                state: "Idle",
+                state: "Worry",
                 className: defaultPeacockClassName,
             },
         ],
@@ -251,7 +251,7 @@ export const secondScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "peacock",
-                state: "Idle",
+                state: "Worry",
                 className: defaultPeacockClassName,
             },
         ],
@@ -305,7 +305,7 @@ export const secondScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "แล้ว <name> มีวิธีจัดการกับความไม่มั่นใจยังไงบ้าง เล่าให้ฉันฟังหน่อยได้มั้ย",
+                    "แล้ว <name> มีวิธีจัดการกับมันยังไงบ้าง เล่าให้ฉันฟังหน่อยได้ไหม",
                 speaker: "นกยูง",
             },
             {
@@ -321,7 +321,7 @@ export const secondScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "peacock",
-                state: "Idle",
+                state: "Happy",
                 className: defaultPeacockClassName,
             },
         ],

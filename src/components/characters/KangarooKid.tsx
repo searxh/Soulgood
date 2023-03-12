@@ -21,6 +21,7 @@ export default function KangarooKid({
             className={`absolute drop-shadow-md m-auto
             animate-bob z-10 w-full max-w-[400px] transition duration-300`}
             alt=""
+            style={className}
         />
     );
 }

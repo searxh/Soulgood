@@ -17,7 +17,7 @@ export default function KangarooKid1({
         <img
             src={image}
             className={`absolute drop-shadow-md m-auto
-            animate-bob z-10 w-full max-w-[400px] transition duration-300`}
+            animate-bob z-10 w-[85%] max-w-[360px] transition duration-300`}
             alt=""
             style={className}
         />

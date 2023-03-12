@@ -87,7 +87,7 @@ const Input = ({
                     <div
                         className={`${
                             transition ? "opacity-100 animate-bob" : "opacity-0"
-                        } absolute bottom-[100px] right-5 transition duration-1000
+                        } absolute bottom-[100px] md:bottom-[110px] right-5 transition duration-1000
                     w-[150px] h-[75px] md:w-[200px] md:h-[100px] text-sm md:text-lg z-10`}
                     >
                         <div
@@ -98,7 +98,7 @@ const Input = ({
                                 ลองค่อย ๆ คิดทบทวนกับตัวเอง
                                 แล้วเล่ามาได้เต็มที่เลยนะ
                             </div>
-                            <div className="absolute -bottom-10 -z-10 h-14 w-5 shadow-md bg-orange-200" />
+                            <div className="absolute -bottom-10 -z-10 h-16 w-5 shadow-md bg-orange-200" />
                         </div>
                     </div>
                 ) : null}

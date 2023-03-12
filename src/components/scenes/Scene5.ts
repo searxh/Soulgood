@@ -16,7 +16,7 @@ export const fifthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Sad",
                 className: { ...defaultOwlClassName },
             },
         ],
@@ -35,7 +35,7 @@ export const fifthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Sad",
                 className: { ...defaultOwlClassName },
             },
         ],
@@ -54,7 +54,7 @@ export const fifthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Sad",
                 className: { ...defaultOwlClassName },
             },
         ],
@@ -110,7 +110,7 @@ export const fifthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Happy",
                 className: { ...defaultOwlClassName },
             },
         ],
@@ -183,7 +183,7 @@ export const fifthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Happy",
                 className: { ...defaultOwlClassName },
             },
         ],
@@ -228,7 +228,7 @@ export const fifthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Happy",
                 className: { ...defaultOwlClassName },
             },
         ],
@@ -266,7 +266,7 @@ export const fifthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Happy",
                 className: { ...defaultOwlClassName },
             },
         ],

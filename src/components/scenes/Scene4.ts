@@ -3,14 +3,14 @@ import { SceneInterface } from "../../types";
 const defaultKangarooKidClassName = {
     top: "50%",
     bottom: "0%",
-    left: "-60%",
+    left: "0%",
     right: "0%",
 };
 
 const defaultKangarooKid1ClassName = {
-    top: "50%",
+    top: "60%",
     bottom: "0%",
-    left: "60%",
+    left: "0%",
     right: "0%",
 };
 
@@ -41,11 +41,6 @@ export const fourthScene: Array<SceneInterface> = [
                 state: "Idle",
                 className: { ...defaultKangarooKidClassName, opacity: 0 },
             },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: { ...defaultKangarooKid1ClassName, opacity: 0 },
-            },
         ],
         dialogues: [
             {
@@ -64,15 +59,6 @@ export const fourthScene: Array<SceneInterface> = [
                 state: "Idle",
                 className: {
                     ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
                 },
             },
         ],
@@ -93,15 +79,6 @@ export const fourthScene: Array<SceneInterface> = [
                 state: "Idle",
                 className: {
                     ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
                 },
             },
         ],
@@ -118,19 +95,10 @@ export const fourthScene: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
                 state: "Idle",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -147,19 +115,10 @@ export const fourthScene: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
                 state: "Idle",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -176,19 +135,10 @@ export const fourthScene: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -206,18 +156,9 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "kid_kangaroo",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
                 },
             },
         ],
@@ -235,19 +176,10 @@ export const fourthScene: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -265,19 +197,10 @@ export const fourthScene: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
                 state: "Idle",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -303,26 +226,17 @@ export const fourthScene: Array<SceneInterface> = [
         branch: 1,
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
-                state: "Idle",
+                state: "Happy",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
         dialogues: [
             {
                 type: "them",
-                content: "ดีจังเลยนะ อย่างน้อยเธอก็ได้มีโอกาสทำในสิ่งที่ชอบนะ",
+                content: "ดีจังเลย อย่างน้อยเธอก็ได้มีโอกาสทำในสิ่งที่ชอบนะ",
                 speaker: "น้องจิงโจ้",
             },
         ],
@@ -334,19 +248,10 @@ export const fourthScene: Array<SceneInterface> = [
         branch: 2,
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
                 state: "Idle",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -365,19 +270,10 @@ export const fourthScene: Array<SceneInterface> = [
         trackChange: 1,
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -395,19 +291,10 @@ export const fourthScene: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -424,19 +311,10 @@ export const fourthScene: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -453,19 +331,10 @@ export const fourthScene: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -483,18 +352,9 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "kid_kangaroo",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
                 },
             },
         ],
@@ -516,15 +376,6 @@ export const fourthScene: Array<SceneInterface> = [
                 state: "Idle",
                 className: {
                     ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
                 },
             },
         ],
@@ -545,15 +396,6 @@ export const fourthScene: Array<SceneInterface> = [
                 state: "Idle",
                 className: {
                     ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
                 },
             },
         ],
@@ -575,19 +417,10 @@ export const fourthScene: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
-                state: "Idle",
+                state: "Happy",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -604,19 +437,10 @@ export const fourthScene: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -633,19 +457,10 @@ export const fourthScene: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -663,19 +478,10 @@ export const fourthScene: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -693,18 +499,9 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "kid_kangaroo",
-                state: "Idle",
+                state: "Stress",
                 className: {
                     ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
                 },
             },
         ],
@@ -726,15 +523,6 @@ export const fourthScene: Array<SceneInterface> = [
                 state: "Idle",
                 className: {
                     ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
                 },
             },
         ],
@@ -757,18 +545,9 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "kid_kangaroo",
-                state: "Idle",
+                state: "Happy",
                 className: {
                     ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
                 },
             },
         ],
@@ -785,19 +564,10 @@ export const fourthScene: Array<SceneInterface> = [
     {
         characters: [
             {
-                name: "kid_kangaroo",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKidClassName,
-                    filter: "brightness(0.5)",
-                },
-            },
-            {
                 name: "kid_kangaroo_1",
-                state: "Idle",
+                state: "Happy",
                 className: {
                     ...defaultKangarooKid1ClassName,
-                    filter: "brightness(1)",
                 },
             },
         ],
@@ -816,7 +586,7 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "mother_kangaroo",
-                state: "Idle",
+                state: "Happy",
                 className: {
                     ...defaultMotherKangarooClassName,
                 },
@@ -836,7 +606,7 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "mother_kangaroo",
-                state: "Idle",
+                state: "Stress",
                 className: {
                     ...defaultMotherKangarooClassName,
                 },
@@ -856,18 +626,9 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "kid_kangaroo",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
                 },
             },
         ],
@@ -885,7 +646,7 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "mother_kangaroo",
-                state: "Idle",
+                state: "Stress",
                 className: {
                     ...defaultMotherKangarooClassName,
                 },
@@ -906,7 +667,7 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "mother_kangaroo",
-                state: "Idle",
+                state: "Stress",
                 className: {
                     ...defaultMotherKangarooClassName,
                 },
@@ -927,7 +688,7 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "mother_kangaroo",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultMotherKangarooClassName,
                 },
@@ -987,7 +748,7 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "mother_kangaroo",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultMotherKangarooClassName,
                 },
@@ -1056,7 +817,7 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "mother_kangaroo",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultMotherKangarooClassName,
                 },
@@ -1097,7 +858,7 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "mother_kangaroo",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultMotherKangarooClassName,
                 },
@@ -1120,15 +881,6 @@ export const fourthScene: Array<SceneInterface> = [
                 state: "Idle",
                 className: {
                     ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
                 },
             },
         ],
@@ -1147,7 +899,7 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "mother_kangaroo",
-                state: "Idle",
+                state: "Sad",
                 className: {
                     ...defaultMotherKangarooClassName,
                 },
@@ -1167,18 +919,9 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "kid_kangaroo",
-                state: "Idle",
+                state: "Happy",
                 className: {
                     ...defaultKangarooKidClassName,
-                    filter: "brightness(1)",
-                },
-            },
-            {
-                name: "kid_kangaroo_1",
-                state: "Idle",
-                className: {
-                    ...defaultKangarooKid1ClassName,
-                    filter: "brightness(0.5)",
                 },
             },
         ],
@@ -1216,7 +959,7 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "mother_kangaroo",
-                state: "Idle",
+                state: "Stress",
                 className: {
                     ...defaultMotherKangarooClassName,
                 },
@@ -1236,7 +979,7 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "mother_kangaroo",
-                state: "Idle",
+                state: "Stress",
                 className: {
                     ...defaultMotherKangarooClassName,
                 },
@@ -1257,7 +1000,7 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Surprise",
                 className: {
                     ...defaultOwlClassName,
                 },

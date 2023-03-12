@@ -1,7 +1,7 @@
 import { SceneInterface } from "../../types";
 
 const defaultRabbitClassName = {
-    top: "45%",
+    top: "40%",
     bottom: "0%",
     left: "0%",
     right: "0%",
@@ -16,7 +16,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Happy",
                 className: { ...defaultRabbitClassName, opacity: 0 },
             },
         ],
@@ -70,7 +70,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Happy",
                 className: defaultRabbitClassName,
             },
         ],
@@ -137,8 +137,8 @@ export const firstScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "ตามหาไขควงที่กระต่ายลืมไว้บนชิงช้าสวรรค์",
-                speaker: "โจทย์",
+                content: "โจทย์ ตามหาไขควงที่กระต่ายลืมไว้บนชิงช้าสวรรค์",
+                speaker: "กระต่าย",
             },
             {
                 type: "choice",
@@ -156,7 +156,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Happy",
                 className: defaultRabbitClassName,
             },
         ],
@@ -238,7 +238,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Happy",
                 className: defaultRabbitClassName,
             },
         ],
@@ -258,7 +258,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Sad",
                 className: defaultRabbitClassName,
             },
         ],
@@ -277,7 +277,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Sad",
                 className: defaultRabbitClassName,
             },
         ],
@@ -295,7 +295,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Sad",
                 className: defaultRabbitClassName,
             },
         ],
@@ -314,7 +314,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Sad",
                 className: defaultRabbitClassName,
             },
         ],
@@ -333,7 +333,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Sad",
                 className: defaultRabbitClassName,
             },
         ],
@@ -351,7 +351,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Sad",
                 className: defaultRabbitClassName,
             },
         ],
@@ -369,7 +369,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Sad",
                 className: defaultRabbitClassName,
             },
         ],
@@ -387,7 +387,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Sad",
                 className: defaultRabbitClassName,
             },
         ],
@@ -405,7 +405,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Sad",
                 className: defaultRabbitClassName,
             },
         ],
@@ -446,7 +446,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Happy",
                 className: defaultRabbitClassName,
             },
         ],
@@ -484,7 +484,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Happy",
                 className: defaultRabbitClassName,
             },
         ],
@@ -544,7 +544,7 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Happy",
                 className: defaultRabbitClassName,
             },
         ],
