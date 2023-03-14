@@ -37,7 +37,7 @@ export interface GlobalStateInterface {
     track: number;
     scene: number;
     preIntroForm: PreIntroFormInterface;
-    answers: Array<string>;
+    answers: { [key: string]: string };
 }
 export interface ActionInterface {
     type: string;

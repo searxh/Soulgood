@@ -8,7 +8,7 @@ const Input = ({
 }: {
     content: string;
     next: any;
-    targetList: Array<number>;
+    targetList: Array<{ id: string; sceneNumber: number }>;
 }) => {
     const [transition, setTransition] = React.useState<boolean>(false);
     const inputRef = React.useRef<HTMLInputElement>(null);
@@ -28,11 +28,12 @@ const Input = ({
         if (name.length === 0) {
             newName = inputRef.current.value;
         }
-        let newAnswers = answers;
-        if (targetList.includes(scene)) {
-            console.log(`[STORE VALUE SCENE ${scene}]`, inputRef.current.value);
-            newAnswers = [...answers, inputRef.current.value];
-        }
+        let newAnswers = { ...answers };
+        targetList.forEach((item) => {
+            if (item.sceneNumber === scene && inputRef.current) {
+                newAnswers[item.id] = inputRef.current.value;
+            }
+        });
         dispatch({
             type: "multi-set",
             field: ["name", "scene", "answers"],

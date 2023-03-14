@@ -28,9 +28,10 @@ const AnswerBubble = ({ clickCallback }: { clickCallback: Function }) => {
             } relative flex flex-col w-[350px] aspect-square max-w-[80%] z-10 m-auto
             p-5 rounded-full transition duration-500 grid gap-5`}
         >
-            {test.map((answer) => (
+            {Object.keys(answers).map((key) => (
                 <div className="flex bg-white rounded-full w-24 h-24">
-                    <div className="m-auto">{answer}</div>
+                    <div className="m-auto">{key}</div>
+                    <div className="m-auto">{answers[key]}</div>
                 </div>
             ))}
         </button>

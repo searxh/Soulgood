@@ -21,7 +21,7 @@ const Dialogue = ({
     speaker?: string;
     printDoneCallback?: Function;
     preventNext: boolean | null;
-    targetList: Array<number>;
+    targetList: Array<{ id: string; sceneNumber: number }>;
 }) => {
     return type === "them" ? (
         <Them

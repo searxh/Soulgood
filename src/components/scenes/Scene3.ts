@@ -331,7 +331,8 @@ export const thirdScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "เคยหรอ ลองเล่าให้ฟังหน่อยได้ไหม",
+                content:
+                    "เคยเหรอ ลองเล่าให้ฟังหน่อยได้มั้ยว่าเพราะอะไรเธอถึงรู้สึกไม่ดีพอ ถึงแม้จะไม่มีใครกดดัน",
                 speaker: "ยีราฟ",
             },
             {

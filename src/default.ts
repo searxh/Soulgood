@@ -5,9 +5,9 @@ export const initialState: GlobalStateInterface = {
     track: 0,
     scene: 0,
     preIntroForm: {} as PreIntroFormInterface,
-    answers: [],
+    answers: {},
 };
 
-export const delayInterval = 10;
+export const delayInterval = 0;
 
 export const introPlayInterval = 5000;
