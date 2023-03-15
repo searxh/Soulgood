@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
 );
 root.render(
-    <div className="relative w-screen h-screen">
+    <div className="relative w-screen h-screen select-none">
         <BrowserRouter>
             <GlobalStateProvider>
                 <NextStateProvider>

@@ -10,7 +10,7 @@ export function Bg({ name }: { name: string }) {
     return (
         <img
             src={image}
-            className="flex-1 object-cover bg-yellow-100 opacity-50 blur-sm"
+            className="flex-1 object-cover opacity-60 bg-white blur-sm"
             alt=""
         />
     );
