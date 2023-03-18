@@ -1,5 +1,7 @@
 import React from "react";
+import CharacterChoose from "./CharacterChoose";
 import MiniScene from "./MiniScene";
+import Rating from "./Rating";
 
 const Conclusion = () => {
     const [transition, setTransition] = React.useState<boolean>(false);
@@ -105,6 +107,8 @@ const Conclusion = () => {
                     character="/assets/Character/Kangaroo (Kid)/Cream_Sad.png"
                     background="/assets/Background/bg_bumper.webp"
                 />
+                <CharacterChoose />
+                <Rating />
             </div>
         </div>
     );
