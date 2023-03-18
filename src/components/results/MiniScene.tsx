@@ -1,6 +1,5 @@
 import React from "react";
 import useObserver from "../../hooks/useObserver";
-import Character from "../Character";
 
 interface IProps {
     character: string;
