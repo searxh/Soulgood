@@ -20,7 +20,8 @@ export default function AudioPlayer() {
     return (
         <button
             onClick={handleOnClick}
-            className={`absolute top-1 right-3 w-12 h-12 hover:scale-110 opacity-70
+            className={`absolute top-1 right-1 w-14 h-14 rounded-full 
+            bg-white hover:bg-neutral-200 opacity-100 shadow-md
             ${
                 mute
                     ? "bg-[url('../public/assets/mute.png')]"
@@ -29,14 +30,14 @@ export default function AudioPlayer() {
             transition duration-300 z-50`}
         >
             <img
-                className="m-auto invert"
+                className="m-auto invert drop-shadow-md p-2 opacity-50"
                 src={mute ? "assets/mute.png" : "assets/unmute.png"}
                 alt=""
             />
             <Player
                 autoPlayAfterSrcChange={!mute}
                 src={trackList[track]}
-                className="opacity-50 scale-[0.01%]"
+                className="opacity-50 scale-[0.01%] w-0 h-0"
                 volume={0.2}
                 loop={true}
                 ref={ref}
