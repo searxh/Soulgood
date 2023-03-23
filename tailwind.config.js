@@ -19,6 +19,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 mitr: "Mitr",
+                ms: "Mansalva",
             },
             scale: {
                 "-1": "-1",
