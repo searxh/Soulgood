@@ -33,11 +33,11 @@ const PreIntroForm = ({
             className="flex flex-col p-5 m-auto text-lg md:text-xl
              bg-gradient-to-r from-pink-200 to-pink-300 w-full my-2 rounded-xl drop-shadow-md"
         >
-            <div className="m-auto drop-shadow-md">
+            <div className="m-auto drop-shadow-md w-[80%]">
                 <div className="text-left text-white">เพศ:</div>
                 <select
                     ref={sexRef}
-                    className="rounded-xl w-24 px-2 h-8 bg-white"
+                    className="rounded-xl w-full px-2 h-8 bg-white"
                 >
                     <option>ชาย</option>
                     <option>หญิง</option>
@@ -50,7 +50,7 @@ const PreIntroForm = ({
                     type="number"
                     min={1}
                     max={150}
-                    className="rounded-xl w-24 px-2 h-8 bg-white"
+                    className="rounded-xl w-full px-2 h-8 bg-white"
                 />
             </div>
             <button

@@ -8,7 +8,7 @@ const Score = ({
 }: {
     selectedCallback: (selected: number) => void;
 }) => {
-    const [selected, setSelected] = React.useState<number>(0);
+    const [selected, setSelected] = React.useState<number>(-1);
     const selectScore = (index: number) => {
         setSelected(index);
     };
