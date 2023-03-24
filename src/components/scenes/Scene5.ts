@@ -285,15 +285,14 @@ export const fifthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Happy",
                 className: { ...defaultOwlClassName },
             },
         ],
         dialogues: [
             {
-                type: "them",
-                content: "* แสงจ้า *",
-                speaker: "นกฮูก",
+                type: "special",
+                content: "End",
             },
         ],
         background: defaultBackground,
