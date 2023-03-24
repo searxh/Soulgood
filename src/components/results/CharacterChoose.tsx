@@ -20,7 +20,7 @@ const characterCardData = [
     },
     {
         name: "จิงโจ้",
-        character: "/assets/Character/Kangaroo (kid)/Grey_Happy.png",
+        character: "/assets/Character/Kangaroo (Kid)/Grey_Happy.png",
         background: "/assets/Background/bg_bumper.webp",
     },
 ];
