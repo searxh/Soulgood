@@ -46,7 +46,7 @@ const NewItem = ({
                     onClick={handleOnClick}
                     className={`${
                         transition ? "opacity-100" : "opacity-0"
-                    } hover:scale-105 absolute -top-3 -right-3 mx-auto w-12 h-12 drop-shadow-md
+                    } hover:bg-red-500 absolute -top-3 -right-3 mx-auto w-12 h-12 drop-shadow-md
                     bg-red-400 text-white z-10 transition duration-500 rounded-full`}
                 >
                     X

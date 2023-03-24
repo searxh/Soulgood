@@ -53,12 +53,6 @@ const Input = ({
                     className="absolute left-0 right-0 bottom-0 flex bg-gradient-to-r from-white to-neutral-200 rounded-3xl p-3 drop-shadow-lg z-20"
                     onSubmit={(e) => handleOnSubmit(e)}
                 >
-                    {/*<div
-                        className="absolute -top-3 left-[10%] bg-yellow-200 px-10 py-0.5 
-                        shadow-md rounded-xl"
-                    >
-                        เรา
-                </div>*/}
                     <input
                         ref={inputRef}
                         autoFocus={true}
@@ -70,7 +64,7 @@ const Input = ({
                             boxShadow: "5px 5px 0px mediumblue",
                         }}
                         className="relative flex rounded-xl w-14 h-6 bg-blue-500 my-auto
-                         text-white p-5 drop-shadow-md hover:scale-105 transition duration-500"
+                         text-white p-5 drop-shadow-md transition duration-500 hover:bg-blue-600"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -91,15 +85,17 @@ const Input = ({
                         } absolute bottom-[100px] md:bottom-[110px] right-5 transition duration-1000
                     w-[150px] h-[75px] md:w-[200px] md:h-[100px] text-sm md:text-lg z-10`}
                     >
-                        <div
-                            className="relative flex justify-center w-[130%] h-[130%] rounded-xl
-                        p-5 drop-shadow-md bg-[url('../public/assets/Props/TextBox.webp')] bg-cover"
-                        >
-                            <div className="m-auto">
-                                ลองค่อย ๆ คิดทบทวนกับตัวเอง
-                                แล้วเล่ามาได้เต็มที่เลยนะ
+                        <div className="relative flex justify-center w-[130%] h-[130%]">
+                            <div
+                                className="flex w-full h-full drop-shadow-md p-5
+                            bg-[url('../public/assets/Props/TextBox.webp')] bg-cover"
+                            >
+                                <div className="m-auto">
+                                    ลองค่อย ๆ คิดทบทวนกับตัวเอง
+                                    แล้วเล่ามาได้เต็มที่เลยนะ
+                                </div>
                             </div>
-                            <div className="absolute -bottom-10 -z-10 h-16 w-5 shadow-md bg-orange-200" />
+                            <div className="absolute -bottom-10 -z-[20] h-16 w-5 shadow-md bg-orange-200" />
                         </div>
                     </div>
                 ) : null}

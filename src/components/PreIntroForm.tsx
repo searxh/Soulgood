@@ -36,13 +36,13 @@ const PreIntroForm = ({
                 boxShadow: "5px 5px 0px hotpink",
             }}
             className="flex flex-col p-5 m-auto text-lg md:text-xl
-             bg-gradient-to-r from-pink-200 to-pink-300 w-full my-2 rounded-xl drop-shadow-md"
+             bg-gradient-to-r from-pink-200 to-pink-300 w-full my-2 rounded-xl"
         >
-            <div className="m-auto drop-shadow-md w-[80%]">
+            <div className="m-auto w-[80%]">
                 <div className="text-left text-white">เพศ:</div>
                 <select
                     ref={sexRef}
-                    className="rounded-xl w-full px-2 h-8 bg-white"
+                    className="rounded-xl w-full px-2 h-8 bg-white shadow-md"
                 >
                     <option>ชาย</option>
                     <option>หญิง</option>
@@ -55,7 +55,7 @@ const PreIntroForm = ({
                     type="number"
                     min={1}
                     max={150}
-                    className="rounded-xl w-full px-2 h-8 bg-white"
+                    className="rounded-xl w-full px-2 h-8 bg-white shadow-md"
                 />
             </div>
             <div className="grid grid-cols-1 gap-3 mt-5">
@@ -71,19 +71,19 @@ const PreIntroForm = ({
                             : "bg-green-400 hover:bg-green-500"
                     } text-2xl rounded-lg text-white px-5 w-[80%]
                 py-2 m-auto transition 
-                duration-500 font-medium drop-shadow-md`}
+                duration-300 font-medium drop-shadow-md`}
                     onClick={handleOnSubmit}
                 >
                     {isError ? "Error" : "Confirm"}
                 </button>
                 <button
                     style={{
-                        boxShadow: `5px 5px 0px gray`,
+                        boxShadow: `5px 5px 0px dimgray`,
                     }}
                     className={`bg-neutral-400 hover:bg-neutral-500
                 text-2xl rounded-lg text-white px-5 w-[80%]
                 py-2 m-auto transition 
-                duration-500 font-medium drop-shadow-md`}
+                duration-300 font-medium drop-shadow-md`}
                     onClick={handleOnBack}
                 >
                     Back

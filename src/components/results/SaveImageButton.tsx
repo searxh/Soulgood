@@ -38,7 +38,7 @@ const SaveImageButton = ({ index, random }: IProps) => {
                     boxShadow: `5px 5px 0px blue`,
                 }}
                 className={`bg-blue-500 hover:bg-blue-700 text-2xl rounded-lg 
-                text-white px-5 w-[80%] py-2 mt-5 m-auto hover:scale-105 flex justify-center
+                text-white px-5 w-[80%] py-2 mt-5 m-auto flex justify-center
                 transition max-w-[20rem] duration-500 font-medium drop-shadow-md mx-auto`}
             >
                 <svg
