@@ -59,7 +59,7 @@ const Them = ({
             }
         }, delay);
     }, [scene]);
-    return (
+    return content.length !== 0 ? (
         <div
             style={{
                 boxShadow: "5px 5px 0px BurlyWood",
@@ -80,6 +80,8 @@ const Them = ({
                 <div className="mx-auto max-w-[40rem]">{displayedContent}</div>
             </div>
         </div>
+    ) : (
+        <></>
     );
 };
 

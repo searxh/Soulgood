@@ -18,6 +18,24 @@ export const thirdScene: Array<SceneInterface> = [
             {
                 name: "giraffe",
                 state: "Stress",
+                className: { ...defaultGiraffeClassName, opacity: 0 },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content: "",
+                speaker: "ยีราฟ",
+            },
+        ],
+        background: thirdAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "giraffe",
+                state: "Stress",
                 className: { ...defaultGiraffeClassName },
             },
         ],
