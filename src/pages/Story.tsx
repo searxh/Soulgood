@@ -8,8 +8,13 @@ import Dialogue from "../components/Dialogue";
 import Background from "../components/Background";
 import { searchSceneNumber } from "../lib/utilities/SearchSceneNumber";
 import { qList } from "../default";
+import { GlobalContext } from "../states";
+import { useNavigate } from "react-router-dom";
 
 const Story = () => {
+    const { global_state } = React.useContext(GlobalContext);
+    const { preIntroForm } = global_state;
+    const [eligible, setEligible] = React.useState<boolean>(false);
     const [targetList, setTargetList] = React.useState<
         Array<{
             id: string;
@@ -19,16 +24,21 @@ const Story = () => {
     const { scene, start, next, lockDialogue, printDoneCallback } =
         useStoryController();
     const { windowSize } = useWindowSize();
+    const navigate = useNavigate();
     React.useEffect(() => {
-        if (targetList.length < 1) {
+        const isEligible = Object.keys(preIntroForm).length !== 0;
+        if (isEligible && targetList.length < 1) {
+            setEligible(true);
             const newList = Object.keys(qList).map((key) => {
                 return { id: key, sceneNumber: searchSceneNumber(qList[key]) };
             });
             console.log(newList);
             setTargetList(newList);
+        } else if (!isEligible) {
+            navigate("/");
         }
     }, []);
-    return scene < scenes.length ? (
+    return scene < scenes.length && eligible ? (
         <div
             style={{
                 height: windowSize.height + "px",

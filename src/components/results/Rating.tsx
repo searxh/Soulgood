@@ -1,4 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
+import { GlobalContext } from "../../states";
 import Score from "./Score";
 import TextAnswer from "./TextAnswer";
 
@@ -22,17 +24,27 @@ const feedback = [
 ];
 
 const Rating = () => {
+    const { dispatch } = React.useContext(GlobalContext);
     const [feedbackData, setFeedbackData] = React.useState<
         Array<number | string | null>
     >([null, null, null, null]);
     const setFeedback = (questionNumber: number, answer: number | string) => {
         const newFeedbackData = [...feedbackData];
-        newFeedbackData[questionNumber] = answer;
+        newFeedbackData[questionNumber - 1] = answer;
         setFeedbackData(newFeedbackData);
     };
+    React.useEffect(() => {
+        dispatch({
+            type: "set",
+            field: "formAnswers",
+            payload: feedbackData,
+        });
+    }, [feedbackData]);
     return (
-        <div className="grid gap-5">
-            <div className="mx-auto font-semibold text-3xl">แบบประเมิน</div>
+        <div className="grid gap-5 max-w-[40rem] mx-auto">
+            <div className="mx-auto font-semibold text-3xl md:text-4xl text-pink-500">
+                แบบประเมิน
+            </div>
             {feedback.map((questionItem, index) => {
                 const questionNumber = index + 1;
                 return (

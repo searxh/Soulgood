@@ -5,6 +5,7 @@ import { GlobalContext } from "../../states";
 import ZoomModule from "../ZoomModule";
 import Balloon from "../Balloon";
 import AnswerBubble from "../AnswerBubble";
+import EndFade from "../EndFade";
 
 const Special = ({ content, next }: { content: string; next: any }) => {
     const { global_state, dispatch } = React.useContext(GlobalContext);
@@ -50,6 +51,8 @@ const Special = ({ content, next }: { content: string; next: any }) => {
                             handleSetChoice();
                         }}
                     />
+                ) : content === "End" ? (
+                    <EndFade />
                 ) : null}
             </>
         </div>

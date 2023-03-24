@@ -9,6 +9,7 @@ interface IProps {
 const MiniScene = ({ character, background }: IProps) => {
     const observer = useObserver({
         elementId: character + background,
+        threshold: 0.9,
         delay: 2000,
     });
     return (

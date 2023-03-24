@@ -202,7 +202,7 @@ export const fifthScene: Array<SceneInterface> = [
             },
         ],
         background: defaultBackground,
-        next: [2, 3],
+        next: [2, 2],
     },
     {
         branch: 1,
@@ -282,19 +282,17 @@ export const fifthScene: Array<SceneInterface> = [
         next: "default",
     },
     {
-        branch: 2,
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Happy",
                 className: { ...defaultOwlClassName },
             },
         ],
         dialogues: [
             {
-                type: "them",
-                content: "* แสงจ้า *",
-                speaker: "นกฮูก",
+                type: "special",
+                content: "End",
             },
         ],
         background: defaultBackground,

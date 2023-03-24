@@ -623,7 +623,30 @@ export const thirdScene: Array<SceneInterface> = [
             },
             {
                 type: "special",
-                content: "New item",
+                content: "New item/Balloon2",
+            },
+        ],
+        background: thirdAttractionBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "giraffe",
+                state: "Happy",
+                className: { ...defaultGiraffeClassName },
+            },
+        ],
+        dialogues: [
+            {
+                type: "them",
+                content:
+                    "ขอบคุณที่เธอมาช่วยฉันมากเลยนะ นี่ลูกโป่งกับตุ๊กตาเป็นของตอบเเทน",
+                speaker: "ยีราฟ",
+            },
+            {
+                type: "special",
+                content: "New item/Heart2",
             },
         ],
         background: thirdAttractionBackground,
