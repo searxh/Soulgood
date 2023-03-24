@@ -6,7 +6,8 @@ import Result from "./pages/Result";
 import generateUID from "./lib/utilities/GenerateUID";
 import ReactGA from "react-ga4";
 
-ReactGA.initialize(process.env.REACT_APP_FIREBASE_MEASUREMENT_ID as string);
+const measurementId = process.env.REACT_APP_MEASUREMENT_ID;
+if (measurementId) ReactGA.initialize(measurementId);
 
 function App() {
     React.useEffect(() => {

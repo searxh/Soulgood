@@ -16,14 +16,14 @@ const Page1 = () => {
                     ภายในโครงการบ่มเพาะนวัตกรรม (University Incubation Program
                     2022)
                 </div>
-                <div className="grid grid-cols-3 max-w-[40rem] mx-auto py-5">
+                <div className="grid grid-cols-3 gap-5 max-w-[40rem] mx-auto py-5">
                     <img
-                        className="rounded-full aspect-square"
+                        className="rounded-xl my-auto"
                         src="/assets/sss.webp"
                         alt=""
                     />
                     <img
-                        className="rounded-full aspect-square"
+                        className="rounded-xl aspect-square"
                         src="/assets/innowhale.webp"
                         alt=""
                     />

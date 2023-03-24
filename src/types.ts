@@ -32,17 +32,21 @@ export interface SceneInterface {
     //extra param for visual purpose only
     branch?: number;
 }
-export interface GlobalStateInterface {
+export interface StringKey {
+    [key: string]: any;
+}
+export interface GlobalStateInterface extends StringKey {
     name: string;
     track: number;
     scene: number;
     preIntroForm: PreIntroFormInterface;
     answers: { [key: string]: string };
+    formAnswers: Array<number | string | null>;
 }
 export interface ActionInterface {
     type: string;
     field?: string | Array<string>;
-    payload: any;
+    payload?: any;
 }
 export interface BranchInfoInterface {
     startBranchIndex: number;
