@@ -25,6 +25,17 @@ module.exports = {
                 "-1": "-1",
             },
             keyframes: {
+                bigbob: {
+                    "0%, 100%": {
+                        transform: ["rotate(0deg)", "translateY(10%)"],
+                    },
+                    "33%": {
+                        transform: ["rotate(-10deg)", "translateY(-50%)]"],
+                    },
+                    "67%": {
+                        transform: ["rotate(10deg)", "translateY(40%)]"],
+                    },
+                },
                 bob: {
                     "0%, 100%": {
                         transform: ["rotate(-2deg)", "translateY(-2%)"],
@@ -44,6 +55,7 @@ module.exports = {
             animation: {
                 bob: "bob 5s ease-in-out infinite",
                 lightbob: "equalbob 10s ease-in-out infinite",
+                bigbob: "bigbob 1s ease-in-out infinite",
             },
         },
     },

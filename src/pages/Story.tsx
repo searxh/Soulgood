@@ -71,12 +71,6 @@ const Story = () => {
                     lockDialogue !== undefined &&
                     scenes[scene].dialogues.map((dialogue, index) => {
                         if (index === 0) {
-                            console.log(
-                                "prevent debug",
-                                scene,
-                                lockDialogue,
-                                dialogue.content
-                            );
                             return (
                                 <Dialogue
                                     key={index}

@@ -1,7 +1,7 @@
 import { SceneInterface } from "../../types";
 
 const defaultRabbitClassName = {
-    top: "40%",
+    top: "45%",
     bottom: "0%",
     left: "0%",
     right: "0%",
@@ -465,14 +465,14 @@ export const firstScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "rabbit",
-                state: "Idle",
+                state: "Screwdriver",
                 className: defaultRabbitClassName,
             },
         ],
         dialogues: [
             {
                 type: "them",
-                content: "* กระต่ายถือไขควงส่ายไปส่ายมา *",
+                content: "...",
                 speaker: "กระต่าย",
             },
         ],
