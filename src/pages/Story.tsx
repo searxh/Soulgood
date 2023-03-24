@@ -8,8 +8,12 @@ import Dialogue from "../components/Dialogue";
 import Background from "../components/Background";
 import { searchSceneNumber } from "../lib/utilities/SearchSceneNumber";
 import { qList } from "../default";
+import { GlobalContext } from "../states";
 
 const Story = () => {
+    const { global_state } = React.useContext(GlobalContext);
+    const { preIntroForm } = global_state;
+    const [eligible, setEligible] = React.useState<boolean>(false);
     const [targetList, setTargetList] = React.useState<
         Array<{
             id: string;
@@ -20,7 +24,8 @@ const Story = () => {
         useStoryController();
     const { windowSize } = useWindowSize();
     React.useEffect(() => {
-        if (targetList.length < 1) {
+        if (Object.keys(preIntroForm).length !== 0 && targetList.length < 1) {
+            setEligible(true);
             const newList = Object.keys(qList).map((key) => {
                 return { id: key, sceneNumber: searchSceneNumber(qList[key]) };
             });
@@ -28,7 +33,7 @@ const Story = () => {
             setTargetList(newList);
         }
     }, []);
-    return scene < scenes.length ? (
+    return scene < scenes.length && eligible ? (
         <div
             style={{
                 height: windowSize.height + "px",

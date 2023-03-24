@@ -202,7 +202,7 @@ export const fifthScene: Array<SceneInterface> = [
             },
         ],
         background: defaultBackground,
-        next: [2, 3],
+        next: [2, 2],
     },
     {
         branch: 1,
@@ -282,7 +282,6 @@ export const fifthScene: Array<SceneInterface> = [
         next: "default",
     },
     {
-        branch: 2,
         characters: [
             {
                 name: "owl",
