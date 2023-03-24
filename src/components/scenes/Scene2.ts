@@ -348,12 +348,12 @@ export const secondScene: Array<SceneInterface> = [
             {
                 type: "them",
                 content:
-                    "ฉันหวังว่าเธอจะสามารถก้าวผ่านมันไปได้ เอา ลูกโป่ง นี่ไปเป็นของฝากจากชั้นนะ",
+                    "ฉันหวังว่าเธอจะสามารถก้าวผ่านมันไปได้ เอาตุ๊กตานี่ไปเป็นของฝากจากชั้นนะ",
                 speaker: "นกยูง",
             },
             {
                 type: "special",
-                content: "New item/Balloon2",
+                content: "New item/Heart2",
             },
         ],
         background: secondAttractionBackground,
