@@ -64,7 +64,7 @@ const Input = ({
                             boxShadow: "5px 5px 0px mediumblue",
                         }}
                         className="relative flex rounded-xl w-14 h-6 bg-blue-500 my-auto
-                         text-white p-5 drop-shadow-md transition duration-500 hover:bg-blue-600"
+                         text-white p-5 drop-shadow-md transition duration-500 md:hover:bg-blue-600"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

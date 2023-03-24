@@ -33,7 +33,7 @@ const Choice = ({
                     boxShadow: "5px 5px 0px gray",
                 }}
                 className="flex-1 bg-gradient-to-r from-white to-neutral-200 rounded-3xl drop-shadow-lg
-                text-center p-5 mr-2 hover:scale-[102%] transition"
+                text-center p-5 mr-2 md:hover:scale-[102%] transition"
             >
                 {content.subContent}
             </button>
@@ -43,7 +43,7 @@ const Choice = ({
                     boxShadow: "5px 5px 0px gray",
                 }}
                 className="flex-1 bg-gradient-to-r from-white to-neutral-200 rounded-3xl drop-shadow-lg
-                text-center p-5 ml-2 hover:scale-[102%] transition"
+                text-center p-5 ml-2 md:hover:scale-[102%] transition"
             >
                 {content.subContent1}
             </button>

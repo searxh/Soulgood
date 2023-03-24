@@ -31,7 +31,7 @@ const CharacterCard = ({
                 />
 
                 <div
-                    className={`w-full h-full m-auto rounded-3xl drop-shadow-md hover:scale-105 transition duration-500`}
+                    className={`w-full h-full m-auto rounded-3xl drop-shadow-md md:hover:scale-105 transition duration-500`}
                 >
                     <img
                         id={character + background}

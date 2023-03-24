@@ -130,7 +130,7 @@ export default function Home() {
                                             boxShadow: "5px 5px 0px dodgerblue",
                                         }}
                                         className="text-2xl bg-cyan-400 rounded-lg text-white
-                            py-1 w-full m-auto hover:bg-cyan-500 transition 
+                            py-1 w-full m-auto md:hover:bg-cyan-500 transition 
                             duration-300 font-medium"
                                         onClick={handleOnContinue}
                                     >
@@ -142,7 +142,7 @@ export default function Home() {
                                         boxShadow: "5px 5px 0px green",
                                     }}
                                     className="text-2xl bg-green-400 rounded-lg text-white
-                                py-1 w-full m-auto hover:bg-green-500 transition 
+                                py-1 w-full m-auto md:hover:bg-green-500 transition 
                                 duration-300 font-medium"
                                     onClick={handleOnStart}
                                 >

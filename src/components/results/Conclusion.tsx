@@ -164,7 +164,10 @@ const Conclusion = () => {
                     <div className="flex justify-center">
                         <button
                             onClick={() => changePage(false)}
-                            className="bg-pink-500 hover:bg-pink-600 rounded-full p-3 shadow-md transition duration-300"
+                            disabled={page === 0}
+                            className={`${
+                                page === 0 ? "opacity-50" : "opacity-100"
+                            } bg-pink-500 md:hover:bg-pink-600 rounded-full p-3 shadow-md transition duration-300`}
                         >
                             <svg
                                 className="w-7 h-7 fill-white"
@@ -180,7 +183,7 @@ const Conclusion = () => {
                         <PagesIndicator currentPage={page} totalPages={3} />
                         <button
                             onClick={() => changePage(true)}
-                            className="bg-pink-500 hover:bg-pink-600 rounded-full p-3 shadow-md transition duration-300"
+                            className="bg-pink-500 md:hover:bg-pink-600 rounded-full p-3 shadow-md transition duration-300"
                         >
                             <svg
                                 className="w-7 h-7 fill-white"
@@ -201,7 +204,7 @@ const Conclusion = () => {
                     style={{
                         boxShadow: `5px 5px 0px pink`,
                     }}
-                    className={`bg-pink-400 hover:bg-pink-500 text-2xl rounded-lg text-white px-5 w-[80%]
+                    className={`bg-pink-400 md:hover:bg-pink-500 text-2xl rounded-lg text-white px-5 w-[80%]
                 py-2 mt-5 m-auto transition max-w-[20rem] duration-500 font-medium drop-shadow-md mx-auto`}
                 >
                     Back to menu

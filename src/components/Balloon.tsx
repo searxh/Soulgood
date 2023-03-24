@@ -18,7 +18,7 @@ const Balloon = ({ clickCallback }: { clickCallback: Function }) => {
             onClick={handleOnClick}
             className={`${
                 transition
-                    ? "scale-100 hover:scale-105"
+                    ? "scale-100 md:hover:scale-105"
                     : "scale-[1000%] opacity-0"
             } relative flex flex-col w-[350px] aspect-square max-w-[80%] z-10 m-auto
             p-5 rounded-full transition duration-500`}

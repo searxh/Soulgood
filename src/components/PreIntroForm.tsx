@@ -68,7 +68,7 @@ const PreIntroForm = ({
                     className={`${
                         isError
                             ? "bg-red-400"
-                            : "bg-green-400 hover:bg-green-500"
+                            : "bg-green-400 md:hover:bg-green-500"
                     } text-2xl rounded-lg text-white px-5 w-[80%]
                 py-2 m-auto transition 
                 duration-300 font-medium drop-shadow-md`}
@@ -80,7 +80,7 @@ const PreIntroForm = ({
                     style={{
                         boxShadow: `5px 5px 0px dimgray`,
                     }}
-                    className={`bg-neutral-400 hover:bg-neutral-500
+                    className={`bg-neutral-400 md:hover:bg-neutral-500
                 text-2xl rounded-lg text-white px-5 w-[80%]
                 py-2 m-auto transition 
                 duration-300 font-medium drop-shadow-md`}
