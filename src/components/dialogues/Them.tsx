@@ -77,7 +77,9 @@ const Them = ({
                 >
                     {speaker}
                 </div>
-                <div className="mx-auto max-w-[40rem]">{displayedContent}</div>
+                <div className="mx-auto w-[90%] max-w-[40rem]">
+                    {displayedContent}
+                </div>
             </div>
         </div>
     ) : (

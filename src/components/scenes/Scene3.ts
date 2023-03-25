@@ -658,8 +658,7 @@ export const thirdScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content:
-                    "ขอบคุณที่เธอมาช่วยฉันมากเลยนะ นี่ลูกโป่งกับตุ๊กตาเป็นของตอบเเทน",
+                content: "",
                 speaker: "ยีราฟ",
             },
             {
