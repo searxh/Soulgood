@@ -35,11 +35,11 @@ const load = () => {
 export function GlobalStateProvider({ children }: any) {
     const reducer = (state: GlobalStateInterface, action: ActionInterface) => {
         const newState: GlobalStateInterface = cloneDeep({ ...state });
-        console.log(newState);
+        //console.log(newState);
         switch (action.type) {
             case "set":
                 newState[action.field as string] = action.payload;
-                console.log("[SET]", state, newState);
+                //console.log("[SET]", state, newState);
                 save(newState);
                 return newState;
             case "multi-set":
@@ -47,13 +47,13 @@ export function GlobalStateProvider({ children }: any) {
                     for (let i = 0; i < action.field.length; i++) {
                         newState[action.field[i]] = action.payload[i];
                     }
-                    console.log("[MULTI-SET]", state, newState);
+                    //console.log("[MULTI-SET]", state, newState);
                     save(newState);
                     return newState;
                 } else return state;
             case "reset":
                 const resetState = { ...initialState };
-                console.log("[RESET]", state, resetState);
+                //console.log("[RESET]", state, resetState);
                 save(resetState);
                 return resetState;
             default:

@@ -24,7 +24,7 @@ const useStoryController = () => {
     };
     const calculateNext = () => {
         if (branchInfo[branchInfo.length - 1] === null) {
-            console.log("[CALCULATE NEXT]", scenes[scene].next);
+            //console.log("[CALCULATE NEXT]", scenes[scene].next);
             return scenes[scene].next;
         } else {
             if (branchInfo[branchInfo.length - 1]) {
@@ -37,10 +37,7 @@ const useStoryController = () => {
                     scene === endBranchIndex
                 ) {
                     const nextEndBranchIndex = endBranchIndex + 1;
-                    console.log(
-                        "[CALCULATE NEXT] GO END BRANCH",
-                        nextEndBranchIndex
-                    );
+                    //console.log("[CALCULATE NEXT] GO END BRANCH",nextEndBranchIndex);
                     const savedBranchInfo = branchInfo[branchInfo.length - 2];
                     setBranchInfo((prev) => prev.slice(0, prev.length - 1));
                     if (
@@ -54,7 +51,7 @@ const useStoryController = () => {
                     }
                     return nextEndBranchIndex;
                 }
-                console.log("[CALCULATE NEXT]", scenes[scene].next, scene);
+                //console.log("[CALCULATE NEXT]", scenes[scene].next, scene);
             }
             return scenes[scene].next;
         }
@@ -63,7 +60,7 @@ const useStoryController = () => {
         if (lockDialogue !== null) setLockDialogue(false);
     };
     React.useLayoutEffect(() => {
-        console.log("----------[SCENE " + scene + "]----------------");
+        //console.log("----------[SCENE " + scene + "]----------------");
         if (scenes[scene] && scenes[scene].trackChange !== undefined) {
             dispatch({
                 type: "set",
@@ -88,7 +85,7 @@ const useStoryController = () => {
         if (scene < scenes.length) {
             calculateLockDialogue();
             const next = calculateNext();
-            console.log("useStoryController next", next);
+            //console.log("useStoryController next", next);
             setNext(next);
         }
         if (scene === 0) setTimeout(() => setStart(false), 100);

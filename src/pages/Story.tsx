@@ -32,7 +32,7 @@ const Story = () => {
             const newList = Object.keys(qList).map((key) => {
                 return { id: key, sceneNumber: searchSceneNumber(qList[key]) };
             });
-            console.log(newList);
+            //console.log(newList);
             setTargetList(newList);
         } else if (!isEligible) {
             navigate("/");
@@ -70,7 +70,7 @@ const Story = () => {
                 {next &&
                     lockDialogue !== undefined &&
                     scenes[scene].dialogues.map((dialogue, index) => {
-                        console.log("story next", next);
+                        //console.log("story next", next);
                         if (index === 0) {
                             return (
                                 <Dialogue

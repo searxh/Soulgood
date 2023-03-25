@@ -44,7 +44,7 @@ const CharacterChoose = () => {
                                 background={background}
                                 index={index}
                                 onSelectCallback={(index) => {
-                                    console.log("selected", index + 1, random);
+                                    //console.log("selected", index + 1, random);
                                     setSelected(index + 1);
                                 }}
                             />

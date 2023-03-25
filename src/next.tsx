@@ -14,7 +14,7 @@ export function NextStateProvider({ children }: any) {
     const [nextScene, setNextScene] = React.useState<number>(-1);
     const handleOnClick = () => {
         setActive(false);
-        console.log("<NEXT CONTEXT>", nextScene);
+        //console.log("<NEXT CONTEXT>", nextScene);
         dispatch({
             type: "set",
             field: "scene",
@@ -27,7 +27,7 @@ export function NextStateProvider({ children }: any) {
         }
     }, [location.pathname]);
     React.useEffect(() => {
-        console.log("[NEXT STATE]", active);
+        //console.log("[NEXT STATE]", active);
     }, [active]);
     return (
         <NextContext.Provider

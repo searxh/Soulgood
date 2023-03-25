@@ -12,7 +12,7 @@ const Special = ({ content, next }: { content: string; next: any }) => {
     const { global_state, dispatch } = React.useContext(GlobalContext);
     const { scene } = global_state;
     const sceneRouter = () => {
-        console.log("special next", next);
+        //console.log("special next", next);
         if (next === "default") {
             return scene + 1;
         } else {

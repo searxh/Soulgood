@@ -18,10 +18,10 @@ const Conclusion = () => {
     const navigate = useNavigate();
     const changePage = (isForward: boolean) => {
         if (!isForward && page - 1 >= 0) {
-            console.log(page - 1);
+            //console.log(page - 1);
             setPage((previous) => (previous -= 1));
         } else if (isForward && page + 1 < totalPages) {
-            console.log(page + 1);
+            //console.log(page + 1);
             setPage((previous) => (previous += 1));
         }
     };

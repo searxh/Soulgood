@@ -18,7 +18,7 @@ const useObserver = ({ elementId, threshold, delay, rootId }: IProps) => {
                 (entries) => {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
-                            console.log(elementId, "INTERSECTING");
+                            //console.log(elementId, "INTERSECTING");
                             setTimeout(() => setActive(true), delay);
                             observer.unobserve(doc);
                         }

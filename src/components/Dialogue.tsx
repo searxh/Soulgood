@@ -24,7 +24,7 @@ const Dialogue = ({
     preventNext: boolean | null;
     targetList: Array<{ id: string; sceneNumber: number }>;
 }) => {
-    console.log("dialogue next", next);
+    //console.log("dialogue next", next);
     return type === "them" ? (
         <Them
             content={content as string}
