@@ -23,26 +23,7 @@ export const fifthScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "",
-                speaker: "นกฮูก",
-            },
-        ],
-        background: defaultBackground,
-        next: "default",
-    },
-    {
-        characters: [
-            {
-                name: "owl",
-                state: "Sad",
-                className: { ...defaultOwlClassName },
-            },
-        ],
-        dialogues: [
-            {
-                type: "them",
-                content:
-                    "ฉันรู้แล้วล่ะ ว่าทำไมสวนสนุกแห่งนี้ถึงร้าง เพราะฉันเองที่เป็นคนกดดันให้ทุกคนต้องสมบูรณ์แบบ",
+                content: "...",
                 speaker: "นกฮูก",
             },
         ],

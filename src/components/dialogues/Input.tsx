@@ -28,6 +28,10 @@ const Input = ({
         if (name.length === 0) {
             newName = inputRef.current.value;
         }
+        if (inputRef.current.value.length === 0) {
+            alert("พิมพ์ตอบก่อนถึงจะเดินทางต่อได้น้า");
+            return;
+        }
         let newAnswers = { ...answers };
         targetList.forEach((item) => {
             if (item.sceneNumber === scene && inputRef.current) {
@@ -59,7 +63,10 @@ const Input = ({
                         className="w-[80%] my-2 mx-auto p-2 outline-none text-center bg-transparent"
                     />
                     <button
-                        onClick={() => handleOnSubmit()}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            handleOnSubmit();
+                        }}
                         style={{
                             boxShadow: "5px 5px 0px mediumblue",
                         }}
