@@ -4,25 +4,26 @@ import generateUID from "../../lib/utilities/GenerateUID";
 import CharacterChoose from "./CharacterChoose";
 import Credits from "./Credits";
 import MiniScene from "./MiniScene";
-import { PagesIndicator } from "./PagesIndicator";
 import Rating from "./Rating";
 import Cookies from "js-cookie";
 import { GlobalContext } from "../../states";
 
-const totalPages = 4;
-
 const Conclusion = () => {
-    const { dispatch } = React.useContext(GlobalContext);
+    const { global_state, dispatch } = React.useContext(GlobalContext);
+    const { resultPage, formAnswers } = global_state;
     const [transition, setTransition] = React.useState<boolean>(false);
-    const [page, setPage] = React.useState<number>(0);
     const navigate = useNavigate();
-    const changePage = (isForward: boolean) => {
-        if (!isForward && page - 1 >= 0) {
-            //console.log(page - 1);
-            setPage((previous) => (previous -= 1));
-        } else if (isForward && page + 1 < totalPages) {
-            //console.log(page + 1);
-            setPage((previous) => (previous += 1));
+    const changePage = () => {
+        if (resultPage + 1 === 2 && formAnswers.includes(null)) {
+            alert(
+                "ขอความร่วมมือช่วยกรอกฟอร์มกันหน่อยนะคะ แป๊บเดียวเท่านั้น กรอกเสร็จช่วงท้ายเรามีของขวัญเซอร์ไพรส์ด้วยนะ !"
+            );
+        } else {
+            dispatch({
+                type: "set",
+                field: "resultPage",
+                payload: resultPage + 1,
+            });
         }
     };
     const handleBackToMenu = () => {
@@ -56,7 +57,7 @@ const Conclusion = () => {
                         GOODIVAL
                     </div>
                 </div>
-                {page === 0 ? (
+                {resultPage === 0 ? (
                     <div className="grid grid-cols-1 gap-12 max-w-[40rem] mx-auto">
                         <div className="font-semibold text-3xl md:text-4xl text-pink-500 tracking-wide mx-auto">
                             สรุป
@@ -151,52 +152,32 @@ const Conclusion = () => {
                             </div>
                         </div>
                     </div>
-                ) : page === 1 ? (
-                    <CharacterChoose />
-                ) : page === 2 ? (
+                ) : resultPage === 1 ? (
                     <Rating />
-                ) : page === 3 ? (
+                ) : resultPage === 2 ? (
+                    <CharacterChoose />
+                ) : resultPage === 3 ? (
                     <Credits />
                 ) : null}
             </div>
-            {page !== 3 ? (
+            {resultPage !== 3 ? (
                 <div className="mt-12">
-                    <div className="flex justify-center">
-                        <button
-                            onClick={() => changePage(false)}
-                            disabled={page === 0}
-                            className={`${
-                                page === 0 ? "opacity-50" : "opacity-100"
-                            } bg-pink-500 md:hover:bg-pink-600 rounded-full p-3 shadow-md transition duration-300`}
+                    <button
+                        onClick={changePage}
+                        className="flex mx-auto bg-pink-500 md:hover:bg-pink-600 rounded-full py-2 px-5 shadow-md transition duration-300"
+                    >
+                        <div className="my-auto text-white">Next</div>
+                        <svg
+                            className="w-7 h-7 fill-white"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512"
                         >
-                            <svg
-                                className="w-7 h-7 fill-white"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 320 512"
-                            >
-                                {
-                                    "<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->"
-                                }
-                                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
-                            </svg>
-                        </button>
-                        <PagesIndicator currentPage={page} totalPages={4} />
-                        <button
-                            onClick={() => changePage(true)}
-                            className="bg-pink-500 md:hover:bg-pink-600 rounded-full p-3 shadow-md transition duration-300"
-                        >
-                            <svg
-                                className="w-7 h-7 fill-white"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 320 512"
-                            >
-                                {
-                                    "<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->"
-                                }
-                                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
-                            </svg>
-                        </button>
-                    </div>
+                            {
+                                "<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->"
+                            }
+                            <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                        </svg>
+                    </button>
                 </div>
             ) : (
                 <button

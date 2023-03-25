@@ -42,6 +42,7 @@ export interface GlobalStateInterface extends StringKey {
     preIntroForm: PreIntroFormInterface;
     answers: { [key: string]: string };
     formAnswers: Array<number | string | null>;
+    resultPage: number;
 }
 export interface ActionInterface {
     type: string;

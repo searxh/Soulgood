@@ -7,6 +7,7 @@ export const initialState: GlobalStateInterface = {
     preIntroForm: {} as PreIntroFormInterface,
     answers: {},
     formAnswers: [null, null, null, null],
+    resultPage: 0,
 };
 
 export const delayInterval = 0;
