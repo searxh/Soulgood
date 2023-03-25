@@ -39,6 +39,7 @@ const CharacterChoose = () => {
                         const { name, character, background } = card;
                         return (
                             <CharacterCard
+                                key={index}
                                 name={name}
                                 character={character}
                                 background={background}

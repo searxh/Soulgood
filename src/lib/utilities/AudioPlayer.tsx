@@ -18,10 +18,10 @@ export default function AudioPlayer() {
         }
     };
     return (
-        <button
+        <div
             onClick={handleOnClick}
             className={`absolute top-1 right-1 w-14 h-14 rounded-full 
-            bg-white md:hover:bg-neutral-200 opacity-100 shadow-md
+            bg-white cursor-pointer md:hover:bg-neutral-200 opacity-100 shadow-md
             ${
                 mute
                     ? "bg-[url('../public/assets/mute.png')]"
@@ -42,6 +42,6 @@ export default function AudioPlayer() {
                 loop={true}
                 ref={ref}
             />
-        </button>
+        </div>
     );
 }
