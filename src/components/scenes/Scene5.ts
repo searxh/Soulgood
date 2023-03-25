@@ -252,9 +252,8 @@ export const fifthScene: Array<SceneInterface> = [
         ],
         dialogues: [
             {
-                type: "them",
-                content: "* ลูกโป่งลอยขึ้นฟ้าไป *",
-                speaker: "นกฮูก",
+                type: "special",
+                content: "Balloon ending",
             },
         ],
         background: defaultBackground,

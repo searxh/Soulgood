@@ -6,11 +6,13 @@ import ZoomModule from "../ZoomModule";
 import Balloon from "../Balloon";
 import AnswerBubble from "../AnswerBubble";
 import EndFade from "../EndFade";
+import BalloonEnding from "../BalloonEnding";
 
 const Special = ({ content, next }: { content: string; next: any }) => {
     const { global_state, dispatch } = React.useContext(GlobalContext);
     const { scene } = global_state;
     const sceneRouter = () => {
+        console.log("special next", next);
         if (next === "default") {
             return scene + 1;
         } else {
@@ -53,6 +55,12 @@ const Special = ({ content, next }: { content: string; next: any }) => {
                     />
                 ) : content === "End" ? (
                     <EndFade />
+                ) : content === "Balloon ending" ? (
+                    <BalloonEnding
+                        callback={() => {
+                            handleSetChoice();
+                        }}
+                    />
                 ) : null}
             </>
         </div>

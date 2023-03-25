@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { GlobalContext } from "../states";
 import { BranchInfoInterface } from "../types";
@@ -53,7 +54,7 @@ const useStoryController = () => {
                     }
                     return nextEndBranchIndex;
                 }
-                console.log("[CALCULATE NEXT]", scenes[scene].next);
+                console.log("[CALCULATE NEXT]", scenes[scene].next, scene);
             }
             return scenes[scene].next;
         }
@@ -86,13 +87,12 @@ const useStoryController = () => {
         }
         if (scene < scenes.length) {
             calculateLockDialogue();
-            setNext(calculateNext());
+            const next = calculateNext();
+            console.log("useStoryController next", next);
+            setNext(next);
         }
         if (scene === 0) setTimeout(() => setStart(false), 100);
     }, [scene]);
-    React.useEffect(() => {
-        console.log("branchInfo", branchInfo);
-    }, [branchInfo]);
     return {
         scene,
         start,

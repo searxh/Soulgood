@@ -5,6 +5,7 @@ import Choice from "../components/dialogues/Choice";
 import Input from "../components/dialogues/Input";
 import Special from "../components/dialogues/Special";
 import Us from "../components/dialogues/Us";
+import { isArray } from "lodash";
 
 const Dialogue = ({
     type,
@@ -23,6 +24,7 @@ const Dialogue = ({
     preventNext: boolean | null;
     targetList: Array<{ id: string; sceneNumber: number }>;
 }) => {
+    console.log("dialogue next", next);
     return type === "them" ? (
         <Them
             content={content as string}
@@ -41,7 +43,7 @@ const Dialogue = ({
         />
     ) : type === "choice" ? (
         <Choice content={content as ContentInterface} next={next} />
-    ) : type === "special" ? (
+    ) : type === "special" && !isArray(next) ? (
         <Special content={content as string} next={next} />
     ) : null;
 };

@@ -70,6 +70,7 @@ const Story = () => {
                 {next &&
                     lockDialogue !== undefined &&
                     scenes[scene].dialogues.map((dialogue, index) => {
+                        console.log("story next", next);
                         if (index === 0) {
                             return (
                                 <Dialogue
