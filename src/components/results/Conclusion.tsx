@@ -190,7 +190,7 @@ const Conclusion = () => {
                         boxShadow: `5px 5px 0px pink`,
                     }}
                     className={`bg-pink-400 md:hover:bg-pink-500 text-2xl rounded-lg text-white px-5 w-[80%]
-                py-2 mt-5 m-auto transition max-w-[20rem] duration-500 font-medium drop-shadow-md mx-auto`}
+                        py-2 mt-5 m-auto transition max-w-[20rem] duration-500 font-medium drop-shadow-md mx-auto mb-24`}
                 >
                     BACK TO MENU
                 </button>

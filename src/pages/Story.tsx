@@ -44,7 +44,7 @@ const Story = () => {
                 height: windowSize.height + "px",
                 width: windowSize.width + "px",
             }}
-            className="relative overflow-hidden w-screen font-mitr text-lg md:text-xl bg-white"
+            className="relative overflow-hidden h-screen w-screen font-mitr text-lg md:text-xl bg-white"
         >
             {scene === 0 && (
                 <img

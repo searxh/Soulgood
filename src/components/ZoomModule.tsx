@@ -29,8 +29,8 @@ const ZoomModule = ({ clickCallback }: { clickCallback: Function }) => {
                     style={{
                         boxShadow: "5px 5px 0px maroon",
                     }}
-                    className="absolute bottom-5 right-5 px-5 transition duration-300 justify-center
-                        z-20 w-52 h-16 shadow-md flex m-auto bg-pink-500 md:hover:bg-pink-600 rounded-2xl py-2"
+                    className="absolute bottom-12 left-0 right-0 m-auto px-5 transition duration-300 justify-center mb-12
+                        z-20 w-52 h-16 shadow-md flex bg-pink-500 md:hover:bg-pink-600 rounded-2xl py-2"
                 >
                     <div className="my-auto text-white drop-shadow-md">
                         NEXT

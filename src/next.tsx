@@ -37,10 +37,10 @@ export function NextStateProvider({ children }: any) {
             }}
         >
             {active ? (
-                <button
+                <div
                     onClick={handleOnClick}
-                    className="absolute z-50 w-screen h-screen"
-                ></button>
+                    className="absolute z-50 w-screen h-screen cursor-pointer"
+                />
             ) : null}
             {children}
         </NextContext.Provider>
