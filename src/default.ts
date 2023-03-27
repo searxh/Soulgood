@@ -12,7 +12,7 @@ export const initialState: GlobalStateInterface = {
 
 export const delayInterval = 50;
 
-export const introPlayInterval = 5000;
+export const introPlayInterval = 7500;
 
 export const qList: { [key: string]: string } = {
     Q1_Deal:
