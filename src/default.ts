@@ -8,6 +8,7 @@ export const initialState: GlobalStateInterface = {
     answers: {},
     formAnswers: [null, null, null, null],
     resultPage: 0,
+    submitted: false,
 };
 
 export const delayInterval = 50;

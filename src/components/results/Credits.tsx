@@ -1,25 +1,24 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
-import { getData, addData } from "../../lib/firebase/database";
+import { addData } from "../../lib/firebase/database";
 import { GlobalContext } from "../../states";
 
 const Credits = () => {
-    const { global_state } = React.useContext(GlobalContext);
-    const { preIntroForm, formAnswers, answers } = global_state;
+    const { global_state, dispatch } = React.useContext(GlobalContext);
+    const { submitted, preIntroForm, formAnswers, answers } = global_state;
     React.useEffect(() => {
-        getData().then((data) => {
-            if (
-                !data?.formAnswers ||
-                !data?.gameAnswers ||
-                !data?.preIntroForm
-            ) {
-                addData({
-                    personalInfo: preIntroForm,
-                    formAnswers: formAnswers,
-                    gameAnswers: answers,
-                });
-            }
-        });
+        if (!submitted) {
+            addData({
+                personalInfo: preIntroForm,
+                formAnswers: formAnswers,
+                gameAnswers: answers,
+            });
+            dispatch({
+                type: "set",
+                field: "submitted",
+                payload: true,
+            });
+        }
     }, []);
     return (
         <div className="flex flex-col max-w-[40rem] mx-auto text-center">

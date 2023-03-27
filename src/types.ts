@@ -43,6 +43,7 @@ export interface GlobalStateInterface extends StringKey {
     answers: { [key: string]: string };
     formAnswers: Array<number | string | null>;
     resultPage: number;
+    submitted: boolean;
 }
 export interface ActionInterface {
     type: string;
