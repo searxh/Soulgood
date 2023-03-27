@@ -21,7 +21,10 @@ export const addData = async (payload: any) => {
     try {
         const uid = Cookies.get("uid");
         if (uid) {
-            await setDoc(doc(db, "User_info", uid), payload);
+            await setDoc(doc(db, "User_info", uid), {
+                ...payload,
+                created_at: new Date(),
+            });
         } else {
             generateUID();
         }
