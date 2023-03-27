@@ -142,10 +142,10 @@ export default function Home() {
                                 ) : null}
                                 <button
                                     style={{
-                                        boxShadow: "5px 5px 0px green",
+                                        boxShadow: "5px 5px 0px hotpink",
                                     }}
-                                    className="text-2xl bg-green-400 rounded-lg text-white
-                                py-1 w-full m-auto md:hover:bg-green-500 transition 
+                                    className="text-2xl bg-pink-300 rounded-lg text-white
+                                py-1 w-full m-auto md:hover:bg-pink-500 transition 
                                 duration-300 font-medium"
                                     onClick={handleOnStart}
                                 >
