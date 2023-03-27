@@ -166,7 +166,7 @@ const Conclusion = () => {
                         onClick={changePage}
                         className="flex mx-auto bg-pink-500 md:hover:bg-pink-600 rounded-full py-2 px-5 shadow-md transition duration-300"
                     >
-                        <div className="my-auto text-white">Next</div>
+                        <div className="my-auto text-white">NEXT</div>
                         <svg
                             className="w-6 h-6 fill-white my-auto"
                             xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +188,7 @@ const Conclusion = () => {
                     className={`bg-pink-400 md:hover:bg-pink-500 text-2xl rounded-lg text-white px-5 w-[80%]
                 py-2 mt-5 m-auto transition max-w-[20rem] duration-500 font-medium drop-shadow-md mx-auto`}
                 >
-                    Back to menu
+                    BACK TO MENU
                 </button>
             )}
         </div>

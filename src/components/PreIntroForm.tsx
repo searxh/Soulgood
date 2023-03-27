@@ -74,7 +74,7 @@ const PreIntroForm = ({
                 duration-300 font-medium drop-shadow-md`}
                     onClick={handleOnSubmit}
                 >
-                    {isError ? "Error" : "Confirm"}
+                    {isError ? "ERROR" : "CONFIRM"}
                 </button>
                 <button
                     style={{
@@ -86,7 +86,7 @@ const PreIntroForm = ({
                 duration-300 font-medium drop-shadow-md`}
                     onClick={handleOnBack}
                 >
-                    Back
+                    BACK
                 </button>
             </div>
         </div>

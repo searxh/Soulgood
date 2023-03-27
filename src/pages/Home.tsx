@@ -134,7 +134,7 @@ export default function Home() {
                             duration-300 font-medium"
                                         onClick={handleOnContinue}
                                     >
-                                        Continue
+                                        CONTINUE
                                     </button>
                                 ) : null}
                                 <button
@@ -146,7 +146,7 @@ export default function Home() {
                                 duration-300 font-medium"
                                     onClick={handleOnStart}
                                 >
-                                    New game
+                                    NEW GAME
                                 </button>
                             </div>
                         ) : (
