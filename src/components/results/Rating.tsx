@@ -48,7 +48,7 @@ const Rating = () => {
             {feedback.map((questionItem, index) => {
                 const questionNumber = index + 1;
                 return (
-                    <>
+                    <div key={index} className="grid gap-5">
                         <div>
                             {questionNumber + ")"} {questionItem.question}
                         </div>
@@ -65,7 +65,7 @@ const Rating = () => {
                                 }
                             />
                         )}
-                    </>
+                    </div>
                 );
             })}
         </div>

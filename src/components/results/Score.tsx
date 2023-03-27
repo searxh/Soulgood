@@ -20,6 +20,7 @@ const Score = ({
             {scores.map((item, index) => {
                 return (
                     <button
+                        key={index}
                         onClick={() => selectScore(index)}
                         className="flex flex-col"
                     >
