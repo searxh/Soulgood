@@ -45,7 +45,10 @@ const Input = ({
         });
     };
     React.useEffect(() => {
-        if (content.length !== 0) setTimeout(() => setTransition(true), 50);
+        if (content.length !== 0) {
+            const timeout = setTimeout(() => setTransition(true), 50);
+            return () => clearTimeout(timeout);
+        }
     }, [content]);
     return (
         <div className="absolute text-black text-center z-20 left-0 right-0 mx-auto bottom-5 w-[90%] max-w-[50rem]">

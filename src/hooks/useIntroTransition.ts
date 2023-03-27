@@ -4,12 +4,16 @@ import { introPlayInterval } from "../default";
 const useIntroTransition = () => {
     const [transition, setTransition] = React.useState<boolean>(false);
     React.useEffect(() => {
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             setTransition(true);
         }, 100);
-        setTimeout(() => {
+        const timeout1 = setTimeout(() => {
             setTransition(false);
         }, introPlayInterval);
+        return () => {
+            clearTimeout(timeout);
+            clearTimeout(timeout1);
+        };
     }, []);
     return transition;
 };

@@ -10,9 +10,10 @@ const ZoomModule = ({ clickCallback }: { clickCallback: Function }) => {
         }, 1000);
     };
     React.useEffect(() => {
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             setTransition(true);
         }, 100);
+        return () => clearTimeout(timeout);
     }, []);
     return (
         <>

@@ -19,8 +19,12 @@ const useObserver = ({ elementId, threshold, delay, rootId }: IProps) => {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
                             //console.log(elementId, "INTERSECTING");
-                            setTimeout(() => setActive(true), delay);
+                            const timeout = setTimeout(
+                                () => setActive(true),
+                                delay
+                            );
                             observer.unobserve(doc);
+                            return () => clearTimeout(timeout);
                         }
                     });
                 },

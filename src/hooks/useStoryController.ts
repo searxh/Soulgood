@@ -61,6 +61,7 @@ const useStoryController = () => {
     };
     React.useLayoutEffect(() => {
         //console.log("----------[SCENE " + scene + "]----------------");
+        //console.log("branchInfo", branchInfo);
         if (scenes[scene] && scenes[scene].trackChange !== undefined) {
             dispatch({
                 type: "set",
@@ -88,7 +89,10 @@ const useStoryController = () => {
             //console.log("useStoryController next", next);
             setNext(next);
         }
-        if (scene === 0) setTimeout(() => setStart(false), 100);
+        if (scene === 0) {
+            const timeout = setTimeout(() => setStart(false), 100);
+            return () => clearTimeout(timeout);
+        }
     }, [scene]);
     return {
         scene,

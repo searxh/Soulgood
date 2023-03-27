@@ -139,6 +139,10 @@ export const fifthScene: Array<SceneInterface> = [
                     "บางทีคำแนะนำหรือกำลังใจก็อาจมาในรูปแบบตุ๊กตาที่คอยปลอบประโลมจิตใจของเธอก็ได้นะ",
                 speaker: "นกฮูก",
             },
+            {
+                type: "special",
+                content: "New item/Heart2",
+            },
         ],
         background: defaultBackground,
         next: "default",
@@ -154,7 +158,7 @@ export const fifthScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "special",
-                content: "Answer bubble",
+                content: "Answer bubble/good",
             },
         ],
         background: defaultBackground,
@@ -192,6 +196,27 @@ export const fifthScene: Array<SceneInterface> = [
                 content:
                     "ส่วนลูกโป่ง ฉันว่าก็ไม่ต่างอะไรจากสิ่งที่ค้างคาอยู่ในใจเธอ ถ้าเธอปล่อยมันไปเธอก็จะเป็นอิสระจากมัน",
                 speaker: "นกฮูก",
+            },
+            {
+                type: "special",
+                content: "New item/Balloon2",
+            },
+        ],
+        background: defaultBackground,
+        next: "default",
+    },
+    {
+        characters: [
+            {
+                name: "owl",
+                state: "Idle",
+                className: { ...defaultOwlClassName },
+            },
+        ],
+        dialogues: [
+            {
+                type: "special",
+                content: "Answer bubble/bad",
             },
         ],
         background: defaultBackground,

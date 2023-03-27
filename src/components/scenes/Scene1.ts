@@ -528,8 +528,7 @@ export const firstScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content:
-                    "อ่ะนี่ฉันให้ ตุ๊กตาหัวใจมีปีก เก็บไว้อาจจะช่วยอะไรเธอได้",
+                content: "อ่ะนี่ฉันให้ ตุ๊กตา เก็บไว้อาจจะช่วยอะไรเธอได้",
                 speaker: "กระต่าย",
             },
             {

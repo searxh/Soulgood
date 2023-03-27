@@ -4,12 +4,16 @@ import React from "react";
 const BalloonEnding = ({ callback }: { callback: Function }) => {
     const [transition, setTransition] = React.useState<boolean>(false);
     React.useEffect(() => {
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             setTransition(true);
         }, 100);
-        setTimeout(() => {
+        const timeout1 = setTimeout(() => {
             callback();
         }, 5100);
+        return () => {
+            clearTimeout(timeout);
+            clearTimeout(timeout1);
+        };
     }, []);
     return (
         <div

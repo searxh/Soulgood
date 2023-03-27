@@ -48,7 +48,7 @@ const Them = ({
             }, delay);
             delay += delayInterval;
         }
-        setTimeout(() => {
+        const timeout1 = setTimeout(() => {
             if (printDoneCallbackRef.current !== undefined) {
                 printDoneCallbackRef.current();
             }
@@ -58,6 +58,7 @@ const Them = ({
                 setActive(true);
             }
         }, delay);
+        return () => clearTimeout(timeout1);
     }, [scene]);
     return content.length !== 0 ? (
         <div

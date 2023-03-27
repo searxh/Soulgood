@@ -47,11 +47,12 @@ const Special = ({ content, next }: { content: string; next: any }) => {
                             handleSetChoice();
                         }}
                     />
-                ) : content === "Answer bubble" ? (
+                ) : content.includes("Answer bubble") ? (
                     <AnswerBubble
                         clickCallback={() => {
                             handleSetChoice();
                         }}
+                        type={content.split("/")[1]}
                     />
                 ) : content === "End" ? (
                     <EndFade />

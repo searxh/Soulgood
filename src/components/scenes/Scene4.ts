@@ -22,7 +22,7 @@ const defaultMotherKangarooClassName = {
 };
 
 const defaultOwlClassName = {
-    top: "50%",
+    top: "55%",
     bottom: "0%",
     left: "0%",
     right: "0%",

@@ -14,7 +14,10 @@ const Conclusion = () => {
     const [transition, setTransition] = React.useState<boolean>(false);
     const navigate = useNavigate();
     const changePage = () => {
-        if (resultPage + 1 === 2 && formAnswers.includes(null)) {
+        if (
+            resultPage + 1 === 2 &&
+            (formAnswers.includes(null) || formAnswers.includes(""))
+        ) {
             alert(
                 "ขอความร่วมมือช่วยกรอกฟอร์มกันหน่อยนะคะ แป๊บเดียวเท่านั้น กรอกเสร็จช่วงท้ายเรามีของขวัญเซอร์ไพรส์ด้วยนะ !"
             );
@@ -35,9 +38,10 @@ const Conclusion = () => {
         navigate("/");
     };
     React.useEffect(() => {
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             setTransition(true);
         }, 100);
+        return () => clearTimeout(timeout);
     }, []);
     return (
         <div

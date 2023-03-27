@@ -31,12 +31,14 @@ const Us = ({ content, next }: { content: string; next: any }) => {
                 setDisplayedContent(accumulator);
             }, delay);
             delay += delayInterval;
+            //return () => clearTimeout(timeout);
         }
-        setTimeout(() => {
+        const timeout1 = setTimeout(() => {
             setPrinting(false);
             setNextScene(sceneRouterRef.current);
             setActive(true);
         }, delay);
+        return () => clearTimeout(timeout1);
     }, [scene]);
     return (
         <>

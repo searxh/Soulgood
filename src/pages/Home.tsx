@@ -46,9 +46,9 @@ export default function Home() {
                 dispatch({
                     type: "reset",
                 });
-                setTimeout(() => {
-                    if (!item)
-                        setTimeout(() => {
+                const timeout = setTimeout(() => {
+                    if (!item) {
+                        const timeout1 = setTimeout(() => {
                             dispatch({
                                 type: "set",
                                 field: "preIntroForm",
@@ -56,8 +56,11 @@ export default function Home() {
                             });
                             navigate("/story");
                         }, 2000);
+                        return () => clearTimeout(timeout1);
+                    }
                     setCurrentPage((prev) => prev + 1);
                 }, index * (introPlayInterval + 2100));
+                return () => clearTimeout(timeout);
             });
         }
     }, [status]);
@@ -146,7 +149,7 @@ export default function Home() {
                                 duration-300 font-medium"
                                     onClick={handleOnStart}
                                 >
-                                    NEW GAME
+                                    START
                                 </button>
                             </div>
                         ) : (

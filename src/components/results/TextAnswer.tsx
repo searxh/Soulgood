@@ -8,9 +8,6 @@ const TextAnswer = ({
     const ref = React.useRef<HTMLInputElement>(null);
     const handleOnChange = () => {
         if (ref.current) answerCallback(ref.current.value);
-        else {
-            alert("Please fill in feedback");
-        }
     };
     return (
         <input

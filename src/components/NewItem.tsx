@@ -10,16 +10,21 @@ const NewItem = ({
 }) => {
     const [transition, setTransition] = React.useState<boolean>(false);
     React.useEffect(() => {
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             setTransition(true);
         }, 100);
-        setTimeout(() => {
+        const timeout1 = setTimeout(() => {
             setTransition(false);
         }, 2600);
-        setTimeout(() => {
+        const timeout2 = setTimeout(() => {
             clickCallback();
             setTransition(false);
         }, 3600);
+        return () => {
+            clearTimeout(timeout);
+            clearTimeout(timeout1);
+            clearTimeout(timeout2);
+        };
     }, []);
     return (
         <>

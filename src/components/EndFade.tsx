@@ -6,12 +6,16 @@ const EndFade = () => {
     const [transition, setTransition] = React.useState<boolean>(false);
     const navigate = useNavigate();
     React.useEffect(() => {
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             setTransition(true);
         }, 100);
-        setTimeout(() => {
+        const timeout1 = setTimeout(() => {
             navigate("/result");
         }, 2000);
+        return () => {
+            clearTimeout(timeout);
+            clearTimeout(timeout1);
+        };
     }, []);
     return (
         <div
