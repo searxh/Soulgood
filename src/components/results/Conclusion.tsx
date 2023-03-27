@@ -161,14 +161,14 @@ const Conclusion = () => {
                 ) : null}
             </div>
             {resultPage !== 3 ? (
-                <div className="mt-12">
+                <div className="my-12">
                     <button
                         onClick={changePage}
                         className="flex mx-auto bg-pink-500 md:hover:bg-pink-600 rounded-full py-2 px-5 shadow-md transition duration-300"
                     >
                         <div className="my-auto text-white">Next</div>
                         <svg
-                            className="w-7 h-7 fill-white"
+                            className="w-6 h-6 fill-white my-auto"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 320 512"
                         >

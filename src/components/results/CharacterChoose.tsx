@@ -30,8 +30,9 @@ const CharacterChoose = () => {
     const [random] = React.useState<number>(Math.floor(Math.random() * 3) + 1);
     return (
         <div>
-            <div className="font-semibold text-2xl md:text-3xl mb-1 text-center text-pink-500">
-                เลือกตัวละครที่คุณชื่นชอบ
+            <div className="font-semibold text-xl md:text-2xl mb-1 text-center text-pink-500 max-w-[40rem]">
+                อย่าลืมลง social media มาเล่น add yours แล้วแท็ก ig
+                soulgood.journey ด้วยนะ ✨
             </div>
             {selected === 0 ? (
                 <div className="grid grid-cols-2 gap-1 max-w-[50rem] mx-auto">

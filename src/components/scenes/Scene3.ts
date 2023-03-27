@@ -24,7 +24,7 @@ export const thirdScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "...",
+                content: "เฮ้อ...",
                 speaker: "ยีราฟ",
             },
         ],

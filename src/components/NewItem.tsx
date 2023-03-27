@@ -8,16 +8,17 @@ const NewItem = ({
     item: string;
 }) => {
     const [transition, setTransition] = React.useState<boolean>(false);
-    const handleOnClick = () => {
-        setTransition(false);
-        setTimeout(() => {
-            clickCallback();
-        }, 1000);
-    };
     React.useEffect(() => {
         setTimeout(() => {
             setTransition(true);
         }, 100);
+        setTimeout(() => {
+            setTransition(false);
+        }, 2600);
+        setTimeout(() => {
+            clickCallback();
+            setTransition(false);
+        }, 3600);
     }, []);
     return (
         <>
@@ -42,15 +43,6 @@ const NewItem = ({
                     src={`/assets/Props/${item}.webp`}
                     alt=""
                 />
-                <button
-                    onClick={handleOnClick}
-                    className={`${
-                        transition ? "opacity-100" : "opacity-0"
-                    } md:hover:bg-red-500 absolute -top-3 -right-3 mx-auto w-12 h-12 drop-shadow-md
-                    bg-red-400 text-white z-10 transition duration-500 rounded-full`}
-                >
-                    X
-                </button>
             </div>
         </>
     );

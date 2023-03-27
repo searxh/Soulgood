@@ -77,7 +77,7 @@ export const firstScene: Array<SceneInterface> = [
         dialogues: [
             {
                 type: "them",
-                content: "ฉัน คือ พนักงานดูแลชิงช้าสวรรค์",
+                content: "ฉันเป็นพนักงานดูแลชิงช้าสวรรค์",
                 speaker: "กระต่าย",
             },
         ],
