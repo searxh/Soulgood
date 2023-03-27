@@ -1020,7 +1020,7 @@ export const fourthScene: Array<SceneInterface> = [
         characters: [
             {
                 name: "owl",
-                state: "Idle",
+                state: "Surprise",
                 className: {
                     ...defaultOwlClassName,
                 },

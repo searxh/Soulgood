@@ -37,7 +37,7 @@ export default function AudioPlayer() {
             <Player
                 autoPlayAfterSrcChange={!mute}
                 src={trackList[track]}
-                className="opacity-50 scale-[0.01%] w-0 h-0"
+                className="opacity-0 scale-[0.01%] w-0 h-0"
                 volume={0.2}
                 loop={true}
                 ref={ref}
