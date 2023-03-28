@@ -8,6 +8,7 @@ import Page4 from "../components/intro/Page4";
 import PreIntroForm from "../components/PreIntroForm";
 import { introPlayInterval } from "../default";
 import useAspectRatio from "../hooks/useAspectRatio";
+import useObserver from "../hooks/useObserver";
 import { GlobalContext } from "../states";
 import { PreIntroFormInterface } from "../types";
 
@@ -40,6 +41,9 @@ export default function Home() {
         setFormData(formData);
         setStatus(2);
     };
+    const imgIsVisible = useObserver({
+        elementId: "logo-img",
+    });
     React.useEffect(() => {
         if (status === 2) {
             introScreens.forEach((item, index) => {
@@ -110,20 +114,24 @@ export default function Home() {
                 <div
                     className={`flex flex-col w-full h-full m-auto drop-shadow-md`}
                 >
-                    <div className="flex flex-col text-center m-auto md:mt-[5rem]">
-                        <div className="text-center text-base md:text-lg font-medium text-pink-400 tracking-widest">
-                            WELCOME TO THE ULTIMATE GAME
-                        </div>
+                    <div className="flex flex-col text-center m-auto mt-[11rem] md:mt-[5rem]">
+                        <img
+                            id="logo-img"
+                            className={`${
+                                imgIsVisible
+                                    ? "translate-y-0 opacity-100"
+                                    : "translate-y-12 opacity-0"
+                            } m-auto h-52 md:h-32 mb-5 drop-shadow-md 
+                            md:hover:scale-105 duration-1000 transition object-contain`}
+                            src="assets/Logo.webp"
+                            draggable={false}
+                            alt=""
+                        />
                         <div
-                            style={{
-                                textShadow: "5px 5px 0px pink",
-                            }}
-                            className="text-5xl md:text-7xl font-ms font-bold leading-none text-pink-400 rounded-full my-2"
+                            className="mx-auto max-w-[20rem] text-center text-base md:text-lg font-medium 
+                        text-pink-500 tracking-widest"
                         >
-                            GOODIVAL
-                        </div>
-                        <div className="text-center text-base md:text-lg font-medium text-pink-500 tracking-widest">
-                            BY TEAM SOULGOOD
+                            มาสํารวจความเป็น perfectionist ในตัวคุณกันเถอะ!
                         </div>
                         {status === 0 ? (
                             <div className="grid grid-cols-1 gap-3 my-5 w-[70%] min-w-[12rem] mx-auto">
