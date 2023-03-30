@@ -35,8 +35,8 @@ const PreIntroForm = ({
             style={{
                 boxShadow: "5px 5px 0px hotpink",
             }}
-            className="flex flex-col p-5 m-auto text-lg md:text-xl
-             bg-gradient-to-r from-pink-200 to-pink-300 w-full my-2 rounded-xl"
+            className="flex flex-col p-5 m-auto text-lg md:text-xl w-[90%]
+             bg-gradient-to-r from-pink-200 to-pink-300 max-w-[30rem] rounded-xl"
         >
             <div className="m-auto w-[80%]">
                 <div className="text-left text-white">เพศ:</div>

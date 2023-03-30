@@ -114,52 +114,56 @@ export default function Home() {
                 <div
                     className={`flex flex-col w-full h-full m-auto drop-shadow-md`}
                 >
-                    <div className="flex flex-col text-center m-auto mt-[11rem] md:mt-[5rem]">
-                        <img
-                            id="logo-img"
-                            className={`${
-                                imgIsVisible
-                                    ? "translate-y-0 opacity-100"
-                                    : "translate-y-12 opacity-0"
-                            } m-auto h-52 md:h-32 mb-5 drop-shadow-md 
-                            md:hover:scale-105 duration-1000 transition object-contain`}
-                            src="assets/Logo.webp"
-                            draggable={false}
-                            alt=""
-                        />
-                        <div
-                            className="mx-auto max-w-[20rem] text-center text-base md:text-lg font-medium 
-                        text-pink-500 tracking-widest"
-                        >
-                            มาสํารวจความเป็น perfectionist ในตัวคุณกันเถอะ!
-                        </div>
+                    <div className="flex flex-col text-center w-full m-auto mt-[7rem] md:mt-[5rem]">
                         {status === 0 ? (
-                            <div className="grid grid-cols-1 gap-3 my-5 w-[70%] min-w-[12rem] mx-auto">
-                                {Object.keys(preIntroForm).length !== 0 ? (
+                            <>
+                                <img
+                                    id="logo-img"
+                                    className={`${
+                                        imgIsVisible
+                                            ? "translate-y-0 opacity-100"
+                                            : "translate-y-12 opacity-0"
+                                    } m-auto h-44 md:h-32 mb-5 drop-shadow-md 
+                                    md:hover:scale-105 duration-1000 transition object-contain`}
+                                    src="assets/Logo.webp"
+                                    draggable={false}
+                                    alt=""
+                                />
+                                <div
+                                    className="mx-auto max-w-[20rem] text-center text-base md:text-lg font-medium 
+                                    text-pink-500 tracking-widest"
+                                >
+                                    มาสํารวจความเป็น perfectionist
+                                    ในตัวคุณกันเถอะ!
+                                </div>
+                                <div className="grid grid-cols-1 gap-3 my-5 w-[70%] max-w-[20rem] mx-auto">
+                                    {Object.keys(preIntroForm).length !== 0 ? (
+                                        <button
+                                            style={{
+                                                boxShadow:
+                                                    "5px 5px 0px dodgerblue",
+                                            }}
+                                            className="text-2xl bg-cyan-400 rounded-lg text-white
+                                            py-1 w-full m-auto md:hover:bg-cyan-500 transition 
+                                            duration-300 font-medium"
+                                            onClick={handleOnContinue}
+                                        >
+                                            CONTINUE
+                                        </button>
+                                    ) : null}
                                     <button
                                         style={{
-                                            boxShadow: "5px 5px 0px dodgerblue",
+                                            boxShadow: "5px 5px 0px hotpink",
                                         }}
-                                        className="text-2xl bg-cyan-400 rounded-lg text-white
-                            py-1 w-full m-auto md:hover:bg-cyan-500 transition 
-                            duration-300 font-medium"
-                                        onClick={handleOnContinue}
+                                        className="text-2xl bg-pink-300 rounded-lg text-white
+                                        py-1 w-full m-auto md:hover:bg-pink-500 transition 
+                                        duration-300 font-medium"
+                                        onClick={handleOnStart}
                                     >
-                                        CONTINUE
+                                        START
                                     </button>
-                                ) : null}
-                                <button
-                                    style={{
-                                        boxShadow: "5px 5px 0px hotpink",
-                                    }}
-                                    className="text-2xl bg-pink-300 rounded-lg text-white
-                                py-1 w-full m-auto md:hover:bg-pink-500 transition 
-                                duration-300 font-medium"
-                                    onClick={handleOnStart}
-                                >
-                                    START
-                                </button>
-                            </div>
+                                </div>
+                            </>
                         ) : (
                             <PreIntroForm
                                 answerCallback={(formData) =>
