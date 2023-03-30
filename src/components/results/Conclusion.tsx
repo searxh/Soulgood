@@ -47,8 +47,8 @@ const Conclusion = () => {
         <div
             className={`${
                 transition ? "opacity-100" : "opacity-0 blur-sm"
-            } flex flex-col m-auto px-5 md:px-12 py-12 text-xl h-full overflow-scroll bg-neutral-100
-            transition duration-[2000ms] ease-in select-text')]`}
+            } flex flex-col m-auto px-5 md:px-12 py-12 text-xl h-full overflow-y-scroll bg-neutral-100
+            transition duration-[2000ms] ease-in select-text`}
         >
             <div className="mx-auto">
                 <div className="mx-auto drop-shadow-md text-center">

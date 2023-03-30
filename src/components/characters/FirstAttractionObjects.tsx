@@ -13,14 +13,14 @@ export default function FirstAttractionObjects({
                 <div className="flex m-auto">
                     <img
                         src="/assets/Props/Screwdriver.webp"
-                        className={`drop-shadow-md mr-24 my-auto
+                        className={`drop-shadow-md mr-24 my-auto pointer-events-none
                         w-[100px] transition duration-300 animate-bob`}
                         alt=""
                         style={className}
                     />
                     <img
                         src="/assets/Props/Hammer.webp"
-                        className={`drop-shadow-md my-auto
+                        className={`drop-shadow-md my-auto pointer-events-none
                         w-[100px] transition duration-300 animate-bob`}
                         alt=""
                         style={className}

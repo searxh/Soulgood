@@ -32,14 +32,14 @@ export default function Rabbit({
                     id="rabbit-image"
                     src={image}
                     className={`absolute drop-shadow-md
-                    animate-bob w-full max-w-[450px]`}
+                    animate-bob w-full max-w-[450px] pointer-events-none`}
                     alt=""
                 />
                 {state === "Screwdriver" ? (
                     <img
                         src="/assets/Props/Screwdriver.webp"
                         className={`absolute top-[65%] left-[17%] drop-shadow-md
-                        w-[20%] animate-bigbob`}
+                        w-[20%] animate-bigbob pointer-events-none`}
                         alt=""
                     />
                 ) : null}

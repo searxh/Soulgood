@@ -123,7 +123,7 @@ export default function Home() {
                                         imgIsVisible
                                             ? "translate-y-0 opacity-100"
                                             : "translate-y-12 opacity-0"
-                                    } m-auto h-44 md:h-32 mb-5 drop-shadow-md 
+                                    } m-auto h-44 md:h-32 mb-5 drop-shadow-md pointer-events-none
                                     md:hover:scale-105 duration-1000 transition object-contain`}
                                     src="assets/Logo.webp"
                                     draggable={false}

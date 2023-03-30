@@ -16,7 +16,7 @@ export default function Giraffe({
     return (
         <img
             src={image}
-            className={`absolute drop-shadow-md m-auto
+            className={`absolute drop-shadow-md m-auto pointer-events-none
             animate-bob z-10 w-full max-w-[450px] transition duration-300`}
             alt=""
             style={className}

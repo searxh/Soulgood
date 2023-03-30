@@ -16,7 +16,7 @@ export default function Peacock({
     return (
         <img
             src={image}
-            className={`absolute drop-shadow-md m-auto
+            className={`absolute drop-shadow-md m-auto pointer-events-none
             animate-bob z-10 w-full max-w-[600px] transition duration-300`}
             alt=""
             style={className}
