@@ -16,7 +16,7 @@ const Page1 = () => {
                     ภายในโครงการบ่มเพาะนวัตกรรม (University Incubation Program
                     2022)
                 </div>
-                <div className="grid grid-cols-3 gap-5 max-w-[40rem] mx-auto py-5">
+                <div className="grid grid-cols-2 gap-5 max-w-[40rem] mx-auto py-5">
                     <img
                         className="rounded-xl my-auto"
                         src="/assets/sss.webp"
@@ -25,11 +25,6 @@ const Page1 = () => {
                     <img
                         className="rounded-xl aspect-square"
                         src="/assets/innowhale.webp"
-                        alt=""
-                    />
-                    <img
-                        className="rounded-full aspect-square"
-                        src="/assets/psychology.webp"
                         alt=""
                     />
                 </div>
